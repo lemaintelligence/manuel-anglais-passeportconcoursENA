@@ -1,6 +1,6 @@
 // Service worker - Manuel interactif anglais ENA
 // Version du cache : changer ce numéro à chaque mise à jour du contenu
-const CACHE_NAME = 'manuel-anglais-ena-v2';
+const CACHE_NAME = 'manuel-anglais-ena-v3';
 
 // Liste de tous les fichiers à mettre en cache
 const FILES_TO_CACHE = [
@@ -14,6 +14,7 @@ const FILES_TO_CACHE = [
   './manuel_interactif_anglais_chapitre5_prepositions.html',
   './manuel_interactif_anglais_chapitre6_traduction.html',
   './lead_magnet_chariow.html',
+  './imprimer_manuel_complet.html',
 ];
 
 // Installation : mise en cache de tous les fichiers
