@@ -82,6 +82,39 @@ td code{font-family:'DM Sans',sans-serif;font-weight:600;color:var(--accent);bac
 footer{text-align:center;padding:20px 0 50px;font-size:.8rem;color:var(--text-muted)}
 footer strong{color:var(--accent);font-weight:700}
 @media(max-width:600px){header{padding:40px 0 30px}.page{padding:0 16px}table{font-size:.85rem}th,td{padding:9px 12px}}
+
+  /* ===== BOUTON SAUVEGARDER ===== */
+  .save-bar {
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    background: var(--green-bg);
+    border-bottom: 2px solid var(--green);
+    padding: 9px 24px;
+    text-align: center;
+  }
+  .save-btn {
+    display: inline-block;
+    padding: 9px 28px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: .9rem;
+    font-weight: 700;
+    color: #fff;
+    background: var(--green);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background .2s;
+    letter-spacing: .2px;
+  }
+  .save-btn:hover { background: #1e6340; }
+
+  @media print {
+    .save-bar, .score-bar, .nav-bottom, .cta, .reveal-btn { display: none !important; }
+    body { background: #fff !important; }
+    .page { padding: 0 12px; }
+    a[href]::after { content: none !important; }
+  }
 </style>
 </head>
 <body>
@@ -591,6 +624,22 @@ footer strong{color:var(--accent);font-weight:700}
 </div>
 
 <script>
+/* ── PDF : aucun lien cliquable dans les chapitres ── */
+function savePDF() {
+  var links = document.querySelectorAll('a[href]');
+  links.forEach(function(a) {
+    a.dataset.savedHref = a.getAttribute('href');
+    a.removeAttribute('href');
+  });
+  window.print();
+  setTimeout(function() {
+    document.querySelectorAll('a[data-saved-href]').forEach(function(a) {
+      a.setAttribute('href', a.dataset.savedHref);
+      delete a.dataset.savedHref;
+    });
+  }, 500);
+}
+
 let score=0,total=10,answered=0;
 function check(btn,isCorrect){
   const block=btn.closest('.quiz-block');

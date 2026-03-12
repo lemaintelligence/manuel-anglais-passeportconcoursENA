@@ -311,9 +311,51 @@ footer strong { color: var(--accent); font-weight: 700; }
   .stat-num { font-size: 1.5rem; }
   .nav-btn { padding: 11px 18px; font-size: .88rem; }
 }
+
+  /* ===== BOUTON SAUVEGARDER ===== */
+  .save-bar {
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    background: var(--green-bg);
+    border-bottom: 2px solid var(--green);
+    padding: 9px 24px;
+    text-align: center;
+  }
+  .save-btn {
+    display: inline-block;
+    padding: 9px 28px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: .9rem;
+    font-weight: 700;
+    color: #fff;
+    background: var(--green);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background .2s;
+    letter-spacing: .2px;
+  }
+  .save-btn:hover { background: #1e6340; }
+
+  @media print {
+    .save-bar, .score-bar, .nav-bottom { display: none !important; }
+    body { background: #fff !important; }
+    /* Tous les liens deviennent du texte ordinaire, sauf les kits */
+    a:not(.kit-card) {
+      color: inherit !important;
+      text-decoration: none !important;
+    }
+    a[href]::after { content: none !important; }
+  }
 </style>
 </head>
 <body>
+
+<!-- ===== BOUTON SAUVEGARDER ===== -->
+<div class="save-bar">
+  <button class="save-btn" id="saveBtn" onclick="savePDF();">&#8595;&nbsp;&nbsp;Sauvegarder la version actuelle du manuel pour le lire hors ligne</button>
+</div>
 
 <!-- Barre sticky -->
 <div class="score-bar">
@@ -483,8 +525,6 @@ footer strong { color: var(--accent); font-weight: 700; }
         <div class="kit-card-detail">Sessions 2015 &agrave; 2025 &middot; T&eacute;l&eacute;chargement imm&eacute;diat</div>
       </div>
       <div class="kit-card-right">
-        <span class="kit-price-old">5&thinsp;000 F CFA</span>
-        <span class="kit-price">2&thinsp;950 F CFA</span>
         <span class="kit-btn">Obtenir ce kit</span>
       </div>
     </a>
@@ -496,8 +536,6 @@ footer strong { color: var(--accent); font-weight: 700; }
         <div class="kit-card-detail">Sessions 2015 &agrave; 2025 &middot; T&eacute;l&eacute;chargement imm&eacute;diat</div>
       </div>
       <div class="kit-card-right">
-        <span class="kit-price-old">5&thinsp;000 F CFA</span>
-        <span class="kit-price">2&thinsp;950 F CFA</span>
         <span class="kit-btn">Obtenir ce kit</span>
       </div>
     </a>
@@ -509,8 +547,6 @@ footer strong { color: var(--accent); font-weight: 700; }
         <div class="kit-card-detail">Sessions 2015 &agrave; 2025 &middot; T&eacute;l&eacute;chargement imm&eacute;diat</div>
       </div>
       <div class="kit-card-right">
-        <span class="kit-price-old">5&thinsp;000 F CFA</span>
-        <span class="kit-price">2&thinsp;950 F CFA</span>
         <span class="kit-btn">Obtenir ce kit</span>
       </div>
     </a>
@@ -522,8 +558,6 @@ footer strong { color: var(--accent); font-weight: 700; }
         <div class="kit-card-detail">Guide PDF + checklist &middot; T&eacute;l&eacute;chargement imm&eacute;diat</div>
       </div>
       <div class="kit-card-right">
-        <span class="kit-price-old">3&thinsp;000 F CFA</span>
-        <span class="kit-price">1&thinsp;800 F CFA</span>
         <span class="kit-btn">Obtenir ce guide</span>
       </div>
     </a>
@@ -569,6 +603,35 @@ function toggleReveal(btn) {
   btn.classList.toggle('open');
   btn.nextElementSibling.classList.toggle('open');
 }
+
+/* ── PDF : seuls les liens .kit-card restent cliquables ── */
+function savePDF() {
+  // Retirer les href de tous les liens SAUF les kit-cards
+  var links = document.querySelectorAll('a:not(.kit-card)');
+  links.forEach(function(a) {
+    a.dataset.savedHref = a.getAttribute('href') || '';
+    a.removeAttribute('href');
+  });
+
+  window.print();
+
+  // Restaurer immédiatement après (afterprint n'est pas fiable sur tous les navigateurs)
+  setTimeout(function() {
+    links.forEach(function(a) {
+      if (a.dataset.savedHref) {
+        a.setAttribute('href', a.dataset.savedHref);
+      }
+      delete a.dataset.savedHref;
+    });
+  }, 500);
+}
+
+window.addEventListener('afterprint', function() {
+  document.querySelectorAll('a[data-saved-href]').forEach(function(a) {
+    a.setAttribute('href', a.dataset.savedHref);
+    delete a.dataset.savedHref;
+  });
+});
 </script>
 
 </body>

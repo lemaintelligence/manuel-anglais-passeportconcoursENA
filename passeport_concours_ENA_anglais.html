@@ -511,9 +511,47 @@
     .regle { flex-direction: column; gap: 10px; }
     .plan-item { flex-direction: column; gap: 6px; }
   }
+
+  /* ===== BOUTON SAUVEGARDER ===== */
+  .save-bar {
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    background: var(--green-bg);
+    border-bottom: 2px solid var(--green);
+    padding: 9px 24px;
+    text-align: center;
+  }
+  .save-btn {
+    display: inline-block;
+    padding: 9px 28px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: .9rem;
+    font-weight: 700;
+    color: #fff;
+    background: var(--green);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background .2s;
+    letter-spacing: .2px;
+  }
+  .save-btn:hover { background: #1e6340; }
+
+  @media print {
+    .save-bar, .score-bar, .nav-bottom, .cta, .reveal-btn { display: none !important; }
+    body { background: #fff !important; }
+    .page { padding: 0 12px; }
+    a[href]::after { content: none !important; }
+  }
 </style>
 </head>
 <body>
+
+<!-- ===== BOUTON SAUVEGARDER ===== -->
+<div class="save-bar">
+  <button class="save-btn" onclick="savePDF();">&#8595;&nbsp;&nbsp;Sauvegarder la version actuelle du manuel pour le lire hors ligne</button>
+</div>
 
 <div class="page">
 
