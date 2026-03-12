@@ -540,6 +540,8 @@
     white-space: nowrap;
   }
   .save-btn:hover { background: #1e6340; }
+.annales-btn { background: var(--accent) !important; }
+.annales-btn:hover { background: #a84808 !important; }
 
   /* Bouton menu chapitres */
   .menu-toggle {
@@ -655,8 +657,15 @@
   .print-topbar {
     position: sticky; top: 0; z-index: 200;
     background: var(--green-bg); border-bottom: 2px solid var(--green);
-    padding: 10px 24px; text-align: center;
+    padding: 8px 14px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 6px;
   }
+  .print-btn:not(.annales-btn) { grid-column: 1; grid-row: 1; }
+  .back-btn                    { grid-column: 2; grid-row: 1; }
+  .print-btn.annales-btn       { grid-column: 1 / -1; grid-row: 2; }
   .print-btn {
     padding: 9px 28px; font-family: 'DM Sans', sans-serif; font-size: .9rem; font-weight: 700;
     color: #fff; background: var(--green); border: none; border-radius: 8px; cursor: pointer; margin-right: 12px;
@@ -679,6 +688,7 @@
 <div class="print-topbar">
   <button class="print-btn" onclick="window.print();">&#8595;&nbsp; Sauvegarder le manuel complet en PDF</button>
   <button class="back-btn" onclick="history.back();">&larr; Retour</button>
+  <button class="print-btn annales-btn" onclick="window.location.href='./lead_magnet_chariow.html';">&#128218;&nbsp; Acc&eacute;der aux anciens sujets r&eacute;els corrig&eacute;s</button>
 </div>
 
 <div class="page">
@@ -2883,7 +2893,7 @@
 <div class="ex"><span class="en">We saw a game <strong>at</strong> the stadium.</span></div>
 <div class="ex"><span class="en">I'll meet you <strong>at</strong> the entrance.</span></div>
 <p>On utilise aussi "at" pour les adresses e-mail et les activités :</p>
-<div class="ex"><span class="en">Please email me <strong>at</strong> nom@exemple.com.</span></div>
+<div class="ex"><span class="en">Please email me <strong>at</strong> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0f6160624f6a776a627f636a216c6062">[email&#160;protected]</a>.</span></div>
 <div class="ex"><span class="en">He is good <strong>at</strong> drawing.</span> <span class="fr">(bon en dessin)</span></div>
 <div class="ex"><span class="en">He laughed <strong>at</strong> my acting.</span> <span class="fr">(il a ri de mon jeu)</span></div>
 <h3>IN = à l'intérieur.</h3>
@@ -3718,12 +3728,4 @@
 </div></div>
 </div>
 
-<script>
-// Désactiver les boutons quiz (déjà répondus ou non pertinents à l'impression)
-document.querySelectorAll('.quiz-option').forEach(function(btn) {
-  btn.disabled = true;
-});
-</script>
-
-</body>
-</html>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.

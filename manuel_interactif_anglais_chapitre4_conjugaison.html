@@ -21,7 +21,7 @@ header .subtitle{font-size:1.05rem;color:var(--text-light);max-width:580px;line-
 .quiz-block{background:var(--bg-white);border:1px solid var(--border);border-radius:10px;padding:26px;margin:28px 0;box-shadow:var(--shadow)}.quiz-label{font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;display:block}.quiz-question{font-family:'Source Serif 4',serif;font-size:1.05rem;font-weight:600;margin-bottom:16px;line-height:1.5}.quiz-options{display:flex;flex-direction:column;gap:8px;margin-bottom:10px}.quiz-option{display:block;width:100%;text-align:left;padding:12px 18px;font-family:'DM Sans',sans-serif;font-size:.95rem;color:var(--text);background:var(--bg);border:1.5px solid var(--border);border-radius:8px;cursor:pointer;transition:all .2s;line-height:1.5}.quiz-option:hover:not(:disabled){border-color:var(--accent-light);background:var(--accent-bg)}.quiz-option.ok{border-color:var(--green);background:var(--green-bg);color:var(--green);font-weight:600;cursor:default}.quiz-option.ko{border-color:var(--red);background:var(--red-bg);color:var(--red);cursor:default;text-decoration:line-through}.quiz-option.show-ok{border-color:var(--green);background:var(--green-bg);color:var(--green);font-weight:600;cursor:default}.quiz-option:disabled{cursor:default}.quiz-fb{font-size:.92rem;padding:14px 18px;border-radius:8px;display:none;line-height:1.65;margin-top:8px}.quiz-fb.show{display:block}.quiz-fb.correct{background:var(--green-bg);color:var(--green)}.quiz-fb.wrong{background:var(--red-bg);color:var(--red)}
 .reveal-block{margin:20px 0}.reveal-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:600;color:var(--accent);background:var(--accent-bg);border:1.5px solid rgba(196,86,10,.2);border-radius:8px;cursor:pointer;transition:all .2s}.reveal-btn:hover{background:rgba(196,86,10,.12)}.reveal-btn .arrow{transition:transform .3s;font-size:.75rem}.reveal-btn.open .arrow{transform:rotate(90deg)}.reveal-content{max-height:0;overflow:hidden;transition:max-height .5s ease,padding .3s;padding:0 18px;background:var(--bg-white);border-radius:0 0 10px 10px}.reveal-content.open{max-height:3000px;padding:18px;border:1px solid var(--border);border-top:none;margin-top:-4px}.reveal-content p{font-size:.95rem;color:var(--text-light);margin-bottom:8px;line-height:1.7}
 .sep{height:1px;background:var(--border);margin:50px 0}
-.score-bar{position:sticky;top:0;z-index:100;background:rgba(250,248,245,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:10px 24px;display:flex;justify-content:space-between;align-items:center;font-size:.85rem}.score-bar .left{font-weight:600;color:var(--text)}.score-bar .right{color:var(--accent);font-weight:700}
+.score-bar{position:sticky;top:96px;z-index:100;background:rgba(250,248,245,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:10px 24px;display:flex;justify-content:space-between;align-items:center;font-size:.85rem}.score-bar .left{font-weight:600;color:var(--text)}.score-bar .right{color:var(--accent);font-weight:700}
 .formula{background:var(--blue-bg);border:1px solid rgba(26,95,138,.15);border-radius:10px;padding:18px 24px;margin:18px 0;text-align:center;font-family:'Source Serif 4',serif;font-size:1.1rem;font-weight:600;color:var(--blue);letter-spacing:.3px}
 .vs-box{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}.vs-col{background:var(--bg-white);border:1px solid var(--border);border-radius:10px;padding:18px 20px;box-shadow:var(--shadow)}.vs-col h4{font-family:'Source Serif 4',serif;font-size:1rem;font-weight:700;margin-bottom:8px}.vs-col p{font-size:.92rem;margin-bottom:6px;line-height:1.6}.vs-col.left{border-top:3px solid var(--blue)}.vs-col.left h4{color:var(--blue)}.vs-col.right{border-top:3px solid var(--accent)}.vs-col.right h4{color:var(--accent)}
 .nav-bottom{display:flex;justify-content:space-between;align-items:center;padding:30px 0;margin-top:40px;border-top:1px solid var(--border)}.nav-btn{padding:12px 28px;font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:700;border-radius:8px;text-decoration:none;cursor:pointer;transition:all .2s;border:none}.nav-btn.prev{color:var(--text-light);background:var(--bg-warm);border:1px solid var(--border)}.nav-btn.prev:hover{background:var(--border)}.nav-btn.next{color:#fff;background:var(--accent)}.nav-btn.next:hover{background:#a84808;transform:translateY(-1px);box-shadow:0 4px 12px rgba(196,86,10,.25)}
@@ -35,12 +35,15 @@ footer{text-align:center;padding:20px 0 50px;font-size:.8rem;color:var(--text-mu
     z-index: 300;
     background: var(--green-bg);
     border-bottom: 2px solid var(--green);
-    padding: 8px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
+    padding: 8px 14px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 6px;
   }
+  .save-btn-all   { grid-column: 1; grid-row: 1; }
+  .menu-toggle    { grid-column: 2; grid-row: 1; }
+  .annales-btn    { grid-column: 1 / -1; grid-row: 2; }
   .save-btn {
     padding: 8px 22px;
     font-family: 'DM Sans', sans-serif;
@@ -166,6 +169,7 @@ footer{text-align:center;padding:20px 0 50px;font-size:.8rem;color:var(--text-mu
 <div class="topbar">
   <button class="save-btn save-btn-all" onclick="window.open('./imprimer_manuel_complet.html','_blank');">&#8595;&nbsp; Sauvegarder le manuel complet</button>
   <button class="menu-toggle" onclick="toggleDrawer();">&#9776;&nbsp; Tous les chapitres</button>
+  <button class="save-btn annales-btn" onclick="window.location.href='./lead_magnet_chariow.html';">&#128218;&nbsp; Acc&eacute;der aux anciens sujets r&eacute;els corrig&eacute;s</button>
 </div>
 
 <!-- Drawer navigation -->

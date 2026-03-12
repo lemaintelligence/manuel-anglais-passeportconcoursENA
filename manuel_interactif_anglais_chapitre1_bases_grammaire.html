@@ -82,7 +82,7 @@ td code{font-family:'DM Sans',sans-serif;font-weight:600;color:var(--accent);bac
 .sep{height:1px;background:var(--border);margin:50px 0}
 
 /* Score flottant */
-.score-bar{position:sticky;top:0;z-index:100;background:rgba(250,248,245,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:10px 24px;display:flex;justify-content:space-between;align-items:center;font-size:.85rem}
+.score-bar{position:sticky;top:96px;z-index:100;background:rgba(250,248,245,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:10px 24px;display:flex;justify-content:space-between;align-items:center;font-size:.85rem}
 .score-bar .left{font-weight:600;color:var(--text)}
 .score-bar .right{color:var(--accent);font-weight:700}
 
@@ -111,12 +111,15 @@ footer strong{color:var(--accent);font-weight:700}
     z-index: 300;
     background: var(--green-bg);
     border-bottom: 2px solid var(--green);
-    padding: 8px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
+    padding: 8px 14px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 6px;
   }
+  .save-btn-all   { grid-column: 1; grid-row: 1; }
+  .menu-toggle    { grid-column: 2; grid-row: 1; }
+  .annales-btn    { grid-column: 1 / -1; grid-row: 2; }
   .save-btn {
     padding: 8px 22px;
     font-family: 'DM Sans', sans-serif;
@@ -242,6 +245,7 @@ footer strong{color:var(--accent);font-weight:700}
 <div class="topbar">
   <button class="save-btn save-btn-all" onclick="window.open('./imprimer_manuel_complet.html','_blank');">&#8595;&nbsp; Sauvegarder le manuel complet</button>
   <button class="menu-toggle" onclick="toggleDrawer();">&#9776;&nbsp; Tous les chapitres</button>
+  <button class="save-btn annales-btn" onclick="window.location.href='./lead_magnet_chariow.html';">&#128218;&nbsp; Acc&eacute;der aux anciens sujets r&eacute;els corrig&eacute;s</button>
 </div>
 
 <!-- Drawer navigation -->
