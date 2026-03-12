@@ -181,7 +181,7 @@ footer{text-align:center;padding:20px 0 50px;font-size:.8rem;color:var(--text-mu
   <div class="ex"><span class="en">I'll meet you <strong>at</strong> the entrance.</span></div>
 
   <p>On utilise aussi "at" pour les adresses e-mail et les activit&eacute;s :</p>
-  <div class="ex"><span class="en">Please email me <strong>at</strong> abc@defg.com.</span></div>
+  <div class="ex"><span class="en">Please email me <strong>at</strong> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9dfcfffeddf9f8fbfab3fef2f0">[email&#160;protected]</a>.</span></div>
   <div class="ex"><span class="en">He is good <strong>at</strong> drawing.</span> <span class="fr">(bon en dessin)</span></div>
   <div class="ex"><span class="en">He laughed <strong>at</strong> my acting.</span> <span class="fr">(il a ri de mon jeu)</span></div>
 
@@ -432,6 +432,12 @@ footer{text-align:center;padding:20px 0 50px;font-size:.8rem;color:var(--text-mu
 </section>
 
 <!-- Navigation -->
+<div class="encart accent" style="margin:40px 0 0;">
+  <span class="encart-label">&#128218; Entra&icirc;ne-toi sur les vrais sujets.</span>
+  <p>La th&eacute;orie seule ne suffit pas. Les candidats qui r&eacute;ussissent travaillent aussi sur les anciens sujets r&eacute;els pos&eacute;s &agrave; l&rsquo;ENA. Dix sessions de 2015 &agrave; 2025 t&rsquo;attendent.</p>
+  <button onclick="window.location.href='./lead_magnet_chariow.html';" style="margin-top:10px;padding:10px 22px;font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:700;color:#fff;background:var(--accent);border:none;border-radius:8px;cursor:pointer;transition:background .2s;">Voir les anciens sujets &rarr;</button>
+</div>
+
 <div class="nav-bottom">
   <button class="nav-btn prev" onclick="window.location.href='./manuel_interactif_anglais_chapitre4_conjugaison.html';">&larr; Chapitre 4 : conjugaison</button>
   <button class="nav-btn next" onclick="window.location.href='./manuel_interactif_anglais_chapitre6_traduction.html';">Chapitre 6 : vocabulaire ENA &rarr;</button>
@@ -443,7 +449,7 @@ footer{text-align:center;padding:20px 0 50px;font-size:.8rem;color:var(--text-mu
 
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 let score=0,total=10,answered=0;
 function check(btn,isCorrect){
   const block=btn.closest('.quiz-block');
@@ -465,10 +471,4 @@ function showBilan(){
   if(pct>=80)msg='<strong>'+score+'/'+total+' ('+pct+'%) — Excellent.</strong> Les prépositions ne te piégeront plus. Tu peux passer au chapitre 6 sur le vocabulaire du secteur public — le vocabulaire qui tombe directement au concours ENA.';
   else if(pct>=50)msg='<strong>'+score+'/'+total+' ('+pct+'%) — Correct, mais les prépositions restent traîtres.</strong> Relis le tableau récapitulatif et mémorise surtout les expressions fixes (at home, interested in, on the phone). Ce sont elles qui tombent le plus souvent.';
   else msg='<strong>'+score+'/'+total+' ('+pct+'%) — Les prépositions demandent du temps.</strong> C\'est le sujet le plus contre-intuitif pour un francophone. Relis ce chapitre avec le tableau récapitulatif sous les yeux, et fais une fiche avec les 10 expressions fixes les plus courantes. En une semaine, tu verras la différence.';
-  t.innerHTML=msg;b.style.display='block';b.scrollIntoView({behavior:'smooth',block:'center'});
-}
-function toggleReveal(btn){btn.classList.toggle('open');btn.nextElementSibling.classList.toggle('open')}
-</script>
-
-</body>
-</html>
+  t.inn
