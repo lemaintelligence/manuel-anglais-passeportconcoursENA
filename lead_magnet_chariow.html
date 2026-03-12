@@ -281,11 +281,11 @@ tbody tr:hover { background: var(--bg-warm); }
 .reveal-btn .arrow { transition: transform .3s; font-size: .75rem; }
 .reveal-btn.open .arrow { transform: rotate(90deg); }
 .reveal-content { max-height: 0; overflow: hidden; transition: max-height .5s ease, padding .3s; padding: 0 18px; background: var(--bg-white); border-radius: 0 0 10px 10px; }
-.reveal-content.open { max-height: 900px; padding: 18px; border: 1px solid var(--border); border-top: none; margin-top: -4px; }
+.reveal-content.open { max-height: 4000px; padding: 18px; border: 1px solid var(--border); border-top: none; margin-top: -4px; }
 .reveal-content p { font-size: .95rem; color: var(--text-light); margin-bottom: 8px; line-height: 1.7; }
 
 /* Score bar */
-.score-bar { position: sticky; top: 0; z-index: 100; background: rgba(250,248,245,.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); padding: 10px 24px; display: flex; justify-content: space-between; align-items: center; font-size: .85rem; }
+.score-bar { position: sticky; top: 44px; z-index: 100; background: rgba(250,248,245,.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); padding: 10px 24px; display: flex; justify-content: space-between; align-items: center; font-size: .85rem; }
 .score-bar .left { font-weight: 600; color: var(--text); }
 .score-bar .right { color: var(--brand-navy); font-weight: 700; font-size: .8rem; }
 
@@ -314,6 +314,7 @@ footer strong { color: var(--accent); font-weight: 700; }
   @media print {
     .save-bar, .score-bar, .nav-bottom { display: none !important; }
     body { background: #fff !important; }
+  }
 
   /* ===== TOPBAR : BOUTON SAUVEGARDER + MENU ===== */
   .topbar {
@@ -748,7 +749,6 @@ function toggleReveal(btn) {
   btn.classList.toggle('open');
   btn.nextElementSibling.classList.toggle('open');
 }
-});
 </script>
 
 </body>
