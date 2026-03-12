@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapitre 5 - Les pr&eacute;positions on, at, in.</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf8f5;--bg-white:#fff;--bg-warm:#f5f0ea;--text:#2c2420;--text-light:#6b5e54;--text-muted:#9a8d82;--accent:#c4560a;--accent-light:#e8874a;--accent-bg:#fef3ea;--green:#2a7d4f;--green-bg:#edf7f0;--blue:#1a5f8a;--blue-bg:#eaf3fa;--red:#b83232;--red-bg:#fdeaea;--border:#e8e0d8;--shadow:0 1px 3px rgba(44,36,32,.06)}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.8;-webkit-font-smoothing:antialiased}.page{max-width:720px;margin:0 auto;padding:0 24px}
+header{padding:60px 0 40px;border-bottom:1px solid var(--border);margin-bottom:50px}header .tag{display:inline-block;font-size:.7rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);background:var(--accent-bg);padding:5px 14px;border-radius:4px;margin-bottom:20px}header h1{font-family:'Source Serif 4',serif;font-size:clamp(1.8rem,5vw,2.6rem);font-weight:700;color:var(--text);line-height:1.25;margin-bottom:14px}header .subtitle{font-size:1.05rem;color:var(--text-light);max-width:580px;line-height:1.7}
+.section{margin-bottom:50px}.section h2{font-family:'Source Serif 4',serif;font-size:1.45rem;font-weight:700;color:var(--text);margin-bottom:14px;line-height:1.3}.section h3{font-family:'Source Serif 4',serif;font-size:1.15rem;font-weight:600;color:var(--text);margin:22px 0 10px}.section p{font-size:1.02rem;color:var(--text);margin-bottom:14px}.section p.light{color:var(--text-light)}strong{font-weight:600}em{font-style:italic;color:var(--text-light)}
+.encart{background:var(--bg-white);border:1px solid var(--border);border-radius:10px;padding:22px 26px;margin:22px 0;box-shadow:var(--shadow)}.encart.accent{background:var(--accent-bg);border-color:rgba(196,86,10,.15)}.encart.green{background:var(--green-bg);border-color:rgba(42,125,79,.15)}.encart.blue{background:var(--blue-bg);border-color:rgba(26,95,138,.15)}.encart.red{background:var(--red-bg);border-color:rgba(184,50,50,.15)}.encart-label{font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;display:block}.encart.accent .encart-label{color:var(--accent)}.encart.green .encart-label{color:var(--green)}.encart.blue .encart-label{color:var(--blue)}.encart.red .encart-label{color:var(--red)}.encart p{font-size:.98rem;margin-bottom:8px;line-height:1.7}.encart p:last-child{margin-bottom:0}
+.table-wrap{overflow-x:auto;margin:20px 0}table{width:100%;border-collapse:collapse;font-size:.95rem;background:var(--bg-white);border-radius:10px;overflow:hidden;box-shadow:var(--shadow)}thead{background:var(--text);color:#fff}th{padding:12px 16px;text-align:left;font-weight:600;font-size:.85rem;letter-spacing:.5px}td{padding:11px 16px;border-bottom:1px solid var(--border)}tr:last-child td{border-bottom:none}tbody tr:hover{background:var(--bg-warm)}td code{font-family:'DM Sans',sans-serif;font-weight:600;color:var(--accent);background:var(--accent-bg);padding:2px 7px;border-radius:4px;font-size:.9rem}
+.ex{background:var(--bg-white);border-left:3px solid var(--border);padding:14px 20px;margin:14px 0;border-radius:0 8px 8px 0;font-size:.97rem}.ex .en{font-weight:600;color:var(--text)}.ex .fr{color:var(--text-muted);font-style:italic;margin-left:4px}.ex.correct{border-left-color:var(--green);background:var(--green-bg)}.ex.wrong{border-left-color:var(--red);background:var(--red-bg)}
+.quiz-block{background:var(--bg-white);border:1px solid var(--border);border-radius:10px;padding:26px;margin:28px 0;box-shadow:var(--shadow)}.quiz-label{font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;display:block}.quiz-question{font-family:'Source Serif 4',serif;font-size:1.05rem;font-weight:600;margin-bottom:16px;line-height:1.5}.quiz-options{display:flex;flex-direction:column;gap:8px;margin-bottom:10px}.quiz-option{display:block;width:100%;text-align:left;padding:12px 18px;font-family:'DM Sans',sans-serif;font-size:.95rem;color:var(--text);background:var(--bg);border:1.5px solid var(--border);border-radius:8px;cursor:pointer;transition:all .2s;line-height:1.5}.quiz-option:hover:not(:disabled){border-color:var(--accent-light);background:var(--accent-bg)}.quiz-option.ok{border-color:var(--green);background:var(--green-bg);color:var(--green);font-weight:600;cursor:default}.quiz-option.ko{border-color:var(--red);background:var(--red-bg);color:var(--red);cursor:default;text-decoration:line-through}.quiz-option.show-ok{border-color:var(--green);background:var(--green-bg);color:var(--green);font-weight:600;cursor:default}.quiz-option:disabled{cursor:default}.quiz-fb{font-size:.92rem;padding:14px 18px;border-radius:8px;display:none;line-height:1.65;margin-top:8px}.quiz-fb.show{display:block}.quiz-fb.correct{background:var(--green-bg);color:var(--green)}.quiz-fb.wrong{background:var(--red-bg);color:var(--red)}
+.reveal-block{margin:20px 0}.reveal-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:600;color:var(--accent);background:var(--accent-bg);border:1.5px solid rgba(196,86,10,.2);border-radius:8px;cursor:pointer;transition:all .2s}.reveal-btn:hover{background:rgba(196,86,10,.12)}.reveal-btn .arrow{transition:transform .3s;font-size:.75rem}.reveal-btn.open .arrow{transform:rotate(90deg)}.reveal-content{max-height:0;overflow:hidden;transition:max-height .5s ease,padding .3s;padding:0 18px;background:var(--bg-white);border-radius:0 0 10px 10px}.reveal-content.open{max-height:3000px;padding:18px;border:1px solid var(--border);border-top:none;margin-top:-4px}.reveal-content p{font-size:.95rem;color:var(--text-light);margin-bottom:8px;line-height:1.7}
+.sep{height:1px;background:var(--border);margin:50px 0}
+.score-bar{position:sticky;top:0;z-index:100;background:rgba(250,248,245,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:10px 24px;display:flex;justify-content:space-between;align-items:center;font-size:.85rem}.score-bar .left{font-weight:600;color:var(--text)}.score-bar .right{color:var(--accent);font-weight:700}
+.tri-box{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin:20px 0}.tri-col{background:var(--bg-white);border:1px solid var(--border);border-radius:10px;padding:18px 16px;box-shadow:var(--shadow)}.tri-col h4{font-family:'Source Serif 4',serif;font-size:1rem;font-weight:700;margin-bottom:8px;text-align:center}.tri-col p{font-size:.88rem;margin-bottom:6px;line-height:1.6}.tri-col.col-on{border-top:3px solid var(--accent)}.tri-col.col-on h4{color:var(--accent)}.tri-col.col-at{border-top:3px solid var(--blue)}.tri-col.col-at h4{color:var(--blue)}.tri-col.col-in{border-top:3px solid var(--green)}.tri-col.col-in h4{color:var(--green)}
+.nav-bottom{display:flex;justify-content:space-between;align-items:center;padding:30px 0;margin-top:40px;border-top:1px solid var(--border)}.nav-btn{padding:12px 28px;font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:700;border-radius:8px;text-decoration:none;cursor:pointer;transition:all .2s;border:none}.nav-btn.prev{color:var(--text-light);background:var(--bg-warm);border:1px solid var(--border)}.nav-btn.prev:hover{background:var(--border)}.nav-btn.next{color:#fff;background:var(--accent)}.nav-btn.next:hover{background:#a84808;transform:translateY(-1px);box-shadow:0 4px 12px rgba(196,86,10,.25)}
+footer{text-align:center;padding:20px 0 50px;font-size:.8rem;color:var(--text-muted)}footer strong{color:var(--accent);font-weight:700}
+@media(max-width:600px){header{padding:40px 0 30px}.page{padding:0 16px}table{font-size:.85rem}th,td{padding:9px 12px}.tri-box{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="score-bar">
+  <span class="left">Chapitre 5 &mdash; Les pr&eacute;positions</span>
+  <span class="right" id="scoreDisplay">0 / 10 bonnes r&eacute;ponses</span>
+</div>
+
+<div class="page">
+
+<header>
+  <span class="tag">Chapitre 5</span>
+  <h1>Les pr&eacute;positions : on, at, in.</h1>
+  <p class="subtitle">
+    Le cauchemar des francophones, d&eacute;mystifi&eacute; une fois pour toutes.
+    Pas de formule magique, mais des r&egrave;gles claires qui couvrent 90% des cas du concours.
+  </p>
+</header>
+
+<!-- ============================================================ -->
+<!-- SECTION 1 : POURQUOI C'EST DIFFICILE -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Pourquoi c'est si difficile pour un francophone.</h2>
+  <p>
+    En fran&ccedil;ais, on dit "je suis <strong>&agrave;</strong> Abidjan", "je suis <strong>&agrave;</strong> la maison", "je suis <strong>dans</strong> la voiture". Un seul mot fran&ccedil;ais ("&agrave;") peut se traduire par <strong>on</strong>, <strong>at</strong> ou <strong>in</strong> selon le contexte. C'est pour &ccedil;a que tu te trompes : tu traduis mot &agrave; mot depuis le fran&ccedil;ais.
+  </p>
+  <p>
+    La bonne approche, c'est d'apprendre les r&egrave;gles anglaises <strong>directement</strong>, sans passer par le fran&ccedil;ais. Ce chapitre te donne deux angles : les pr&eacute;positions pour le <strong>temps</strong> et les pr&eacute;positions pour le <strong>lieu</strong>.
+  </p>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 2 : ON / AT / IN POUR LE TEMPS -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>On, at, in pour parler du temps.</h2>
+  <p>
+    La r&egrave;gle est simple et visuelle. Pense &agrave; un entonnoir : du plus <strong>large</strong> (in) au plus <strong>pr&eacute;cis</strong> (at).
+  </p>
+
+  <div class="tri-box">
+    <div class="tri-col col-in">
+      <h4>IN</h4>
+      <p><strong>P&eacute;riodes longues</strong></p>
+      <p><em>in</em> the morning</p>
+      <p><em>in</em> summer</p>
+      <p><em>in</em> March</p>
+      <p><em>in</em> 2024</p>
+      <p><em>in</em> the 21st century</p>
+    </div>
+    <div class="tri-col col-on">
+      <h4>ON</h4>
+      <p><strong>Jours et dates</strong></p>
+      <p><em>on</em> Monday</p>
+      <p><em>on</em> Wednesdays</p>
+      <p><em>on</em> 14th July</p>
+      <p><em>on</em> Christmas Day</p>
+      <p><em>on</em> my birthday</p>
+    </div>
+    <div class="tri-col col-at">
+      <h4>AT</h4>
+      <p><strong>Heures pr&eacute;cises</strong></p>
+      <p><em>at</em> 12 p.m.</p>
+      <p><em>at</em> 5:45 p.m.</p>
+      <p><em>at</em> midnight</p>
+      <p><em>at</em> noon</p>
+      <p><em>at</em> night</p>
+    </div>
+  </div>
+
+  <div class="encart green">
+    <span class="encart-label">L'astuce infaillible</span>
+    <p><strong>IN</strong> = grande p&eacute;riode (mois, saison, ann&eacute;e, si&egrave;cle, moment de la journ&eacute;e).</p>
+    <p><strong>ON</strong> = jour pr&eacute;cis ou date.</p>
+    <p><strong>AT</strong> = heure pr&eacute;cise ou moment ponctuel.</p>
+    <p>Plus la p&eacute;riode est large, plus on "rentre dedans" &rarr; <strong>in</strong>. Plus c'est pr&eacute;cis, plus on "pointe dessus" &rarr; <strong>at</strong>.</p>
+  </div>
+
+  <div class="encart red">
+    <span class="encart-label">L'exception &agrave; retenir</span>
+    <p>On dit <strong>at night</strong> (et non <del>in night</del> ou <del>on night</del>). C'est la seule p&eacute;riode de la journ&eacute;e qui utilise "at" au lieu de "in".</p>
+    <p>Mais on dit bien : <em>in the morning, in the afternoon, in the evening</em>.</p>
+  </div>
+
+  <!-- QUIZ 1 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">"The new semester will start _____ March."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) on</button>
+      <button class="quiz-option" onclick="check(this,true)">b) in</button>
+      <button class="quiz-option" onclick="check(this,false)">c) at</button>
+      <button class="quiz-option" onclick="check(this,false)">d) by</button>
+    </div>
+    <div class="quiz-fb correct">Exact. "March" est un mois &rarr; p&eacute;riode longue &rarr; <strong>in</strong>. On utilise "in" pour les mois, les saisons, les ann&eacute;es.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>b) in</strong>. Un mois est une p&eacute;riode longue &rarr; on utilise <strong>in</strong>. "On" serait pour un jour pr&eacute;cis (on March 15th), "at" pour une heure.</div>
+  </div>
+
+  <!-- QUIZ 2 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">"I will meet you _____ 7:00 PM."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) in</button>
+      <button class="quiz-option" onclick="check(this,false)">b) on</button>
+      <button class="quiz-option" onclick="check(this,true)">c) at</button>
+      <button class="quiz-option" onclick="check(this,false)">d) for</button>
+    </div>
+    <div class="quiz-fb correct">Exact. "7:00 PM" est une heure pr&eacute;cise &rarr; <strong>at</strong>. On utilise toujours "at" devant les heures.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>c) at</strong>. Les heures pr&eacute;cises utilisent toujours <strong>at</strong> : at 7:00, at noon, at midnight.</div>
+  </div>
+
+  <!-- QUIZ 3 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">"Let's meet _____ Wednesday."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,true)">a) on</button>
+      <button class="quiz-option" onclick="check(this,false)">b) in</button>
+      <button class="quiz-option" onclick="check(this,false)">c) at</button>
+      <button class="quiz-option" onclick="check(this,false)">d) to</button>
+    </div>
+    <div class="quiz-fb correct">Exact. "Wednesday" est un jour de la semaine &rarr; <strong>on</strong>. Tous les jours et toutes les dates utilisent "on".</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>a) on</strong>. Les jours de la semaine prennent toujours <strong>on</strong> : on Monday, on Wednesday, on Friday.</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 3 : ON / AT / IN POUR LE LIEU -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>On, at, in pour parler du lieu.</h2>
+  <p>
+    La m&ecirc;me logique s'applique pour les lieux, mais avec une image diff&eacute;rente. Pense &agrave; la relation physique entre toi et l'endroit.
+  </p>
+
+  <h3>ON = sur une surface.</h3>
+  <p>"On" indique que quelque chose est <strong>pos&eacute; sur une surface</strong> ou en contact avec elle.</p>
+  <div class="ex"><span class="en">I put an egg <strong>on</strong> the kitchen table.</span> <span class="fr">(sur la table)</span></div>
+  <div class="ex"><span class="en">The paper is <strong>on</strong> my desk.</span> <span class="fr">(sur le bureau)</span></div>
+  <div class="ex"><span class="en">He kissed me <strong>on</strong> the cheek.</span> <span class="fr">(sur la joue)</span></div>
+
+  <p>On utilise aussi "on" pour les appareils et moyens de transport ouverts :</p>
+  <div class="ex"><span class="en">He is <strong>on</strong> the phone.</span> <span class="fr">(au t&eacute;l&eacute;phone)</span></div>
+  <div class="ex"><span class="en">She has been <strong>on</strong> the computer since this morning.</span></div>
+  <div class="ex"><span class="en">I'm <strong>on</strong> the bus.</span> <span class="fr">(dans le bus &mdash; en anglais c'est "on")</span></div>
+
+  <h3>AT = un point pr&eacute;cis.</h3>
+  <p>"At" indique qu'on est &agrave; un <strong>endroit pr&eacute;cis</strong>, vu comme un point sur une carte.</p>
+  <div class="ex"><span class="en">There is a party <strong>at</strong> the club house.</span></div>
+  <div class="ex"><span class="en">We saw a game <strong>at</strong> the stadium.</span></div>
+  <div class="ex"><span class="en">I'll meet you <strong>at</strong> the entrance.</span></div>
+
+  <p>On utilise aussi "at" pour les adresses e-mail et les activit&eacute;s :</p>
+  <div class="ex"><span class="en">Please email me <strong>at</strong> abc@defg.com.</span></div>
+  <div class="ex"><span class="en">He is good <strong>at</strong> drawing.</span> <span class="fr">(bon en dessin)</span></div>
+  <div class="ex"><span class="en">He laughed <strong>at</strong> my acting.</span> <span class="fr">(il a ri de mon jeu)</span></div>
+
+  <h3>IN = &agrave; l'int&eacute;rieur.</h3>
+  <p>"In" indique qu'on est <strong>&agrave; l'int&eacute;rieur</strong> d'un espace ferm&eacute; ou d&eacute;limit&eacute;.</p>
+  <div class="ex"><span class="en">She looked me directly <strong>in</strong> the eyes.</span></div>
+  <div class="ex"><span class="en">I am currently staying <strong>in</strong> a hotel.</span></div>
+  <div class="ex"><span class="en">My hometown is Los Angeles, which is <strong>in</strong> California.</span></div>
+
+  <p>On utilise aussi "in" pour les formes, les couleurs et les croyances :</p>
+  <div class="ex"><span class="en">This painting is mostly <strong>in</strong> blue.</span> <span class="fr">(en bleu)</span></div>
+  <div class="ex"><span class="en">The students stood <strong>in</strong> a circle.</span> <span class="fr">(en cercle)</span></div>
+  <div class="ex"><span class="en">I believe <strong>in</strong> the next life.</span> <span class="fr">(je crois en...)</span></div>
+
+  <div class="encart accent">
+    <span class="encart-label">Les pi&egrave;ges lieu les plus fr&eacute;quents</span>
+    <p><strong>At home</strong> (et non <del>in home</del> ou <del>at the home</del>). Pas d'article.</p>
+    <p><strong>At work</strong>, <strong>at school</strong>, <strong>at the office</strong>.</p>
+    <p><strong>In the car</strong> (on est &agrave; l'int&eacute;rieur) mais <strong>on the bus / on the train / on the plane</strong> (transports en commun ouverts).</p>
+    <p><strong>In the street</strong> (anglais britannique) mais <strong>on the street</strong> (anglais am&eacute;ricain). Les deux sont accept&eacute;s.</p>
+  </div>
+
+  <!-- QUIZ 4 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">"She was sitting _____ her car."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) on</button>
+      <button class="quiz-option" onclick="check(this,false)">b) at</button>
+      <button class="quiz-option" onclick="check(this,true)">c) in</button>
+      <button class="quiz-option" onclick="check(this,false)">d) by</button>
+    </div>
+    <div class="quiz-fb correct">Exact. On est <strong>&agrave; l'int&eacute;rieur</strong> d'une voiture &rarr; <strong>in</strong>. Attention : pour le bus, le train ou l'avion, on utilise "on" (parce qu'on peut se tenir debout et marcher &agrave; l'int&eacute;rieur).</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>c) in</strong>. On est enferm&eacute; dans une voiture &rarr; "in the car". La r&egrave;gle : espace ferm&eacute; et petit = in. Transport en commun grand et ouvert = on.</div>
+  </div>
+
+  <!-- QUIZ 5 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">"Will you be _____ home today?"</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,true)">a) at</button>
+      <button class="quiz-option" onclick="check(this,false)">b) in</button>
+      <button class="quiz-option" onclick="check(this,false)">c) on</button>
+      <button class="quiz-option" onclick="check(this,false)">d) to</button>
+    </div>
+    <div class="quiz-fb correct">Exact. "At home" est une expression fig&eacute;e. Pas d'article, pas de "in". On dit <strong>at home</strong>, <strong>at work</strong>, <strong>at school</strong>.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>a) at</strong>. "At home" est une expression &agrave; conna&icirc;tre par coeur. On dit aussi "at work", "at school". Jamais "in home".</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 4 : TABLEAU RECAPITULATIF -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Le tableau r&eacute;capitulatif complet.</h2>
+  <p class="light">Ce tableau concentre tout ce que tu dois savoir. Imprime-le dans ta m&eacute;moire.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Usage</th><th>ON</th><th>AT</th><th>IN</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Temps</strong></td><td>Jours, dates (<em>on Monday, on 14th July</em>)</td><td>Heures, moments ponctuels (<em>at 5pm, at night, at noon</em>)</td><td>P&eacute;riodes longues (<em>in March, in summer, in 2024, in the morning</em>)</td></tr>
+        <tr><td><strong>Lieu : surface</strong></td><td>Sur (<em>on the table, on the wall</em>)</td><td>&mdash;</td><td>&mdash;</td></tr>
+        <tr><td><strong>Lieu : point</strong></td><td>&mdash;</td><td>Point pr&eacute;cis (<em>at the door, at the station</em>)</td><td>&mdash;</td></tr>
+        <tr><td><strong>Lieu : int&eacute;rieur</strong></td><td>&mdash;</td><td>&mdash;</td><td>Espace ferm&eacute; (<em>in the room, in the car, in Paris</em>)</td></tr>
+        <tr><td><strong>Transport</strong></td><td>Bus, train, avion (<em>on the bus</em>)</td><td>&mdash;</td><td>Voiture, taxi (<em>in the car</em>)</td></tr>
+        <tr><td><strong>Appareils</strong></td><td>T&eacute;l&eacute;phone, ordi (<em>on the phone</em>)</td><td>&mdash;</td><td>&mdash;</td></tr>
+        <tr><td><strong>Expressions fixes</strong></td><td><em>on sale, on fire, on time</em></td><td><em>at home, at work, at school</em></td><td><em>in love, in a hurry, in trouble</em></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 5 : LES AUTRES PREPOSITIONS PIEGE -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Les autres pr&eacute;positions qui tombent au concours.</h2>
+  <p>Au-del&agrave; de on/at/in, certaines pr&eacute;positions reviennent r&eacute;guli&egrave;rement dans les QCM de l'ENA.</p>
+
+  <h3>Since vs for (rappel du chapitre 4).</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Pr&eacute;position</th><th>Sens</th><th>Exemple</th></tr></thead>
+      <tbody>
+        <tr><td><code>since</code></td><td>Depuis un <strong>moment pr&eacute;cis</strong></td><td><em>I have lived here <strong>since</strong> 2018.</em></td></tr>
+        <tr><td><code>for</code></td><td>Pendant une <strong>dur&eacute;e</strong></td><td><em>I have lived here <strong>for</strong> six years.</em></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>By vs until.</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Pr&eacute;position</th><th>Sens</th><th>Exemple</th></tr></thead>
+      <tbody>
+        <tr><td><code>by</code></td><td>Au plus tard &agrave; / avant la limite</td><td><em>I'll finish <strong>by</strong> Friday.</em> (avant vendredi inclus)</td></tr>
+        <tr><td><code>until</code></td><td>Jusqu'&agrave; (une action continue)</td><td><em>I will wait <strong>until</strong> 6:30.</em></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>From vs of vs about.</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Pr&eacute;position</th><th>Sens</th><th>Exemple</th></tr></thead>
+      <tbody>
+        <tr><td><code>from</code></td><td>Origine, provenance</td><td><em>The professor <strong>from</strong> South Africa amazed everyone.</em></td></tr>
+        <tr><td><code>of</code></td><td>Appartenance, composition</td><td><em>What are the main ingredients <strong>of</strong> this casserole?</em></td></tr>
+        <tr><td><code>about</code></td><td>Au sujet de, concernant</td><td><em>What <strong>about</strong> having dinner now?</em></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Les expressions "verbe + pr&eacute;position" &agrave; conna&icirc;tre.</h3>
+  <p class="light">Ces combinaisons sont fig&eacute;es. Elles tombent tr&egrave;s souvent au concours.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Expression</th><th>Sens</th><th>Exemple</th></tr></thead>
+      <tbody>
+        <tr><td><code>interested in</code></td><td>Int&eacute;ress&eacute; par</td><td><em>I am not interested <strong>in</strong> buying a car.</em></td></tr>
+        <tr><td><code>look forward to</code></td><td>Avoir h&acirc;te de</td><td><em>I look forward <strong>to</strong> hearing from you.</em></td></tr>
+        <tr><td><code>good at</code></td><td>Bon en / dou&eacute; pour</td><td><em>He's good <strong>at</strong> playing video games.</em></td></tr>
+        <tr><td><code>named after</code></td><td>Nomm&eacute; d'apr&egrave;s</td><td><em>My friend John is named <strong>after</strong> his grandfather.</em></td></tr>
+        <tr><td><code>respond to ... by</code></td><td>R&eacute;pondre &agrave; ... en (faisant)</td><td><em>He responded to the demands <strong>by</strong> throwing a tantrum.</em></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="encart accent">
+    <span class="encart-label">Pi&egrave;ge : "to" comme pr&eacute;position (pas infinitif)</span>
+    <p>Dans "I look forward <strong>to hearing</strong>", le "to" est une pr&eacute;position, pas la marque de l'infinitif. C'est pour &ccedil;a qu'on met <strong>-ing</strong> apr&egrave;s (hearing, et non <del>hear</del>). M&ecirc;me chose pour : <em>I'm used <strong>to working</strong> late.</em></p>
+  </div>
+
+  <!-- QUIZ 6 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">"My parents have been married _____ forty-nine years."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) since</button>
+      <button class="quiz-option" onclick="check(this,true)">b) for</button>
+      <button class="quiz-option" onclick="check(this,false)">c) until</button>
+      <button class="quiz-option" onclick="check(this,false)">d) during</button>
+    </div>
+    <div class="quiz-fb correct">Exact. "Forty-nine years" est une <strong>dur&eacute;e</strong> &rarr; <strong>for</strong>. Si c'&eacute;tait un moment pr&eacute;cis (since 1975), on utiliserait "since".</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>b) for</strong>. "Forty-nine years" est une dur&eacute;e &rarr; for. "Since" s'utilise avec un point de d&eacute;part pr&eacute;cis (since 1975, since last Monday).</div>
+  </div>
+
+  <!-- QUIZ 7 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">"I will wait _____ 6:30, but then I'm going home."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) from</button>
+      <button class="quiz-option" onclick="check(this,false)">b) at</button>
+      <button class="quiz-option" onclick="check(this,true)">c) until</button>
+      <button class="quiz-option" onclick="check(this,false)">d) by</button>
+    </div>
+    <div class="quiz-fb correct">Exact. L'action d'attendre <strong>continue jusqu'&agrave;</strong> 6h30 &rarr; <strong>until</strong>. "By" signifierait "au plus tard &agrave;" (une limite, pas une action continue).</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>c) until</strong>. "Until" indique qu'une action se poursuit jusqu'&agrave; un moment donn&eacute;. "By" indiquerait une date limite pour terminer quelque chose.</div>
+  </div>
+
+  <!-- QUIZ 8 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">"I am not interested _____ buying a new car now."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) to</button>
+      <button class="quiz-option" onclick="check(this,false)">b) for</button>
+      <button class="quiz-option" onclick="check(this,true)">c) in</button>
+      <button class="quiz-option" onclick="check(this,false)">d) about</button>
+    </div>
+    <div class="quiz-fb correct">Exact. "Interested" est toujours suivi de <strong>in</strong>. C'est une combinaison fixe &agrave; m&eacute;moriser : interested in + nom ou -ing.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>c) in</strong>. "Interested in" est une expression fig&eacute;e. Attention : apr&egrave;s "in" (pr&eacute;position), le verbe prend la forme -ing : interested in <strong>buying</strong>.</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- QUIZ FINAL -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Quiz de fin de chapitre.</h2>
+  <p class="light">Deux derni&egrave;res questions pour consolider le tout.</p>
+
+  <!-- QUIZ 9 -->
+  <div class="quiz-block">
+    <span class="quiz-label">Question 9 sur 10</span>
+    <p class="quiz-question">"The teacher wrote something _____ the board."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) at</button>
+      <button class="quiz-option" onclick="check(this,false)">b) in</button>
+      <button class="quiz-option" onclick="check(this,true)">c) on</button>
+      <button class="quiz-option" onclick="check(this,false)">d) to</button>
+    </div>
+    <div class="quiz-fb correct">Exact. Le tableau est une <strong>surface</strong> &rarr; <strong>on</strong>. On &eacute;crit <strong>on</strong> the board, <strong>on</strong> the wall, <strong>on</strong> the paper.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>c) on</strong>. Le tableau est une surface plane sur laquelle on &eacute;crit &rarr; "on the board". M&ecirc;me logique que "on the wall", "on a piece of paper".</div>
+  </div>
+
+  <!-- QUIZ 10 -->
+  <div class="quiz-block">
+    <span class="quiz-label">Question 10 sur 10</span>
+    <p class="quiz-question">"I met John _____ my friend's party."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) in</button>
+      <button class="quiz-option" onclick="check(this,true)">b) at</button>
+      <button class="quiz-option" onclick="check(this,false)">c) on</button>
+      <button class="quiz-option" onclick="check(this,false)">d) into</button>
+    </div>
+    <div class="quiz-fb correct">Exact. Une f&ecirc;te est un <strong>&eacute;v&eacute;nement</strong> (un point pr&eacute;cis dans le temps et l'espace) &rarr; <strong>at</strong>. On dit "at a party", "at a concert", "at a meeting".</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>b) at</strong>. Les &eacute;v&eacute;nements sont des points pr&eacute;cis &rarr; "at". On dit : at a party, at a concert, at a wedding, at a meeting.</div>
+  </div>
+</section>
+
+<!-- BILAN -->
+<section class="section" id="bilan" style="display:none;">
+  <div class="encart green">
+    <span class="encart-label">Ton bilan du chapitre 5</span>
+    <p id="bilan-text"></p>
+  </div>
+</section>
+
+<!-- RESUME -->
+<section class="section">
+  <h2>R&eacute;sum&eacute; du chapitre.</h2>
+  <div class="reveal-block">
+    <button class="reveal-btn" onclick="toggleReveal(this)">
+      <span class="arrow">&#9654;</span> Afficher le r&eacute;sum&eacute; complet
+    </button>
+    <div class="reveal-content">
+      <p><strong>Temps &mdash; IN :</strong> p&eacute;riodes longues (mois, saisons, ann&eacute;es, moments de la journ&eacute;e sauf "night"). In March, in summer, in the morning.</p>
+      <p><strong>Temps &mdash; ON :</strong> jours et dates. On Monday, on 14th July, on Christmas Day.</p>
+      <p><strong>Temps &mdash; AT :</strong> heures pr&eacute;cises et moments ponctuels. At 5pm, at midnight, at night, at noon.</p>
+      <p><strong>Lieu &mdash; ON :</strong> surface (on the table), appareils (on the phone), transports ouverts (on the bus).</p>
+      <p><strong>Lieu &mdash; AT :</strong> point pr&eacute;cis (at the door, at the station), &eacute;v&eacute;nements (at a party), expressions fixes (at home, at work, at school).</p>
+      <p><strong>Lieu &mdash; IN :</strong> int&eacute;rieur (in the room, in the car), villes/pays (in Paris, in California), formes/couleurs (in blue, in a circle).</p>
+      <p><strong>Since</strong> = depuis un moment pr&eacute;cis. <strong>For</strong> = pendant une dur&eacute;e. <strong>Until</strong> = jusqu'&agrave; (action continue). <strong>By</strong> = au plus tard &agrave; (limite).</p>
+      <p><strong>Expressions fig&eacute;es :</strong> interested in, good at, look forward to + -ing, named after, respond by + -ing.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Navigation -->
+<div class="nav-bottom">
+  <button class="nav-btn prev" onclick="window.location.href='./manuel_interactif_anglais_chapitre4_conjugaison.html';">&larr; Chapitre 4 : conjugaison</button>
+  <button class="nav-btn next" onclick="window.location.href='./manuel_interactif_anglais_chapitre6_traduction.html';">Chapitre 6 : vocabulaire ENA &rarr;</button>
+</div>
+
+<footer>
+  <p><strong>Passeport Concours</strong> &mdash; Anglais ENA 2026 &mdash; Chapitre 5.</p>
+</footer>
+
+</div>
+
+<script>
+let score=0,total=10,answered=0;
+function check(btn,isCorrect){
+  const block=btn.closest('.quiz-block');
+  if(block.dataset.done)return;
+  block.dataset.done='1';
+  const opts=block.querySelectorAll('.quiz-option');
+  const fbs=block.querySelectorAll('.quiz-fb');
+  opts.forEach(o=>o.disabled=true);
+  if(isCorrect){btn.classList.add('ok');fbs[0].classList.add('show');score++}
+  else{btn.classList.add('ko');fbs[1].classList.add('show');opts.forEach(o=>{const h=o.getAttribute('onclick');if(h&&h.includes('true'))o.classList.add('show-ok')})}
+  answered++;
+  document.getElementById('scoreDisplay').textContent=score+' / '+total+' bonnes réponses';
+  if(answered===total)setTimeout(showBilan,500);
+}
+function showBilan(){
+  const b=document.getElementById('bilan'),t=document.getElementById('bilan-text');
+  const pct=Math.round(score/total*100);
+  let msg='';
+  if(pct>=80)msg='<strong>'+score+'/'+total+' ('+pct+'%) — Excellent.</strong> Les prépositions ne te piégeront plus. Tu peux passer au chapitre 6 sur le vocabulaire du secteur public — le vocabulaire qui tombe directement au concours ENA.';
+  else if(pct>=50)msg='<strong>'+score+'/'+total+' ('+pct+'%) — Correct, mais les prépositions restent traîtres.</strong> Relis le tableau récapitulatif et mémorise surtout les expressions fixes (at home, interested in, on the phone). Ce sont elles qui tombent le plus souvent.';
+  else msg='<strong>'+score+'/'+total+' ('+pct+'%) — Les prépositions demandent du temps.</strong> C\'est le sujet le plus contre-intuitif pour un francophone. Relis ce chapitre avec le tableau récapitulatif sous les yeux, et fais une fiche avec les 10 expressions fixes les plus courantes. En une semaine, tu verras la différence.';
+  t.innerHTML=msg;b.style.display='block';b.scrollIntoView({behavior:'smooth',block:'center'});
+}
+function toggleReveal(btn){btn.classList.toggle('open');btn.nextElementSibling.classList.toggle('open')}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapitre 1 - Les bases de la grammaire anglaise.</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf8f5;--bg-white:#fff;--bg-warm:#f5f0ea;--text:#2c2420;--text-light:#6b5e54;--text-muted:#9a8d82;--accent:#c4560a;--accent-light:#e8874a;--accent-bg:#fef3ea;--green:#2a7d4f;--green-bg:#edf7f0;--blue:#1a5f8a;--blue-bg:#eaf3fa;--red:#b83232;--red-bg:#fdeaea;--border:#e8e0d8;--shadow:0 1px 3px rgba(44,36,32,.06)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.8;-webkit-font-smoothing:antialiased}
+.page{max-width:720px;margin:0 auto;padding:0 24px}
+header{padding:60px 0 40px;border-bottom:1px solid var(--border);margin-bottom:50px}
+header .tag{display:inline-block;font-size:.7rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);background:var(--accent-bg);padding:5px 14px;border-radius:4px;margin-bottom:20px}
+header h1{font-family:'Source Serif 4',serif;font-size:clamp(1.8rem,5vw,2.6rem);font-weight:700;color:var(--text);line-height:1.25;margin-bottom:14px}
+header .subtitle{font-size:1.05rem;color:var(--text-light);max-width:580px;line-height:1.7}
+.section{margin-bottom:50px}
+.section h2{font-family:'Source Serif 4',serif;font-size:1.45rem;font-weight:700;color:var(--text);margin-bottom:14px;line-height:1.3}
+.section h3{font-family:'Source Serif 4',serif;font-size:1.15rem;font-weight:600;color:var(--text);margin:22px 0 10px}
+.section p{font-size:1.02rem;color:var(--text);margin-bottom:14px}
+.section p.light{color:var(--text-light)}
+strong{font-weight:600}
+em{font-style:italic;color:var(--text-light)}
+
+/* Encarts */
+.encart{background:var(--bg-white);border:1px solid var(--border);border-radius:10px;padding:22px 26px;margin:22px 0;box-shadow:var(--shadow)}
+.encart.accent{background:var(--accent-bg);border-color:rgba(196,86,10,.15)}
+.encart.green{background:var(--green-bg);border-color:rgba(42,125,79,.15)}
+.encart.blue{background:var(--blue-bg);border-color:rgba(26,95,138,.15)}
+.encart.red{background:var(--red-bg);border-color:rgba(184,50,50,.15)}
+.encart-label{font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;display:block}
+.encart.accent .encart-label{color:var(--accent)}
+.encart.green .encart-label{color:var(--green)}
+.encart.blue .encart-label{color:var(--blue)}
+.encart.red .encart-label{color:var(--red)}
+.encart p{font-size:.98rem;margin-bottom:8px;line-height:1.7}
+.encart p:last-child{margin-bottom:0}
+
+/* Tableaux */
+.table-wrap{overflow-x:auto;margin:20px 0}
+table{width:100%;border-collapse:collapse;font-size:.95rem;background:var(--bg-white);border-radius:10px;overflow:hidden;box-shadow:var(--shadow)}
+thead{background:var(--text);color:#fff}
+th{padding:12px 16px;text-align:left;font-weight:600;font-size:.85rem;letter-spacing:.5px}
+td{padding:11px 16px;border-bottom:1px solid var(--border)}
+tr:last-child td{border-bottom:none}
+tbody tr:hover{background:var(--bg-warm)}
+td code{font-family:'DM Sans',sans-serif;font-weight:600;color:var(--accent);background:var(--accent-bg);padding:2px 7px;border-radius:4px;font-size:.9rem}
+
+/* Exemples en ligne */
+.ex{background:var(--bg-white);border-left:3px solid var(--border);padding:14px 20px;margin:14px 0;border-radius:0 8px 8px 0;font-size:.97rem}
+.ex .en{font-weight:600;color:var(--text)}
+.ex .fr{color:var(--text-muted);font-style:italic;margin-left:4px}
+.ex.correct{border-left-color:var(--green);background:var(--green-bg)}
+.ex.wrong{border-left-color:var(--red);background:var(--red-bg);text-decoration:line-through;color:var(--text-muted)}
+
+/* Quiz */
+.quiz-block{background:var(--bg-white);border:1px solid var(--border);border-radius:10px;padding:26px;margin:28px 0;box-shadow:var(--shadow)}
+.quiz-label{font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;display:block}
+.quiz-question{font-family:'Source Serif 4',serif;font-size:1.05rem;font-weight:600;margin-bottom:16px;line-height:1.5}
+.quiz-options{display:flex;flex-direction:column;gap:8px;margin-bottom:10px}
+.quiz-option{display:block;width:100%;text-align:left;padding:12px 18px;font-family:'DM Sans',sans-serif;font-size:.95rem;color:var(--text);background:var(--bg);border:1.5px solid var(--border);border-radius:8px;cursor:pointer;transition:all .2s;line-height:1.5}
+.quiz-option:hover:not(:disabled){border-color:var(--accent-light);background:var(--accent-bg)}
+.quiz-option.ok{border-color:var(--green);background:var(--green-bg);color:var(--green);font-weight:600;cursor:default}
+.quiz-option.ko{border-color:var(--red);background:var(--red-bg);color:var(--red);cursor:default;text-decoration:line-through}
+.quiz-option.show-ok{border-color:var(--green);background:var(--green-bg);color:var(--green);font-weight:600;cursor:default}
+.quiz-option:disabled{cursor:default}
+.quiz-fb{font-size:.92rem;padding:14px 18px;border-radius:8px;display:none;line-height:1.65;margin-top:8px}
+.quiz-fb.show{display:block}
+.quiz-fb.correct{background:var(--green-bg);color:var(--green)}
+.quiz-fb.wrong{background:var(--red-bg);color:var(--red)}
+
+/* Toggle reveal */
+.reveal-block{margin:20px 0}
+.reveal-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:600;color:var(--accent);background:var(--accent-bg);border:1.5px solid rgba(196,86,10,.2);border-radius:8px;cursor:pointer;transition:all .2s}
+.reveal-btn:hover{background:rgba(196,86,10,.12)}
+.reveal-btn .arrow{transition:transform .3s;font-size:.75rem}
+.reveal-btn.open .arrow{transform:rotate(90deg)}
+.reveal-content{max-height:0;overflow:hidden;transition:max-height .5s ease,padding .3s;padding:0 18px;background:var(--bg-white);border-radius:0 0 10px 10px}
+.reveal-content.open{max-height:1500px;padding:18px;border:1px solid var(--border);border-top:none;margin-top:-4px}
+.reveal-content p{font-size:.95rem;color:var(--text-light);margin-bottom:8px;line-height:1.7}
+
+.sep{height:1px;background:var(--border);margin:50px 0}
+
+/* Score flottant */
+.score-bar{position:sticky;top:0;z-index:100;background:rgba(250,248,245,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:10px 24px;display:flex;justify-content:space-between;align-items:center;font-size:.85rem}
+.score-bar .left{font-weight:600;color:var(--text)}
+.score-bar .right{color:var(--accent);font-weight:700}
+
+/* Navigation */
+.nav-bottom{display:flex;justify-content:space-between;align-items:center;padding:30px 0;margin-top:40px;border-top:1px solid var(--border)}
+.nav-btn{padding:12px 28px;font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:700;border-radius:8px;text-decoration:none;cursor:pointer;transition:all .2s;border:none}
+.nav-btn.prev{color:var(--text-light);background:var(--bg-warm);border:1px solid var(--border)}
+.nav-btn.prev:hover{background:var(--border)}
+.nav-btn.next{color:#fff;background:var(--accent)}
+.nav-btn.next:hover{background:#a84808;transform:translateY(-1px);box-shadow:0 4px 12px rgba(196,86,10,.25)}
+
+footer{text-align:center;padding:20px 0 50px;font-size:.8rem;color:var(--text-muted)}
+footer strong{color:var(--accent);font-weight:700}
+
+@media(max-width:600px){
+  header{padding:40px 0 30px}
+  .page{padding:0 16px}
+  table{font-size:.85rem}
+  th,td{padding:9px 12px}
+}
+</style>
+</head>
+<body>
+
+<!-- Score sticky -->
+<div class="score-bar">
+  <span class="left">Chapitre 1 &mdash; Les bases</span>
+  <span class="right" id="scoreDisplay">0 / 10 bonnes r&eacute;ponses</span>
+</div>
+
+<div class="page">
+
+<header>
+  <span class="tag">Chapitre 1</span>
+  <h1>Les bases de la grammaire anglaise.</h1>
+  <p class="subtitle">
+    Avant de conjuguer ou de faire des phrases complexes, il faut conna&icirc;tre les briques &eacute;l&eacute;mentaires.
+    Ce chapitre t'explique chaque terme grammatical en fran&ccedil;ais simple, avec des exemples concrets.
+  </p>
+</header>
+
+<!-- ============================================================ -->
+<!-- SECTION 1 : LES PRONOMS PERSONNELS -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Les pronoms personnels : qui fait quoi dans la phrase.</h2>
+  <p>
+    En anglais comme en fran&ccedil;ais, les pronoms remplacent un nom pour &eacute;viter les r&eacute;p&eacute;titions.
+    La diff&eacute;rence, c'est qu'en anglais il y a <strong>deux formes</strong> : le pronom sujet (celui qui fait l'action) et le pronom compl&eacute;ment (celui qui re&ccedil;oit l'action).
+  </p>
+
+  <h3>Les pronoms sujets.</h3>
+  <p class="light">Ce sont ceux qui r&eacute;pondent &agrave; la question "qui fait l'action ?"</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Fran&ccedil;ais</th><th>Anglais</th><th>Exemple</th></tr></thead>
+      <tbody>
+        <tr><td>je</td><td><code>I</code></td><td><em>I like coffee.</em> (J'aime le caf&eacute;.)</td></tr>
+        <tr><td>tu / vous</td><td><code>you</code></td><td><em>You are smart.</em> (Tu es malin.)</td></tr>
+        <tr><td>il</td><td><code>he</code></td><td><em>He is a doctor.</em> (Il est m&eacute;decin.)</td></tr>
+        <tr><td>elle</td><td><code>she</code></td><td><em>She is clever.</em> (Elle est maligne.)</td></tr>
+        <tr><td>il / elle (chose)</td><td><code>it</code></td><td><em>It doesn't work.</em> (&Ccedil;a ne marche pas.)</td></tr>
+        <tr><td>nous</td><td><code>we</code></td><td><em>We go to school.</em> (Nous allons &agrave; l'&eacute;cole.)</td></tr>
+        <tr><td>ils / elles</td><td><code>they</code></td><td><em>They are here.</em> (Ils sont l&agrave;.)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="encart accent">
+    <span class="encart-label">Pi&egrave;ge fr&eacute;quent au concours</span>
+    <p>En fran&ccedil;ais, on dit "on aime le foot". En anglais, "on" n'existe pas. Il faut utiliser <strong>we</strong> : <em>We like soccer.</em></p>
+    <p>Autre pi&egrave;ge : <strong>I</strong> s'&eacute;crit toujours en majuscule, m&ecirc;me au milieu d'une phrase.</p>
+  </div>
+
+  <h3>Les pronoms compl&eacute;ments.</h3>
+  <p class="light">Ce sont ceux qui r&eacute;pondent &agrave; la question "l'action est faite &agrave; qui ?" Ils se placent <strong>apr&egrave;s le verbe</strong>.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Sujet</th><th>Compl&eacute;ment</th><th>Exemple</th></tr></thead>
+      <tbody>
+        <tr><td>I</td><td><code>me</code></td><td><em>John helped <strong>me</strong>.</em> (John m'a aid&eacute;.)</td></tr>
+        <tr><td>you</td><td><code>you</code></td><td><em>I told <strong>you</strong>.</em> (Je te l'avais dit.)</td></tr>
+        <tr><td>he</td><td><code>him</code></td><td><em>Give <strong>him</strong> a beer.</em> (Donne-lui une bi&egrave;re.)</td></tr>
+        <tr><td>she</td><td><code>her</code></td><td><em>She's writing to <strong>her</strong>.</em> (Elle lui &eacute;crit.)</td></tr>
+        <tr><td>it</td><td><code>it</code></td><td><em>Open <strong>it</strong>.</em> (Ouvre-le.)</td></tr>
+        <tr><td>we</td><td><code>us</code></td><td><em>That's <strong>us</strong>.</em> (C'est nous.)</td></tr>
+        <tr><td>they</td><td><code>them</code></td><td><em>The teacher gives <strong>them</strong> homework.</em></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="encart accent">
+    <span class="encart-label">"I" ou "me" ? La r&egrave;gle simple.</span>
+    <p>Si le pronom est <strong>sujet</strong> de la phrase (il fait l'action) &rarr; <strong>I</strong>.</p>
+    <p>Si le pronom est <strong>compl&eacute;ment</strong> (il re&ccedil;oit l'action) &rarr; <strong>me</strong>.</p>
+    <p><em>Tom and <strong>I</strong> are going to Paris.</em> ("I" est sujet, il fait l'action de partir.)</p>
+    <p><em>They gave the job to <strong>me</strong>.</em> ("me" est compl&eacute;ment, il re&ccedil;oit l'action.)</p>
+  </div>
+
+  <!-- QUIZ 1 -->
+  <div class="quiz-block" data-q="q1">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">Compl&egrave;te : "The manager spoke to _____ yesterday."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) they</button>
+      <button class="quiz-option" onclick="check(this,true)">b) them</button>
+      <button class="quiz-option" onclick="check(this,false)">c) their</button>
+      <button class="quiz-option" onclick="check(this,false)">d) theirs</button>
+    </div>
+    <div class="quiz-fb correct">Exact. Apr&egrave;s "spoke to" (verbe + pr&eacute;position), on a besoin d'un pronom <strong>compl&eacute;ment</strong>. "They" est un pronom sujet, "their/theirs" sont des possessifs. Seul <strong>them</strong> convient.</div>
+    <div class="quiz-fb wrong">La bonne r&eacute;ponse est <strong>b) them</strong>. Apr&egrave;s une pr&eacute;position (to, for, with...), on utilise toujours un pronom compl&eacute;ment : me, you, him, her, it, us, <strong>them</strong>.</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 2 : LES POSSESSIFS -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Les possessifs : dire "&agrave; qui appartient quoi".</h2>
+  <p>
+    En anglais, il y a deux outils pour exprimer la possession : l'<strong>adjectif possessif</strong> (qui se place devant un nom) et le <strong>pronom possessif</strong> (qui remplace le nom).
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Fran&ccedil;ais</th><th>Adjectif possessif</th><th>Pronom possessif</th></tr></thead>
+      <tbody>
+        <tr><td>mon / ma / mes</td><td><code>my</code></td><td><code>mine</code></td></tr>
+        <tr><td>ton / ta / tes</td><td><code>your</code></td><td><code>yours</code></td></tr>
+        <tr><td>son / sa / ses (il)</td><td><code>his</code></td><td><code>his</code></td></tr>
+        <tr><td>son / sa / ses (elle)</td><td><code>her</code></td><td><code>hers</code></td></tr>
+        <tr><td>son / sa / ses (chose)</td><td><code>its</code></td><td>&mdash;</td></tr>
+        <tr><td>notre / nos</td><td><code>our</code></td><td><code>ours</code></td></tr>
+        <tr><td>leur / leurs</td><td><code>their</code></td><td><code>theirs</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ex"><span class="en">This is <strong>my</strong> car.</span> <span class="fr">&rarr; adjectif possessif, suivi d'un nom (car).</span></div>
+  <div class="ex"><span class="en">This car is <strong>mine</strong>.</span> <span class="fr">&rarr; pronom possessif, il remplace "my car".</span></div>
+
+  <div class="encart red">
+    <span class="encart-label">Erreur fatale : ne jamais mettre d'apostrophe</span>
+    <p>Les pronoms possessifs ne prennent <strong>jamais</strong> d'apostrophe. On &eacute;crit <strong>its, hers, ours, theirs, yours</strong> &mdash; jamais <del>it's, her's, our's</del>.</p>
+  </div>
+
+  <h3>Le trio infernal : its / it's / their / they're / there.</h3>
+  <p>Ces confusions font perdre des points &agrave; chaque concours. Voici la r&egrave;gle d&eacute;finitive :</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Mot</th><th>Nature</th><th>Exemple</th></tr></thead>
+      <tbody>
+        <tr><td><code>its</code></td><td>Adjectif possessif de "it"</td><td><em>The dog is showing <strong>its</strong> teeth.</em></td></tr>
+        <tr><td><code>it's</code></td><td>Contraction de "it is" ou "it has"</td><td><em><strong>It's</strong> raining.</em> (= It is raining.)</td></tr>
+        <tr><td><code>their</code></td><td>Adjectif possessif de "they"</td><td><em><strong>Their</strong> homework is on the desk.</em></td></tr>
+        <tr><td><code>they're</code></td><td>Contraction de "they are"</td><td><em><strong>They're</strong> very smart.</em> (= They are.)</td></tr>
+        <tr><td><code>there</code></td><td>Adverbe de lieu (= l&agrave;-bas)</td><td><em>The book is <strong>there</strong>.</em></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="encart green">
+    <span class="encart-label">Astuce pour ne plus se tromper</span>
+    <p>Si tu peux remplacer par "it is" et que la phrase a toujours du sens &rarr; c'est <strong>it's</strong>. Sinon, c'est <strong>its</strong>.</p>
+    <p>M&ecirc;me logique : si tu peux remplacer par "they are" &rarr; c'est <strong>they're</strong>. Sinon, c'est <strong>their</strong> ou <strong>there</strong>.</p>
+  </div>
+
+  <!-- QUIZ 2 -->
+  <div class="quiz-block" data-q="q2">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">"The company increased _____ profits last year."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,true)">a) its</button>
+      <button class="quiz-option" onclick="check(this,false)">b) it's</button>
+      <button class="quiz-option" onclick="check(this,false)">c) their</button>
+      <button class="quiz-option" onclick="check(this,false)">d) there</button>
+    </div>
+    <div class="quiz-fb correct">Bravo. "The company" est singulier, donc on utilise <strong>its</strong> (possessif de "it"). "It's" serait "it is" &mdash; absurde ici. "Their" serait possible si on parlait de "they" (les entreprises au pluriel).</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>a) its</strong>. "The company" est un sujet singulier. Son possessif est "its" (sans apostrophe). Remplace par "it is" : "The company increased it is profits" &mdash; &ccedil;a ne veut rien dire, donc ce n'est pas "it's".</div>
+  </div>
+
+  <!-- QUIZ 3 -->
+  <div class="quiz-block" data-q="q3">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">"Is that your book?" &mdash; "No, it's not _____."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) my</button>
+      <button class="quiz-option" onclick="check(this,true)">b) mine</button>
+      <button class="quiz-option" onclick="check(this,false)">c) me</button>
+      <button class="quiz-option" onclick="check(this,false)">d) I</button>
+    </div>
+    <div class="quiz-fb correct">Exact. Ici, aucun nom ne suit le possessif (on ne dit pas "mine book"). On a besoin du <strong>pronom possessif</strong> "mine", qui remplace "my book".</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>b) mine</strong>. "My" est un adjectif possessif &mdash; il doit &ecirc;tre suivi d'un nom (my book). Ici, le nom est absent, donc on utilise le pronom possessif <strong>mine</strong>.</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 3 : LES VERBES MODAUX -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Les verbes modaux : exprimer une possibilit&eacute;, une obligation, un conseil.</h2>
+  <p>
+    Les verbes modaux sont des verbes sp&eacute;ciaux qu'on utilise <strong>devant un autre verbe</strong> pour exprimer une id&eacute;e de capacit&eacute;, de permission, d'obligation ou de conseil.
+    Ils fonctionnent diff&eacute;remment des verbes normaux, et c'est pour &ccedil;a qu'ils pi&egrave;gent les candidats.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Modal</th><th>Sens principal</th><th>Exemple</th></tr></thead>
+      <tbody>
+        <tr><td><code>can</code></td><td>Capacit&eacute; / permission</td><td><em>I <strong>can</strong> swim.</em> (Je sais nager.)</td></tr>
+        <tr><td><code>could</code></td><td>Capacit&eacute; pass&eacute;e / politesse</td><td><em><strong>Could</strong> you help me?</em></td></tr>
+        <tr><td><code>may</code></td><td>Permission / possibilit&eacute;</td><td><em>It <strong>may</strong> rain.</em> (Il se peut qu'il pleuve.)</td></tr>
+        <tr><td><code>might</code></td><td>Possibilit&eacute; (moins probable)</td><td><em>She <strong>might</strong> come.</em></td></tr>
+        <tr><td><code>must</code></td><td>Obligation forte</td><td><em>You <strong>must</strong> study.</em> (Tu dois &eacute;tudier.)</td></tr>
+        <tr><td><code>should</code></td><td>Conseil</td><td><em>You <strong>should</strong> rest.</em> (Tu devrais te reposer.)</td></tr>
+        <tr><td><code>will</code></td><td>Futur / volont&eacute;</td><td><em>I <strong>will</strong> call you.</em></td></tr>
+        <tr><td><code>would</code></td><td>Conditionnel / politesse</td><td><em><strong>Would</strong> you like some tea?</em></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Les quatre r&egrave;gles des modaux &agrave; retenir.</h3>
+
+  <div class="encart blue">
+    <span class="encart-label">R&egrave;gle n&deg;1 &mdash; Pas de "-s" &agrave; la 3e personne</span>
+    <p>Contrairement aux verbes normaux, les modaux ne changent <strong>jamais</strong> de forme.</p>
+    <p class="ex"><span class="en correct">He <strong>can</strong> speak Spanish.</span></p>
+    <p class="ex"><span class="en wrong"><del>He cans speak Spanish.</del></span></p>
+  </div>
+
+  <div class="encart blue">
+    <span class="encart-label">R&egrave;gle n&deg;2 &mdash; N&eacute;gation avec "not" directement</span>
+    <p>On ajoute "not" juste apr&egrave;s le modal, sans auxiliaire.</p>
+    <p class="ex"><span class="en">He <strong>should not</strong> be late.</span> <span class="fr">(= He shouldn't be late.)</span></p>
+  </div>
+
+  <div class="encart blue">
+    <span class="encart-label">R&egrave;gle n&deg;3 &mdash; Le verbe qui suit est toujours &agrave; l'infinitif sans "to"</span>
+    <p>Apr&egrave;s un modal, le verbe reste &agrave; sa forme de base.</p>
+    <p class="ex"><span class="en correct">She <strong>can swim</strong>.</span></p>
+    <p class="ex"><span class="en wrong"><del>She can to swim.</del></span></p>
+  </div>
+
+  <div class="encart blue">
+    <span class="encart-label">R&egrave;gle n&deg;4 &mdash; Pour la question, on inverse le modal et le sujet</span>
+    <p><em>She can go.</em> &rarr; <em><strong>Can</strong> she go?</em></p>
+    <p><em>You should drive.</em> &rarr; <em><strong>Should</strong> you drive?</em></p>
+  </div>
+
+  <!-- QUIZ 4 -->
+  <div class="quiz-block" data-q="q4">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">Quelle phrase est correcte ?</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) He musted study hard.</button>
+      <button class="quiz-option" onclick="check(this,false)">b) She can to speak English.</button>
+      <button class="quiz-option" onclick="check(this,true)">c) They might not come to the party.</button>
+      <button class="quiz-option" onclick="check(this,false)">d) He wills help us tomorrow.</button>
+    </div>
+    <div class="quiz-fb correct">Correct. "Might not" suit bien la r&egrave;gle : modal + not + verbe &agrave; l'infinitif. Les autres contiennent des erreurs : "musted" n'existe pas, "can to" est faux (r&egrave;gle n&deg;3), et "wills" est impossible (r&egrave;gle n&deg;1).</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>c)</strong>. Les modaux ne se conjuguent jamais ("musted" et "wills" sont impossibles) et ne sont jamais suivis de "to" ("can to speak" est faux).</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 4 : VERBES AUXILIAIRES -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Les verbes auxiliaires : be, do, have.</h2>
+  <p>
+    Ces trois verbes sont les piliers de la conjugaison anglaise. Ils servent &agrave; <strong>former les temps</strong>, les <strong>n&eacute;gations</strong> et les <strong>questions</strong>. Tu les verras dans presque chaque phrase du concours.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Auxiliaire</th><th>Sert &agrave;...</th><th>Exemple</th></tr></thead>
+      <tbody>
+        <tr><td><code>be</code></td><td>Former les temps continus + le passif</td><td><em>I <strong>am</strong> working.</em> / <em>It <strong>was</strong> stolen.</em></td></tr>
+        <tr><td><code>do</code></td><td>Former les questions et n&eacute;gations au pr&eacute;sent/pass&eacute; simple</td><td><em><strong>Do</strong> you like it?</em> / <em>I <strong>didn't</strong> go.</em></td></tr>
+        <tr><td><code>have</code></td><td>Former les temps perfect</td><td><em>She <strong>has</strong> finished.</em> / <em>They <strong>had</strong> left.</em></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="encart accent">
+    <span class="encart-label">Le pi&egrave;ge classique avec "do"</span>
+    <p>Apr&egrave;s "do", "does" ou "did", le verbe revient <strong>toujours &agrave; l'infinitif</strong>.</p>
+    <p class="ex"><span class="en correct"><strong>Did</strong> you <strong>see</strong> her?</span></p>
+    <p class="ex"><span class="en wrong"><del>Did you saw her?</del></span></p>
+    <p>C'est l'une des erreurs les plus fr&eacute;quentes au concours. Le "did" porte d&eacute;j&agrave; la marque du pass&eacute;, donc le verbe principal reste &agrave; l'infinitif.</p>
+  </div>
+
+  <!-- QUIZ 5 -->
+  <div class="quiz-block" data-q="q5">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">"He _____ steal your money." (N&eacute;gation au pass&eacute; simple.)</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) didn't stole</button>
+      <button class="quiz-option" onclick="check(this,true)">b) didn't steal</button>
+      <button class="quiz-option" onclick="check(this,false)">c) doesn't steal</button>
+      <button class="quiz-option" onclick="check(this,false)">d) not stealed</button>
+    </div>
+    <div class="quiz-fb correct">Exact. "Didn't" (pass&eacute; de do + not) est suivi de l'infinitif <strong>steal</strong>. "Stole" est le past simple, et "stealed" n'existe pas (steal est irr&eacute;gulier).</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>b) didn't steal</strong>. Apr&egrave;s "didn't", le verbe reste &agrave; l'infinitif. "Stole" serait correct dans une phrase affirmative (He stole), mais pas apr&egrave;s "didn't".</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 5 : ADVERBE, PREPOSITION, GERONDIF, INFINITIF -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Les autres briques essentielles.</h2>
+  <p class="light">
+    Voici les termes que tu rencontreras constamment dans les questions de grammaire.
+    Pas besoin de les apprendre par coeur &mdash; il suffit de les reconna&icirc;tre.
+  </p>
+
+  <h3>L'adverbe.</h3>
+  <p>Il ajoute une information sur <strong>quand</strong>, <strong>o&ugrave;</strong> ou <strong>comment</strong> quelque chose se passe.</p>
+  <div class="ex"><span class="en">We talked about it <strong>yesterday</strong>.</span> <span class="fr">(quand ?)</span></div>
+  <div class="ex"><span class="en">I'll wait <strong>here</strong>.</span> <span class="fr">(o&ugrave; ?)</span></div>
+  <div class="ex"><span class="en">Read the text <strong>carefully</strong>.</span> <span class="fr">(comment ?)</span></div>
+
+  <h3>L'adverbe de fr&eacute;quence.</h3>
+  <p>Il indique &agrave; quelle fr&eacute;quence une action se produit. Il se place <strong>avant le verbe principal</strong> (mais apr&egrave;s "be").</p>
+  <div class="ex"><span class="en">I <strong>usually</strong> eat at home.</span></div>
+  <div class="ex"><span class="en">These lessons are <strong>often</strong> very boring.</span></div>
+
+  <h3>La pr&eacute;position.</h3>
+  <p>Elle connecte un nom ou un pronom au reste de la phrase, et indique une relation de lieu, de temps ou de mani&egrave;re. Les plus courantes : <strong>in, on, at, around, above, between, inside, near, for, with</strong>.</p>
+  <div class="ex"><span class="en">He swam <strong>across</strong> the river.</span></div>
+  <div class="ex"><span class="en">This movie is <strong>about</strong> the second World War.</span></div>
+
+  <h3>Le g&eacute;rondif.</h3>
+  <p>C'est un verbe termin&eacute; en <strong>-ing</strong> utilis&eacute; comme un <strong>nom</strong>. Attention &agrave; ne pas le confondre avec un temps continu.</p>
+  <div class="ex"><span class="en"><strong>Smoking</strong> is not allowed here.</span> <span class="fr">("Smoking" est le sujet de la phrase, comme un nom.)</span></div>
+  <div class="ex"><span class="en">I'm not keen on <strong>flying</strong>.</span> <span class="fr">("Flying" est compl&eacute;ment apr&egrave;s une pr&eacute;position.)</span></div>
+
+  <h3>L'infinitif.</h3>
+  <p>C'est la forme de base du verbe (come, go, eat...). On l'utilise avec ou sans "to".</p>
+  <div class="ex"><span class="en">This book is hard <strong>to understand</strong>.</span></div>
+  <div class="ex"><span class="en">I must <strong>finish</strong> my homework today.</span> <span class="fr">(sans "to", apr&egrave;s un modal.)</span></div>
+
+  <h3>Les "phrasal verbs" (verbes &agrave; particule).</h3>
+  <p>Ce sont des verbes compos&eacute;s de deux parties : un verbe + un adverbe ou une pr&eacute;position. <strong>Le sens change compl&egrave;tement selon la particule.</strong></p>
+  <div class="ex"><span class="en">He's <strong>looking after</strong> the children.</span> <span class="fr">(= Il s'occupe des enfants.)</span></div>
+  <div class="ex"><span class="en">She <strong>looked up</strong> the word in her dictionary.</span> <span class="fr">(= Elle a cherch&eacute; le mot.)</span></div>
+
+  <!-- QUIZ 6 -->
+  <div class="quiz-block" data-q="q6">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">Dans la phrase "Swimming is good for your health", quel est le r&ocirc;le de "swimming" ?</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) C'est un verbe au pr&eacute;sent continu.</button>
+      <button class="quiz-option" onclick="check(this,true)">b) C'est un g&eacute;rondif utilis&eacute; comme sujet.</button>
+      <button class="quiz-option" onclick="check(this,false)">c) C'est un adverbe.</button>
+      <button class="quiz-option" onclick="check(this,false)">d) C'est un adjectif.</button>
+    </div>
+    <div class="quiz-fb correct">Bravo. "Swimming" est un verbe en -ing qui joue le r&ocirc;le de <strong>sujet</strong> de la phrase, exactement comme un nom. C'est la d&eacute;finition m&ecirc;me du g&eacute;rondif.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>b)</strong>. Quand un verbe en -ing est utilis&eacute; comme sujet ou compl&eacute;ment (comme un nom), c'est un g&eacute;rondif. Au pr&eacute;sent continu, il y aurait un auxiliaire "be" devant : "I <strong>am</strong> swimming."</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 6 : PRONOMS RELATIFS -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Les pronoms relatifs : who, which, that, whose, whom.</h2>
+  <p>
+    Un pronom relatif sert &agrave; relier deux informations sur un m&ecirc;me sujet. Il introduit une <strong>proposition relative</strong> &mdash; une sorte de pr&eacute;cision ajout&eacute;e &agrave; un nom.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Pronom</th><th>On l'utilise pour...</th><th>Exemple</th></tr></thead>
+      <tbody>
+        <tr><td><code>who</code></td><td>Les personnes (sujet)</td><td><em>The woman <strong>who</strong> phoned me is my girlfriend.</em></td></tr>
+        <tr><td><code>whom</code></td><td>Les personnes (compl&eacute;ment)</td><td><em>This is Matt, <strong>whom</strong> you met at the party.</em></td></tr>
+        <tr><td><code>whose</code></td><td>La possession</td><td><em>This is Matt, <strong>whose</strong> sister went to university with me.</em></td></tr>
+        <tr><td><code>which</code></td><td>Les choses</td><td><em>We had pizza, <strong>which</strong> is my favourite meal.</em></td></tr>
+        <tr><td><code>that</code></td><td>Les personnes ET les choses</td><td><em>The house <strong>that</strong> Tom built is big.</em></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="encart accent">
+    <span class="encart-label">R&egrave;gle simple pour choisir</span>
+    <p>Tu parles d'une <strong>personne</strong> ? &rarr; <strong>who</strong> (ou that).</p>
+    <p>Tu parles d'une <strong>chose</strong> ? &rarr; <strong>which</strong> (ou that).</p>
+    <p>Tu parles de <strong>possession</strong> ? &rarr; <strong>whose</strong>.</p>
+    <p>Dans le doute, <strong>that</strong> fonctionne presque partout (sauf pour la possession).</p>
+  </div>
+
+  <!-- QUIZ 7 -->
+  <div class="quiz-block" data-q="q7">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">"The minister _____ speech was broadcast on TV resigned yesterday."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) who</button>
+      <button class="quiz-option" onclick="check(this,true)">b) whose</button>
+      <button class="quiz-option" onclick="check(this,false)">c) which</button>
+      <button class="quiz-option" onclick="check(this,false)">d) whom</button>
+    </div>
+    <div class="quiz-fb correct">Exact. On parle du discours <strong>du</strong> ministre (possession). "Whose" est le seul pronom relatif qui exprime la possession : <em>the minister <strong>whose</strong> speech...</em> = le ministre <strong>dont</strong> le discours...</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>b) whose</strong>. Il y a une relation de possession entre "minister" et "speech" (le discours du ministre). Seul <strong>whose</strong> exprime cette relation. "Who" remplacerait le sujet, pas un possessif.</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 7 : LA VOIX PASSIVE (intro) -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>La voix passive : dire ce qui a &eacute;t&eacute; fait (sans dire par qui).</h2>
+  <p>
+    En voix active, le sujet fait l'action. En voix passive, le sujet <strong>subit</strong> l'action.
+    La voix passive est tr&egrave;s utilis&eacute;e dans le langage administratif &mdash; donc au concours ENA.
+  </p>
+
+  <p><strong>La formule :</strong> sujet + <strong>be</strong> (conjugu&eacute;) + <strong>participe pass&eacute;</strong>.</p>
+
+  <div class="ex"><span class="en"><strong>Actif :</strong> He drove the car yesterday.</span></div>
+  <div class="ex"><span class="en"><strong>Passif :</strong> The car <strong>was driven</strong> by him yesterday.</span></div>
+
+  <div class="ex"><span class="en"><strong>Actif :</strong> I clean my house once a week.</span></div>
+  <div class="ex"><span class="en"><strong>Passif :</strong> My house <strong>is cleaned</strong> once a week.</span></div>
+
+  <div class="encart green">
+    <span class="encart-label">Quand utilise-t-on le passif ?</span>
+    <p>Quand on ne sait pas <strong>qui</strong> a fait l'action : <em>My phone <strong>has been stolen</strong>.</em></p>
+    <p>Quand le "qui" n'est pas important : <em>The vegetables <strong>are all grown</strong> by local farmers.</em></p>
+    <p>Quand on veut mettre l'accent sur l'objet de l'action plut&ocirc;t que sur l'auteur.</p>
+  </div>
+
+  <div class="encart accent">
+    <span class="encart-label">Attention : "I was born" et jamais "I am born"</span>
+    <p>On dit <strong>I was born in 1983</strong> (et pas <del>I am born in 1983</del>). "Born" est un participe pass&eacute;, et la naissance est un &eacute;v&eacute;nement pass&eacute;.</p>
+  </div>
+
+  <!-- QUIZ 8 -->
+  <div class="quiz-block" data-q="q8">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">Transforme &agrave; la voix passive : "They offered me the job." &rarr; "I _____ the job."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,true)">a) was offered</button>
+      <button class="quiz-option" onclick="check(this,false)">b) am offered</button>
+      <button class="quiz-option" onclick="check(this,false)">c) have offering</button>
+      <button class="quiz-option" onclick="check(this,false)">d) got offer</button>
+    </div>
+    <div class="quiz-fb correct">Exact. La phrase originale est au pass&eacute; ("offered"), donc le passif est aussi au pass&eacute; : <strong>was</strong> (pass&eacute; de "be") + <strong>offered</strong> (participe pass&eacute;).</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>a) was offered</strong>. Passif = be + participe pass&eacute;. La phrase originale est au pass&eacute;, donc on utilise "was" (pass&eacute; de be) + "offered".</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- QUIZ FINAL DE CHAPITRE -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Quiz de fin de chapitre.</h2>
+  <p class="light">Deux derni&egrave;res questions pour v&eacute;rifier que les bases sont bien en place.</p>
+
+  <!-- QUIZ 9 -->
+  <div class="quiz-block" data-q="q9">
+    <span class="quiz-label">Question 9 sur 10</span>
+    <p class="quiz-question">"I wonder _____ he likes us."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) that he likes</button>
+      <button class="quiz-option" onclick="check(this,false)">b) does he like</button>
+      <button class="quiz-option" onclick="check(this,true)">c) if he likes</button>
+      <button class="quiz-option" onclick="check(this,false)">d) he likes</button>
+    </div>
+    <div class="quiz-fb correct">Bien jou&eacute;. Apr&egrave;s "I wonder", on utilise <strong>if</strong> (ou whether) pour introduire une question indirecte. L'ordre reste sujet + verbe (pas d'inversion).</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>c) if he likes</strong>. "I wonder" introduit une question indirecte. En anglais, les questions indirectes gardent l'ordre normal (sujet + verbe) et sont souvent introduites par "if".</div>
+  </div>
+
+  <!-- QUIZ 10 -->
+  <div class="quiz-block" data-q="q10">
+    <span class="quiz-label">Question 10 sur 10</span>
+    <p class="quiz-question">"The woman _____ fixed your car is waiting outside."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,true)">a) who</button>
+      <button class="quiz-option" onclick="check(this,false)">b) which</button>
+      <button class="quiz-option" onclick="check(this,false)">c) whom</button>
+      <button class="quiz-option" onclick="check(this,false)">d) whose</button>
+    </div>
+    <div class="quiz-fb correct">Parfait. On parle d'une <strong>personne</strong> (the woman) qui est le <strong>sujet</strong> de l'action (elle a r&eacute;par&eacute; la voiture). Le pronom relatif sujet pour une personne est <strong>who</strong>.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>a) who</strong>. "The woman" est une personne (&rarr; pas "which") et elle est le sujet de "fixed" (&rarr; pas "whom", qui est compl&eacute;ment). "Whose" exprimerait la possession.</div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- BILAN -->
+<!-- ============================================================ -->
+<section class="section" id="bilan" style="display:none;">
+  <div class="encart green">
+    <span class="encart-label">Ton bilan du chapitre 1</span>
+    <p id="bilan-text"></p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- RECAP -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>R&eacute;sum&eacute; du chapitre.</h2>
+
+  <div class="reveal-block">
+    <button class="reveal-btn" onclick="toggleReveal(this)">
+      <span class="arrow">&#9654;</span> Afficher le r&eacute;sum&eacute; compl&egrave;t
+    </button>
+    <div class="reveal-content">
+      <p><strong>Pronoms personnels :</strong> sujet (I, you, he, she, it, we, they) vs compl&eacute;ment (me, you, him, her, it, us, them). Le compl&eacute;ment va apr&egrave;s le verbe ou apr&egrave;s une pr&eacute;position.</p>
+      <p><strong>Possessifs :</strong> adjectif (my, your, his, her, its, our, their) devant un nom. Pronom (mine, yours, his, hers, ours, theirs) sans nom apr&egrave;s. Jamais d'apostrophe.</p>
+      <p><strong>Its vs it's :</strong> "its" = possessif. "It's" = "it is". M&ecirc;me logique pour their/they're/there.</p>
+      <p><strong>Modaux :</strong> can, could, may, might, must, should, will, would. Pas de -s, pas de "to" apr&egrave;s, n&eacute;gation directe avec "not", inversion pour les questions.</p>
+      <p><strong>Auxiliaires :</strong> be (continu, passif), do (questions/n&eacute;gations au pr&eacute;sent/pass&eacute; simple), have (temps perfect). Apr&egrave;s did/didn't, le verbe revient &agrave; l'infinitif.</p>
+      <p><strong>Pronoms relatifs :</strong> who (personne/sujet), whom (personne/compl&eacute;ment), whose (possession), which (chose), that (personne ou chose).</p>
+      <p><strong>Voix passive :</strong> sujet + be (conjugu&eacute;) + participe pass&eacute;. Fr&eacute;quente en langage administratif.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Navigation -->
+<div class="nav-bottom">
+  <button class="nav-btn prev" onclick="window.location.href='./passeport_concours_ENA_anglais.html';">&larr; Introduction</button>
+  <button class="nav-btn next" onclick="window.location.href='./manuel_interactif_anglais_chapitre2_comparatifs_superlatifs.html';">Chapitre 2 : comparatifs &rarr;</button>
+</div>
+
+<footer>
+  <p><strong>Passeport Concours</strong> &mdash; Anglais ENA 2026 &mdash; Chapitre 1.</p>
+</footer>
+
+</div>
+
+<script>
+let score = 0;
+let total = 10;
+let answered = 0;
+
+function check(btn, isCorrect) {
+  const block = btn.closest('.quiz-block');
+  if (block.dataset.done) return;
+  block.dataset.done = '1';
+
+  const options = block.querySelectorAll('.quiz-option');
+  const fbs = block.querySelectorAll('.quiz-fb');
+
+  options.forEach(o => o.disabled = true);
+
+  if (isCorrect) {
+    btn.classList.add('ok');
+    fbs[0].classList.add('show');
+    score++;
+  } else {
+    btn.classList.add('ko');
+    fbs[1].classList.add('show');
+    // Montrer la bonne réponse
+    options.forEach(o => {
+      const handler = o.getAttribute('onclick');
+      if (handler && handler.includes('true')) o.classList.add('show-ok');
+    });
+  }
+
+  answered++;
+  document.getElementById('scoreDisplay').textContent = score + ' / ' + total + ' bonnes réponses';
+
+  if (answered === total) {
+    setTimeout(showBilan, 500);
+  }
+}
+
+function showBilan() {
+  const bilan = document.getElementById('bilan');
+  const txt = document.getElementById('bilan-text');
+  let msg = '';
+  const pct = Math.round(score / total * 100);
+
+  if (pct >= 80) {
+    msg = '<strong>' + score + '/' + total + ' (' + pct + '%) — Excellent.</strong> Les bases sont solides. Tu peux passer au chapitre 2 en confiance. Les comparatifs et superlatifs t\'attendent.';
+  } else if (pct >= 50) {
+    msg = '<strong>' + score + '/' + total + ' (' + pct + '%) — Correct, mais perfectible.</strong> Relis les sections où tu as fait des erreurs avant de passer au chapitre suivant. Chaque point gagné au concours compte.';
+  } else {
+    msg = '<strong>' + score + '/' + total + ' (' + pct + '%) — Il y a du travail, mais c\'est normal.</strong> Ce chapitre est dense. Relis-le une deuxième fois demain, tu verras que beaucoup de choses vont devenir plus claires. La répétition est la clé.';
+  }
+
+  txt.innerHTML = msg;
+  bilan.style.display = 'block';
+  bilan.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function toggleReveal(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+</script>
+
+</body>
+</html>

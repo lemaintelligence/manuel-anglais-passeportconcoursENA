@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapitre 4 - La conjugaison anglaise.</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf8f5;--bg-white:#fff;--bg-warm:#f5f0ea;--text:#2c2420;--text-light:#6b5e54;--text-muted:#9a8d82;--accent:#c4560a;--accent-light:#e8874a;--accent-bg:#fef3ea;--green:#2a7d4f;--green-bg:#edf7f0;--blue:#1a5f8a;--blue-bg:#eaf3fa;--red:#b83232;--red-bg:#fdeaea;--border:#e8e0d8;--shadow:0 1px 3px rgba(44,36,32,.06)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.8;-webkit-font-smoothing:antialiased}
+.page{max-width:720px;margin:0 auto;padding:0 24px}
+header{padding:60px 0 40px;border-bottom:1px solid var(--border);margin-bottom:50px}
+header .tag{display:inline-block;font-size:.7rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);background:var(--accent-bg);padding:5px 14px;border-radius:4px;margin-bottom:20px}
+header h1{font-family:'Source Serif 4',serif;font-size:clamp(1.8rem,5vw,2.6rem);font-weight:700;color:var(--text);line-height:1.25;margin-bottom:14px}
+header .subtitle{font-size:1.05rem;color:var(--text-light);max-width:580px;line-height:1.7}
+.section{margin-bottom:50px}.section h2{font-family:'Source Serif 4',serif;font-size:1.45rem;font-weight:700;color:var(--text);margin-bottom:14px;line-height:1.3}.section h3{font-family:'Source Serif 4',serif;font-size:1.15rem;font-weight:600;color:var(--text);margin:22px 0 10px}.section p{font-size:1.02rem;color:var(--text);margin-bottom:14px}.section p.light{color:var(--text-light)}strong{font-weight:600}em{font-style:italic;color:var(--text-light)}
+.encart{background:var(--bg-white);border:1px solid var(--border);border-radius:10px;padding:22px 26px;margin:22px 0;box-shadow:var(--shadow)}.encart.accent{background:var(--accent-bg);border-color:rgba(196,86,10,.15)}.encart.green{background:var(--green-bg);border-color:rgba(42,125,79,.15)}.encart.blue{background:var(--blue-bg);border-color:rgba(26,95,138,.15)}.encart.red{background:var(--red-bg);border-color:rgba(184,50,50,.15)}.encart-label{font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;display:block}.encart.accent .encart-label{color:var(--accent)}.encart.green .encart-label{color:var(--green)}.encart.blue .encart-label{color:var(--blue)}.encart.red .encart-label{color:var(--red)}.encart p{font-size:.98rem;margin-bottom:8px;line-height:1.7}.encart p:last-child{margin-bottom:0}
+.table-wrap{overflow-x:auto;margin:20px 0}table{width:100%;border-collapse:collapse;font-size:.95rem;background:var(--bg-white);border-radius:10px;overflow:hidden;box-shadow:var(--shadow)}thead{background:var(--text);color:#fff}th{padding:12px 16px;text-align:left;font-weight:600;font-size:.85rem;letter-spacing:.5px}td{padding:11px 16px;border-bottom:1px solid var(--border)}tr:last-child td{border-bottom:none}tbody tr:hover{background:var(--bg-warm)}td code{font-family:'DM Sans',sans-serif;font-weight:600;color:var(--accent);background:var(--accent-bg);padding:2px 7px;border-radius:4px;font-size:.9rem}
+.ex{background:var(--bg-white);border-left:3px solid var(--border);padding:14px 20px;margin:14px 0;border-radius:0 8px 8px 0;font-size:.97rem}.ex .en{font-weight:600;color:var(--text)}.ex .fr{color:var(--text-muted);font-style:italic;margin-left:4px}.ex.correct{border-left-color:var(--green);background:var(--green-bg)}.ex.wrong{border-left-color:var(--red);background:var(--red-bg)}
+.quiz-block{background:var(--bg-white);border:1px solid var(--border);border-radius:10px;padding:26px;margin:28px 0;box-shadow:var(--shadow)}.quiz-label{font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;display:block}.quiz-question{font-family:'Source Serif 4',serif;font-size:1.05rem;font-weight:600;margin-bottom:16px;line-height:1.5}.quiz-options{display:flex;flex-direction:column;gap:8px;margin-bottom:10px}.quiz-option{display:block;width:100%;text-align:left;padding:12px 18px;font-family:'DM Sans',sans-serif;font-size:.95rem;color:var(--text);background:var(--bg);border:1.5px solid var(--border);border-radius:8px;cursor:pointer;transition:all .2s;line-height:1.5}.quiz-option:hover:not(:disabled){border-color:var(--accent-light);background:var(--accent-bg)}.quiz-option.ok{border-color:var(--green);background:var(--green-bg);color:var(--green);font-weight:600;cursor:default}.quiz-option.ko{border-color:var(--red);background:var(--red-bg);color:var(--red);cursor:default;text-decoration:line-through}.quiz-option.show-ok{border-color:var(--green);background:var(--green-bg);color:var(--green);font-weight:600;cursor:default}.quiz-option:disabled{cursor:default}.quiz-fb{font-size:.92rem;padding:14px 18px;border-radius:8px;display:none;line-height:1.65;margin-top:8px}.quiz-fb.show{display:block}.quiz-fb.correct{background:var(--green-bg);color:var(--green)}.quiz-fb.wrong{background:var(--red-bg);color:var(--red)}
+.reveal-block{margin:20px 0}.reveal-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:600;color:var(--accent);background:var(--accent-bg);border:1.5px solid rgba(196,86,10,.2);border-radius:8px;cursor:pointer;transition:all .2s}.reveal-btn:hover{background:rgba(196,86,10,.12)}.reveal-btn .arrow{transition:transform .3s;font-size:.75rem}.reveal-btn.open .arrow{transform:rotate(90deg)}.reveal-content{max-height:0;overflow:hidden;transition:max-height .5s ease,padding .3s;padding:0 18px;background:var(--bg-white);border-radius:0 0 10px 10px}.reveal-content.open{max-height:3000px;padding:18px;border:1px solid var(--border);border-top:none;margin-top:-4px}.reveal-content p{font-size:.95rem;color:var(--text-light);margin-bottom:8px;line-height:1.7}
+.sep{height:1px;background:var(--border);margin:50px 0}
+.score-bar{position:sticky;top:0;z-index:100;background:rgba(250,248,245,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:10px 24px;display:flex;justify-content:space-between;align-items:center;font-size:.85rem}.score-bar .left{font-weight:600;color:var(--text)}.score-bar .right{color:var(--accent);font-weight:700}
+.formula{background:var(--blue-bg);border:1px solid rgba(26,95,138,.15);border-radius:10px;padding:18px 24px;margin:18px 0;text-align:center;font-family:'Source Serif 4',serif;font-size:1.1rem;font-weight:600;color:var(--blue);letter-spacing:.3px}
+.vs-box{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}.vs-col{background:var(--bg-white);border:1px solid var(--border);border-radius:10px;padding:18px 20px;box-shadow:var(--shadow)}.vs-col h4{font-family:'Source Serif 4',serif;font-size:1rem;font-weight:700;margin-bottom:8px}.vs-col p{font-size:.92rem;margin-bottom:6px;line-height:1.6}.vs-col.left{border-top:3px solid var(--blue)}.vs-col.left h4{color:var(--blue)}.vs-col.right{border-top:3px solid var(--accent)}.vs-col.right h4{color:var(--accent)}
+.nav-bottom{display:flex;justify-content:space-between;align-items:center;padding:30px 0;margin-top:40px;border-top:1px solid var(--border)}.nav-btn{padding:12px 28px;font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:700;border-radius:8px;text-decoration:none;cursor:pointer;transition:all .2s;border:none}.nav-btn.prev{color:var(--text-light);background:var(--bg-warm);border:1px solid var(--border)}.nav-btn.prev:hover{background:var(--border)}.nav-btn.next{color:#fff;background:var(--accent)}.nav-btn.next:hover{background:#a84808;transform:translateY(-1px);box-shadow:0 4px 12px rgba(196,86,10,.25)}
+footer{text-align:center;padding:20px 0 50px;font-size:.8rem;color:var(--text-muted)}footer strong{color:var(--accent);font-weight:700}
+@media(max-width:600px){header{padding:40px 0 30px}.page{padding:0 16px}table{font-size:.85rem}th,td{padding:9px 12px}.vs-box{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="score-bar">
+  <span class="left">Chapitre 4 &mdash; La conjugaison</span>
+  <span class="right" id="scoreDisplay">0 / 12 bonnes r&eacute;ponses</span>
+</div>
+
+<div class="page">
+
+<header>
+  <span class="tag">Chapitre 4</span>
+  <h1>La conjugaison anglaise.</h1>
+  <p class="subtitle">
+    Ce chapitre couvre tous les temps anglais en se concentrant sur une seule question :
+    <strong>quand utiliser quoi ?</strong> C'est la cl&eacute; pour r&eacute;pondre aux QCM.
+  </p>
+</header>
+
+<!-- ============================================================ -->
+<!-- SECTION 1 : LA CARTE DES TEMPS -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>La carte des temps : vue d'ensemble.</h2>
+  <p>
+    L'anglais a beaucoup de temps, mais au concours, six d'entre eux repr&eacute;sentent la grande majorit&eacute; des questions. Voici la carte compl&egrave;te. Les temps en gras sont les plus test&eacute;s.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th></th><th>Pass&eacute;</th><th>Pr&eacute;sent</th><th>Futur</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Simple</strong></td><td><code>I walked</code></td><td><code>I walk / he walks</code></td><td><code>I will walk</code></td></tr>
+        <tr><td><strong>Continu</strong></td><td><code>I was walking</code></td><td><code>I am walking</code></td><td><code>I will be walking</code></td></tr>
+        <tr><td><strong>Perfect</strong></td><td><code>I had walked</code></td><td><code>I have walked</code></td><td><code>I will have walked</code></td></tr>
+        <tr><td><strong>Perfect continu</strong></td><td><code>I had been walking</code></td><td><code>I have been walking</code></td><td><code>I will have been walking</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="encart green">
+    <span class="encart-label">Strat&eacute;gie concours</span>
+    <p>Dans les QCM, le choix du bon temps d&eacute;pend presque toujours d'un <strong>indice dans la phrase</strong> : un marqueur de temps (yesterday, now, since, already...) ou un contexte (habitude, action en cours, r&eacute;sultat pr&eacute;sent...). Apprends &agrave; rep&eacute;rer ces indices et tu auras la bonne r&eacute;ponse.</p>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 2 : PRESENT SIMPLE -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Le pr&eacute;sent simple : les habitudes et les v&eacute;rit&eacute;s g&eacute;n&eacute;rales.</h2>
+  <p>On utilise le pr&eacute;sent simple pour parler de ce qui est <strong>habituel, permanent ou toujours vrai</strong>.</p>
+
+  <div class="formula">Sujet + verbe (+ s &agrave; la 3e personne du singulier)</div>
+
+  <div class="ex"><span class="en">I <strong>live</strong> in France.</span> <span class="fr">(situation permanente)</span></div>
+  <div class="ex"><span class="en">The sun <strong>rises</strong> in the East.</span> <span class="fr">(v&eacute;rit&eacute; g&eacute;n&eacute;rale)</span></div>
+  <div class="ex"><span class="en">He <strong>gets</strong> up early on Monday.</span> <span class="fr">(habitude)</span></div>
+
+  <div class="encart accent">
+    <span class="encart-label">Le pi&egrave;ge n&deg;1 du concours : le -s &agrave; la 3e personne</span>
+    <p>Avec <strong>he, she, it</strong>, le verbe prend un -s (ou -es) : <em>he go<strong>es</strong></em>, <em>she watch<strong>es</strong></em>, <em>it work<strong>s</strong></em>.</p>
+    <p>Quand le verbe finit par consonne + y, on remplace par -ies : <em>I worry &rarr; he worr<strong>ies</strong></em>.</p>
+    <p>Mais avec voyelle + y, on ajoute juste -s : <em>I play &rarr; he play<strong>s</strong></em>.</p>
+  </div>
+
+  <h3>Questions et n&eacute;gations : l'auxiliaire do/does.</h3>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Forme</th><th>I / you / we / they</th><th>He / she / it</th></tr></thead>
+      <tbody>
+        <tr><td>Affirmative</td><td>I <strong>work</strong></td><td>He <strong>works</strong></td></tr>
+        <tr><td>N&eacute;gative</td><td>I <strong>don't work</strong></td><td>He <strong>doesn't work</strong></td></tr>
+        <tr><td>Question</td><td><strong>Do</strong> you work?</td><td><strong>Does</strong> he work?</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="encart red">
+    <span class="encart-label">Erreur fatale</span>
+    <p>Apr&egrave;s <strong>does</strong> ou <strong>doesn't</strong>, le verbe revient &agrave; l'infinitif (sans -s).</p>
+    <p class="ex correct"><span class="en"><strong>Does</strong> he <strong>like</strong> football?</span></p>
+    <p class="ex wrong"><span class="en"><del>Does he likes football?</del></span></p>
+  </div>
+
+  <!-- QUIZ 1 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">"She _____ speak French very well."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,true)">a) doesn't</button>
+      <button class="quiz-option" onclick="check(this,false)">b) don't</button>
+      <button class="quiz-option" onclick="check(this,false)">c) isn't</button>
+      <button class="quiz-option" onclick="check(this,false)">d) not</button>
+    </div>
+    <div class="quiz-fb correct">Exact. "She" = 3e personne du singulier &rarr; on utilise <strong>doesn't</strong> (does + not). "Don't" est pour I/you/we/they. Et "isn't" s'utilise avec le verbe "be", pas avec "speak".</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>a) doesn't</strong>. Pour la n&eacute;gation au pr&eacute;sent simple avec he/she/it, c'est toujours <strong>doesn't + verbe &agrave; l'infinitif</strong>.</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 3 : PRESENT CONTINU -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Le pr&eacute;sent continu : ce qui se passe en ce moment.</h2>
+  <p>On utilise le pr&eacute;sent continu pour parler de ce qui est <strong>en train de se passer maintenant</strong> ou d'une <strong>situation temporaire</strong>.</p>
+
+  <div class="formula">Sujet + am / is / are + verbe-ing</div>
+
+  <div class="ex"><span class="en">I <strong>am learning</strong> French now.</span> <span class="fr">(en ce moment)</span></div>
+  <div class="ex"><span class="en">He <strong>is working</strong> late today.</span> <span class="fr">(temporaire)</span></div>
+  <div class="ex"><span class="en">It<strong>'s raining</strong> a lot this afternoon.</span></div>
+
+  <div class="encart blue">
+    <span class="encart-label">Les marqueurs de temps du pr&eacute;sent continu</span>
+    <p>Quand tu vois ces mots dans une phrase, c'est probablement du pr&eacute;sent continu : <strong>now, at the moment, today, these days, this week, this year, currently, right now</strong>.</p>
+  </div>
+
+  <div class="encart red">
+    <span class="encart-label">Les verbes qui refusent le -ing</span>
+    <p>Certains verbes ne s'utilisent <strong>jamais</strong> au pr&eacute;sent continu. Ce sont les verbes d'&eacute;tat mental ou de perception : <strong>love, like, hate, understand, need, believe, want, prefer, know, remember, see, hear, smell, taste, seem, belong, mean, consist, agree, suppose, guess</strong>.</p>
+    <p>On dit <em>I <strong>understand</strong></em> (et jamais <del>I am understanding</del>).</p>
+  </div>
+
+  <h3>Pr&eacute;sent simple ou pr&eacute;sent continu ? La distinction cruciale.</h3>
+
+  <div class="vs-box">
+    <div class="vs-col left">
+      <h4>Pr&eacute;sent simple.</h4>
+      <p>Habitude, routine, v&eacute;rit&eacute; g&eacute;n&eacute;rale.</p>
+      <p><em>He <strong>works</strong> in a factory.</em></p>
+      <p><em>She <strong>sleeps</strong> late at night.</em></p>
+      <p>Marqueurs : always, usually, often, every day, never.</p>
+    </div>
+    <div class="vs-col right">
+      <h4>Pr&eacute;sent continu.</h4>
+      <p>Action en cours, situation temporaire.</p>
+      <p><em>He <strong>is working</strong> from home today.</em></p>
+      <p><em>She <strong>is sleeping</strong> in the living room.</em></p>
+      <p>Marqueurs : now, at the moment, today, this week.</p>
+    </div>
+  </div>
+
+  <!-- QUIZ 2 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">"My brother _____ in Spain until next month." (situation temporaire)</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) lives</button>
+      <button class="quiz-option" onclick="check(this,true)">b) is living</button>
+      <button class="quiz-option" onclick="check(this,false)">c) live</button>
+      <button class="quiz-option" onclick="check(this,false)">d) has lived</button>
+    </div>
+    <div class="quiz-fb correct">Exact. "Until next month" indique une situation <strong>temporaire</strong>. Le pr&eacute;sent continu est le bon choix. Si c'&eacute;tait permanent, on dirait "My brother lives in Spain" (pr&eacute;sent simple).</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>b) is living</strong>. La pr&eacute;cision "until next month" montre que la situation est temporaire &rarr; pr&eacute;sent continu. Le pr&eacute;sent simple ("lives") exprimerait une situation permanente.</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 4 : PAST SIMPLE -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Le pass&eacute; simple (past simple) : une action termin&eacute;e dans le pass&eacute;.</h2>
+  <p>On utilise le past simple pour parler d'un &eacute;v&eacute;nement <strong>termin&eacute;</strong> &agrave; un <strong>moment pr&eacute;cis du pass&eacute;</strong>.</p>
+
+  <div class="formula">Verbe r&eacute;gulier : sujet + verbe + ed &nbsp; | &nbsp; Verbe irr&eacute;gulier : forme sp&eacute;ciale</div>
+
+  <div class="ex"><span class="en">I <strong>went</strong> to the cinema yesterday.</span> <span class="fr">(irr&eacute;gulier : go &rarr; went)</span></div>
+  <div class="ex"><span class="en">She <strong>finished</strong> work late last Friday.</span> <span class="fr">(r&eacute;gulier : finish + ed)</span></div>
+  <div class="ex"><span class="en">They <strong>lived</strong> in London two years ago.</span></div>
+
+  <div class="encart blue">
+    <span class="encart-label">Marqueurs du past simple</span>
+    <p>Quand tu vois ces mots, c'est du past simple : <strong>yesterday, last week/month/year, ago, in 2020, when I was young, at that time</strong>.</p>
+  </div>
+
+  <h3>Les n&eacute;gations et questions au past simple : did/didn't.</h3>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Forme</th><th>Toutes les personnes</th></tr></thead>
+      <tbody>
+        <tr><td>Affirmative</td><td>I/he/she/they <strong>played</strong></td></tr>
+        <tr><td>N&eacute;gative</td><td>I/he/she/they <strong>didn't play</strong></td></tr>
+        <tr><td>Question</td><td><strong>Did</strong> you/he/she/they <strong>play</strong>?</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="encart red">
+    <span class="encart-label">Le pi&egrave;ge le plus fr&eacute;quent du concours</span>
+    <p>Apr&egrave;s <strong>did</strong> ou <strong>didn't</strong>, le verbe revient <strong>toujours &agrave; l'infinitif</strong>. Le "did" porte d&eacute;j&agrave; la marque du pass&eacute;.</p>
+    <p class="ex correct"><span class="en"><strong>Did</strong> you <strong>see</strong> her?</span></p>
+    <p class="ex wrong"><span class="en"><del>Did you saw her?</del></span></p>
+    <p class="ex correct"><span class="en">He <strong>didn't steal</strong> your money.</span></p>
+    <p class="ex wrong"><span class="en"><del>He didn't stole your money.</del></span></p>
+  </div>
+
+  <div class="reveal-block">
+    <button class="reveal-btn" onclick="toggleReveal(this)">
+      <span class="arrow">&#9654;</span> Voir les verbes irr&eacute;guliers les plus courants
+    </button>
+    <div class="reveal-content">
+      <p><strong>go</strong> &rarr; went | <strong>see</strong> &rarr; saw | <strong>come</strong> &rarr; came | <strong>give</strong> &rarr; gave | <strong>take</strong> &rarr; took | <strong>make</strong> &rarr; made | <strong>buy</strong> &rarr; bought | <strong>say</strong> &rarr; said | <strong>tell</strong> &rarr; told | <strong>think</strong> &rarr; thought | <strong>know</strong> &rarr; knew | <strong>get</strong> &rarr; got | <strong>find</strong> &rarr; found | <strong>write</strong> &rarr; wrote | <strong>speak</strong> &rarr; spoke | <strong>eat</strong> &rarr; ate | <strong>drink</strong> &rarr; drank | <strong>begin</strong> &rarr; began | <strong>break</strong> &rarr; broke | <strong>choose</strong> &rarr; chose | <strong>drive</strong> &rarr; drove | <strong>feel</strong> &rarr; felt | <strong>leave</strong> &rarr; left | <strong>lose</strong> &rarr; lost | <strong>meet</strong> &rarr; met | <strong>pay</strong> &rarr; paid | <strong>run</strong> &rarr; ran | <strong>send</strong> &rarr; sent | <strong>sit</strong> &rarr; sat | <strong>stand</strong> &rarr; stood | <strong>steal</strong> &rarr; stole | <strong>win</strong> &rarr; won</p>
+      <p>Attention, certains ne changent pas : <strong>cut</strong> &rarr; cut | <strong>put</strong> &rarr; put | <strong>cost</strong> &rarr; cost | <strong>let</strong> &rarr; let | <strong>quit</strong> &rarr; quit | <strong>read</strong> &rarr; read (mais se prononce "red").</p>
+    </div>
+  </div>
+
+  <!-- QUIZ 3 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">"She _____ this hat last week."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) has bought</button>
+      <button class="quiz-option" onclick="check(this,true)">b) bought</button>
+      <button class="quiz-option" onclick="check(this,false)">c) buyed</button>
+      <button class="quiz-option" onclick="check(this,false)">d) is buying</button>
+    </div>
+    <div class="quiz-fb correct">Exact. "Last week" est un marqueur de pass&eacute; pr&eacute;cis &rarr; past simple. Et "buy" est irr&eacute;gulier : buy &rarr; <strong>bought</strong> (jamais "buyed").</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>b) bought</strong>. "Last week" impose le past simple. "Buy" est irr&eacute;gulier (buy &rarr; bought, pas "buyed"). "Has bought" (present perfect) ne s'utilise pas avec un moment pr&eacute;cis du pass&eacute;.</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 5 : PRESENT PERFECT vs PAST SIMPLE -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Present perfect vs past simple : la distinction la plus test&eacute;e.</h2>
+  <p>
+    C'est <strong>le</strong> point de conjugaison le plus important du concours. Si tu ne retiens qu'une chose de ce chapitre, retiens cette section.
+  </p>
+
+  <div class="formula">Present perfect : sujet + have / has + participe pass&eacute;</div>
+
+  <div class="vs-box">
+    <div class="vs-col left">
+      <h4>Past simple.</h4>
+      <p>Action <strong>termin&eacute;e</strong> &agrave; un <strong>moment pr&eacute;cis</strong> du pass&eacute;.</p>
+      <p><em>I <strong>visited</strong> Paris <strong>last year</strong>.</em></p>
+      <p><em>She <strong>left</strong> <strong>two hours ago</strong>.</em></p>
+      <p>Marqueurs : yesterday, last..., ago, in 2020, when.</p>
+    </div>
+    <div class="vs-col right">
+      <h4>Present perfect.</h4>
+      <p>Action pass&eacute;e avec un <strong>lien avec le pr&eacute;sent</strong> ou <strong>sans moment pr&eacute;cis</strong>.</p>
+      <p><em>I <strong>have visited</strong> Paris. (= j'y suis d&eacute;j&agrave; all&eacute;, l'exp&eacute;rience compte)</em></p>
+      <p><em>She <strong>has left</strong>. (= elle n'est plus l&agrave;, r&eacute;sultat pr&eacute;sent)</em></p>
+      <p>Marqueurs : already, yet, ever, never, just, since, for, recently, so far.</p>
+    </div>
+  </div>
+
+  <div class="encart red">
+    <span class="encart-label">La r&egrave;gle d'or &agrave; graver en m&eacute;moire</span>
+    <p>On n'utilise <strong>jamais</strong> le present perfect avec un moment pr&eacute;cis du pass&eacute;.</p>
+    <p class="ex correct"><span class="en">I <strong>finished</strong> the report <strong>yesterday</strong>.</span></p>
+    <p class="ex wrong"><span class="en"><del>I have finished the report yesterday.</del></span></p>
+    <p class="ex correct"><span class="en">I <strong>have already finished</strong> the report.</span> <span class="fr">(pas de moment pr&eacute;cis)</span></p>
+  </div>
+
+  <div class="encart blue">
+    <span class="encart-label">Since et for : toujours avec le present perfect</span>
+    <p><strong>Since</strong> (depuis un moment pr&eacute;cis) : <em>I have lived here <strong>since</strong> 2015.</em></p>
+    <p><strong>For</strong> (pendant une dur&eacute;e) : <em>I have worked here <strong>for</strong> ten years.</em></p>
+  </div>
+
+  <!-- QUIZ 4 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">"I _____ to London three times." (exp&eacute;rience de vie)</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) went</button>
+      <button class="quiz-option" onclick="check(this,true)">b) have been</button>
+      <button class="quiz-option" onclick="check(this,false)">c) was going</button>
+      <button class="quiz-option" onclick="check(this,false)">d) had been</button>
+    </div>
+    <div class="quiz-fb correct">Exact. On parle d'une exp&eacute;rience de vie (combien de fois au total), sans pr&eacute;ciser quand. C'est typiquement du <strong>present perfect</strong>.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>b) have been</strong>. Quand on parle d'une exp&eacute;rience sans pr&eacute;ciser le moment, on utilise le present perfect. "Went" serait correct si on disait "I went to London <em>last year</em>" (moment pr&eacute;cis).</div>
+  </div>
+
+  <!-- QUIZ 5 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">"She _____ here since 2018."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) works</button>
+      <button class="quiz-option" onclick="check(this,false)">b) worked</button>
+      <button class="quiz-option" onclick="check(this,true)">c) has worked</button>
+      <button class="quiz-option" onclick="check(this,false)">d) is working</button>
+    </div>
+    <div class="quiz-fb correct">Bravo. Le mot <strong>since</strong> est un signal automatique du present perfect. L'action a commenc&eacute; en 2018 et continue jusqu'&agrave; maintenant &rarr; <strong>has worked</strong>.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>c) has worked</strong>. "Since" impose le present perfect. Il indique que l'action a commenc&eacute; dans le pass&eacute; et se poursuit dans le pr&eacute;sent.</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 6 : PAST CONTINUOUS -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Le pass&eacute; continu : d&eacute;crire ce qui &eacute;tait en cours quand autre chose s'est pass&eacute;.</h2>
+
+  <div class="formula">Sujet + was / were + verbe-ing</div>
+
+  <p>On utilise le past continuous pour :</p>
+
+  <div class="ex"><span class="en">The children <strong>were doing</strong> their homework <strong>when</strong> I got home.</span> <span class="fr">(action en cours interrompue par une autre)</span></div>
+  <div class="ex"><span class="en">It was eight o'clock. I <strong>was writing</strong> a letter.</span> <span class="fr">(d&eacute;cor d'un r&eacute;cit)</span></div>
+  <div class="ex"><span class="en">I <strong>was practising</strong> every day, three times a day.</span> <span class="fr">(r&eacute;p&eacute;tition dans le pass&eacute;)</span></div>
+
+  <div class="encart accent">
+    <span class="encart-label">La structure classique du concours : when + while</span>
+    <p><strong>When</strong> + past simple, past continuous. <em>When the phone <strong>rang</strong>, I <strong>was watching</strong> TV.</em></p>
+    <p><strong>While</strong> + past continuous, past simple. <em>While I <strong>was watching</strong> TV, the phone <strong>rang</strong>.</em></p>
+    <p>L'action <strong>longue</strong> (en cours) est au past continuous. L'action <strong>courte</strong> (qui interrompt) est au past simple.</p>
+  </div>
+
+  <!-- QUIZ 6 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">"As I _____ television, the telephone rang."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) watched</button>
+      <button class="quiz-option" onclick="check(this,true)">b) was watching</button>
+      <button class="quiz-option" onclick="check(this,false)">c) have watched</button>
+      <button class="quiz-option" onclick="check(this,false)">d) am watching</button>
+    </div>
+    <div class="quiz-fb correct">Exact. L'action de regarder la t&eacute;l&eacute; &eacute;tait en cours (longue) quand le t&eacute;l&eacute;phone a sonn&eacute; (action courte qui interrompt). Action en cours dans le pass&eacute; &rarr; <strong>past continuous</strong>.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>b) was watching</strong>. La structure "As/While + action longue, action courte" utilise le past continuous pour l'action longue en cours et le past simple pour l'action courte qui interrompt.</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 7 : LE FUTUR -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Le futur : will vs be going to.</h2>
+  <p>L'anglais a deux fa&ccedil;ons principales d'exprimer le futur, et elles ne sont <strong>pas interchangeables</strong>.</p>
+
+  <div class="vs-box">
+    <div class="vs-col left">
+      <h4>Will + infinitif.</h4>
+      <p><strong>D&eacute;cision spontan&eacute;e</strong>, promesse, pr&eacute;diction, offre.</p>
+      <p><em>I<strong>'ll</strong> open the door for you.</em> (d&eacute;cision imm&eacute;diate)</p>
+      <p><em>It <strong>will</strong> snow tomorrow.</em> (pr&eacute;diction)</p>
+      <p><em>I <strong>won't</strong> tell her your secret.</em> (promesse)</p>
+    </div>
+    <div class="vs-col right">
+      <h4>Be going to + infinitif.</h4>
+      <p><strong>Intention planifi&eacute;e</strong>, &eacute;vidence visible.</p>
+      <p><em>I<strong>'m going to</strong> study medicine.</em> (d&eacute;cision d&eacute;j&agrave; prise)</p>
+      <p><em>Look at those clouds. It<strong>'s going to</strong> rain.</em> (&eacute;vidence visible)</p>
+    </div>
+  </div>
+
+  <h3>N&eacute;gation et question avec will.</h3>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Forme</th><th>Toutes les personnes</th></tr></thead>
+      <tbody>
+        <tr><td>Affirmative</td><td>I <strong>will play</strong> (= I'll play)</td></tr>
+        <tr><td>N&eacute;gative</td><td>I <strong>will not play</strong> (= I won't play)</td></tr>
+        <tr><td>Question</td><td><strong>Will</strong> you play?</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- QUIZ 7 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">"Are you hungry? I _____ you some coffee." (offre spontan&eacute;e)</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,true)">a) 'll get</button>
+      <button class="quiz-option" onclick="check(this,false)">b) 'm going to get</button>
+      <button class="quiz-option" onclick="check(this,false)">c) get</button>
+      <button class="quiz-option" onclick="check(this,false)">d) 'm getting</button>
+    </div>
+    <div class="quiz-fb correct">Exact. C'est une offre spontan&eacute;e, d&eacute;cid&eacute;e au moment o&ugrave; l'on parle &rarr; <strong>will</strong> (= I'll). "Going to" serait pour une intention d&eacute;j&agrave; planifi&eacute;e avant la conversation.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>a) 'll get</strong>. Les offres et d&eacute;cisions spontan&eacute;es (prises au moment m&ecirc;me de la conversation) utilisent <strong>will</strong>. "Going to" indiquerait une intention pr&eacute;existante.</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 8 : PAST PERFECT -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Le past perfect : raconter ce qui s'&eacute;tait pass&eacute; avant un autre &eacute;v&eacute;nement pass&eacute;.</h2>
+  <p>Le past perfect sert &agrave; parler d'une action <strong>ant&eacute;rieure &agrave; un autre moment du pass&eacute;</strong>. C'est le "pass&eacute; du pass&eacute;".</p>
+
+  <div class="formula">Sujet + had + participe pass&eacute;</div>
+
+  <div class="ex"><span class="en">The train <strong>had</strong> already <strong>left</strong> when we arrived at the station.</span> <span class="fr">(Le train &eacute;tait d&eacute;j&agrave; parti quand nous sommes arriv&eacute;s.)</span></div>
+  <div class="ex"><span class="en">She <strong>had just left</strong> the room when she heard a noise.</span></div>
+  <div class="ex"><span class="en">I asked him why he <strong>had bought</strong> this house.</span></div>
+
+  <div class="encart blue">
+    <span class="encart-label">Marqueurs du past perfect</span>
+    <p><strong>Already, just, before, when, by the time, after, once, never (before)</strong>.</p>
+    <p>Quand tu vois deux actions dans le pass&eacute; et que tu dois montrer laquelle est arriv&eacute;e en premier &rarr; la premi&egrave;re prend le <strong>past perfect</strong>, la seconde le <strong>past simple</strong>.</p>
+  </div>
+
+  <!-- QUIZ 8 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">"When I arrived at the party, most people _____."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) already left</button>
+      <button class="quiz-option" onclick="check(this,true)">b) had already left</button>
+      <button class="quiz-option" onclick="check(this,false)">c) have already left</button>
+      <button class="quiz-option" onclick="check(this,false)">d) were already leaving</button>
+    </div>
+    <div class="quiz-fb correct">Exact. Deux actions dans le pass&eacute; : l'arriv&eacute;e (past simple) et le d&eacute;part des gens (avant l'arriv&eacute;e). L'action ant&eacute;rieure prend le <strong>past perfect</strong> : had already left.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>b) had already left</strong>. Les gens sont partis <strong>avant</strong> l'arriv&eacute;e &rarr; c'est le "pass&eacute; du pass&eacute;" &rarr; past perfect (had + participe pass&eacute;).</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 9 : LE VERBE BE -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Le verbe "to be" : le verbe le plus important de l'anglais.</h2>
+  <p>Le verbe "be" (&ecirc;tre) est partout. Il sert d'auxiliaire pour les temps continus et le passif, et c'est un verbe principal &agrave; part enti&egrave;re. Il faut le conna&icirc;tre parfaitement.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th></th><th>Pr&eacute;sent</th><th>Pass&eacute;</th><th>Participe pass&eacute;</th></tr></thead>
+      <tbody>
+        <tr><td>I</td><td><code>am</code></td><td><code>was</code></td><td rowspan="7"><code>been</code></td></tr>
+        <tr><td>you</td><td><code>are</code></td><td><code>were</code></td></tr>
+        <tr><td>he / she / it</td><td><code>is</code></td><td><code>was</code></td></tr>
+        <tr><td>we</td><td><code>are</code></td><td><code>were</code></td></tr>
+        <tr><td>they</td><td><code>are</code></td><td><code>were</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="encart accent">
+    <span class="encart-label">Pi&egrave;ge avec was/were dans les questions</span>
+    <p>Quand "was/were" appara&icirc;t dans une phrase interrogative ou n&eacute;gative, on n'utilise <strong>pas "did"</strong>.</p>
+    <p class="ex correct"><span class="en"><strong>Were</strong> you sick last night?</span></p>
+    <p class="ex wrong"><span class="en"><del>Did you were sick last night?</del></span></p>
+  </div>
+
+  <!-- QUIZ 9 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">"How _____ the test? It wasn't difficult at all!"</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,true)">a) was</button>
+      <button class="quiz-option" onclick="check(this,false)">b) did</button>
+      <button class="quiz-option" onclick="check(this,false)">c) were</button>
+      <button class="quiz-option" onclick="check(this,false)">d) has been</button>
+    </div>
+    <div class="quiz-fb correct">Exact. "The test" est singulier &rarr; <strong>was</strong>. La r&eacute;ponse "wasn't" confirme qu'on est dans le pass&eacute; avec le verbe "be". Pas de "did" avec "be".</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>a) was</strong>. "The test" est singulier &rarr; was (pas "were"). Et les questions avec "be" n'utilisent pas "did" : on inverse directement "was" et le sujet.</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- QUIZ FINAL -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Quiz de fin de chapitre.</h2>
+  <p class="light">Trois derni&egrave;res questions pour consolider tout ce chapitre.</p>
+
+  <!-- QUIZ 10 -->
+  <div class="quiz-block">
+    <span class="quiz-label">Question 10 sur 12</span>
+    <p class="quiz-question">"What _____ you do last weekend?"</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,true)">a) did</button>
+      <button class="quiz-option" onclick="check(this,false)">b) do</button>
+      <button class="quiz-option" onclick="check(this,false)">c) have</button>
+      <button class="quiz-option" onclick="check(this,false)">d) were</button>
+    </div>
+    <div class="quiz-fb correct">Exact. "Last weekend" = marqueur de pass&eacute; pr&eacute;cis &rarr; past simple. La question au past simple se forme avec <strong>did</strong> + sujet + verbe infinitif.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>a) did</strong>. "Last weekend" impose le past simple. Les questions au past simple utilisent "did" + verbe &agrave; l'infinitif : <em>What <strong>did</strong> you <strong>do</strong>?</em></div>
+  </div>
+
+  <!-- QUIZ 11 -->
+  <div class="quiz-block">
+    <span class="quiz-label">Question 11 sur 12</span>
+    <p class="quiz-question">"I _____ forward to hearing from you soon."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) look</button>
+      <button class="quiz-option" onclick="check(this,false)">b) am look</button>
+      <button class="quiz-option" onclick="check(this,false)">c) will look</button>
+      <button class="quiz-option" onclick="check(this,true)">d) look</button>
+    </div>
+    <div class="quiz-fb correct">Exact. "Look forward to" est une expression fig&eacute;e qui s'utilise au pr&eacute;sent simple dans les formules de politesse (&agrave; la fin d'une lettre). Attention : "to" est ici une pr&eacute;position, donc suivi de -ing (hearing), pas d'un infinitif.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>d) look</strong>. "I look forward to + -ing" est une formule standard de correspondance. Le "to" ici est une pr&eacute;position (pas la marque de l'infinitif), d'o&ugrave; le -ing apr&egrave;s.</div>
+  </div>
+
+  <!-- QUIZ 12 -->
+  <div class="quiz-block">
+    <span class="quiz-label">Question 12 sur 12</span>
+    <p class="quiz-question">"By the time we arrived, the show _____."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) started</button>
+      <button class="quiz-option" onclick="check(this,true)">b) had already started</button>
+      <button class="quiz-option" onclick="check(this,false)">c) has started</button>
+      <button class="quiz-option" onclick="check(this,false)">d) was starting</button>
+    </div>
+    <div class="quiz-fb correct">Parfait. "By the time" + past simple indique que deux actions se sont pass&eacute;es dans le pass&eacute;, et le spectacle a commenc&eacute; <strong>avant</strong> l'arriv&eacute;e &rarr; past perfect.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>b) had already started</strong>. "By the time we arrived" (past simple) &rarr; l'autre action, ant&eacute;rieure, doit &ecirc;tre au past perfect. Le show avait d&eacute;j&agrave; commenc&eacute; avant notre arriv&eacute;e.</div>
+  </div>
+</section>
+
+<!-- BILAN -->
+<section class="section" id="bilan" style="display:none;">
+  <div class="encart green">
+    <span class="encart-label">Ton bilan du chapitre 4</span>
+    <p id="bilan-text"></p>
+  </div>
+</section>
+
+<!-- RESUME -->
+<section class="section">
+  <h2>R&eacute;sum&eacute; du chapitre.</h2>
+  <div class="reveal-block">
+    <button class="reveal-btn" onclick="toggleReveal(this)">
+      <span class="arrow">&#9654;</span> Afficher le r&eacute;sum&eacute; complet
+    </button>
+    <div class="reveal-content">
+      <p><strong>Pr&eacute;sent simple :</strong> habitudes, v&eacute;rit&eacute;s g&eacute;n&eacute;rales, situations permanentes. -s &agrave; la 3e personne. Questions/n&eacute;gations avec do/does + infinitif.</p>
+      <p><strong>Pr&eacute;sent continu :</strong> action en cours, situation temporaire. Am/is/are + -ing. Marqueurs : now, at the moment, today. Certains verbes refusent le -ing (love, know, understand...).</p>
+      <p><strong>Past simple :</strong> action termin&eacute;e &agrave; un moment pr&eacute;cis du pass&eacute;. Verbe + ed (r&eacute;gulier) ou forme irr&eacute;guli&egrave;re. Apr&egrave;s did/didn't, le verbe revient &agrave; l'infinitif.</p>
+      <p><strong>Present perfect :</strong> action pass&eacute;e li&eacute;e au pr&eacute;sent, exp&eacute;rience, r&eacute;sultat. Have/has + participe pass&eacute;. Marqueurs : already, yet, ever, never, since, for. Jamais avec un moment pr&eacute;cis du pass&eacute;.</p>
+      <p><strong>Past continuous :</strong> action en cours dans le pass&eacute;, interrompue par une autre. Was/were + -ing. Structure : when + past simple, past continuous (ou while + past continuous, past simple).</p>
+      <p><strong>Futur avec will :</strong> d&eacute;cision spontan&eacute;e, pr&eacute;diction, promesse, offre. Will + infinitif. N&eacute;gation : won't.</p>
+      <p><strong>Futur avec going to :</strong> intention planifi&eacute;e, &eacute;vidence visible. Am/is/are going to + infinitif.</p>
+      <p><strong>Past perfect :</strong> action ant&eacute;rieure &agrave; un autre moment du pass&eacute;. Had + participe pass&eacute;. Marqueurs : already, before, by the time, when, after.</p>
+      <p><strong>Verbe "be" :</strong> am/is/are (pr&eacute;sent), was/were (pass&eacute;). Pas de "did" avec "be" dans les questions et n&eacute;gations.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Navigation -->
+<div class="nav-bottom">
+  <button class="nav-btn prev" onclick="window.location.href='./manuel_interactif_anglais_chapitre3_pluriel.html';">&larr; Chapitre 3 : le pluriel</button>
+  <button class="nav-btn next" onclick="window.location.href='./manuel_interactif_anglais_chapitre5_prepositions.html';">Chapitre 5 : prépositions &rarr;</button>
+</div>
+
+<footer>
+  <p><strong>Passeport Concours</strong> &mdash; Anglais ENA 2026 &mdash; Chapitre 4.</p>
+</footer>
+
+</div>
+
+<script>
+let score=0,total=12,answered=0;
+function check(btn,isCorrect){
+  const block=btn.closest('.quiz-block');
+  if(block.dataset.done)return;
+  block.dataset.done='1';
+  const opts=block.querySelectorAll('.quiz-option');
+  const fbs=block.querySelectorAll('.quiz-fb');
+  opts.forEach(o=>o.disabled=true);
+  if(isCorrect){btn.classList.add('ok');fbs[0].classList.add('show');score++}
+  else{btn.classList.add('ko');fbs[1].classList.add('show');opts.forEach(o=>{const h=o.getAttribute('onclick');if(h&&h.includes('true'))o.classList.add('show-ok')})}
+  answered++;
+  document.getElementById('scoreDisplay').textContent=score+' / '+total+' bonnes réponses';
+  if(answered===total)setTimeout(showBilan,500);
+}
+function showBilan(){
+  const b=document.getElementById('bilan'),t=document.getElementById('bilan-text');
+  const pct=Math.round(score/total*100);
+  let msg='';
+  if(pct>=80)msg='<strong>'+score+'/'+total+' ('+pct+'%) — Excellent.</strong> Tu maîtrises les temps anglais. C\'est le chapitre le plus important du concours et tu le domines. Direction le chapitre 5 sur les prépositions.';
+  else if(pct>=50)msg='<strong>'+score+'/'+total+' ('+pct+'%) — Correct, mais la conjugaison est le coeur du concours.</strong> Relis surtout la distinction present perfect vs past simple et la règle du "did + infinitif". Ces deux points représentent à eux seuls une bonne partie des questions.';
+  else msg='<strong>'+score+'/'+total+' ('+pct+'%) — Ce chapitre demande un travail approfondi.</strong> C\'est normal : la conjugaison est le sujet le plus vaste. Reprends-le en deux fois : d\'abord les temps simples (présent simple, past simple, futur), puis les temps composés (present perfect, past continuous, past perfect). 15 minutes par jour pendant une semaine feront la différence.';
+  t.innerHTML=msg;b.style.display='block';b.scrollIntoView({behavior:'smooth',block:'center'});
+}
+function toggleReveal(btn){btn.classList.toggle('open');btn.nextElementSibling.classList.toggle('open')}
+</script>
+
+</body>
+</html>

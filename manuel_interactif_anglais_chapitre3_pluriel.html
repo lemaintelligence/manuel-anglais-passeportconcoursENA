@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapitre 3 - Le pluriel en anglais.</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf8f5;--bg-white:#fff;--bg-warm:#f5f0ea;--text:#2c2420;--text-light:#6b5e54;--text-muted:#9a8d82;--accent:#c4560a;--accent-light:#e8874a;--accent-bg:#fef3ea;--green:#2a7d4f;--green-bg:#edf7f0;--blue:#1a5f8a;--blue-bg:#eaf3fa;--red:#b83232;--red-bg:#fdeaea;--border:#e8e0d8;--shadow:0 1px 3px rgba(44,36,32,.06)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.8;-webkit-font-smoothing:antialiased}
+.page{max-width:720px;margin:0 auto;padding:0 24px}
+header{padding:60px 0 40px;border-bottom:1px solid var(--border);margin-bottom:50px}
+header .tag{display:inline-block;font-size:.7rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);background:var(--accent-bg);padding:5px 14px;border-radius:4px;margin-bottom:20px}
+header h1{font-family:'Source Serif 4',serif;font-size:clamp(1.8rem,5vw,2.6rem);font-weight:700;color:var(--text);line-height:1.25;margin-bottom:14px}
+header .subtitle{font-size:1.05rem;color:var(--text-light);max-width:580px;line-height:1.7}
+.section{margin-bottom:50px}
+.section h2{font-family:'Source Serif 4',serif;font-size:1.45rem;font-weight:700;color:var(--text);margin-bottom:14px;line-height:1.3}
+.section h3{font-family:'Source Serif 4',serif;font-size:1.15rem;font-weight:600;color:var(--text);margin:22px 0 10px}
+.section p{font-size:1.02rem;color:var(--text);margin-bottom:14px}
+.section p.light{color:var(--text-light)}
+strong{font-weight:600}
+em{font-style:italic;color:var(--text-light)}
+.encart{background:var(--bg-white);border:1px solid var(--border);border-radius:10px;padding:22px 26px;margin:22px 0;box-shadow:var(--shadow)}
+.encart.accent{background:var(--accent-bg);border-color:rgba(196,86,10,.15)}
+.encart.green{background:var(--green-bg);border-color:rgba(42,125,79,.15)}
+.encart.blue{background:var(--blue-bg);border-color:rgba(26,95,138,.15)}
+.encart.red{background:var(--red-bg);border-color:rgba(184,50,50,.15)}
+.encart-label{font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;display:block}
+.encart.accent .encart-label{color:var(--accent)}
+.encart.green .encart-label{color:var(--green)}
+.encart.blue .encart-label{color:var(--blue)}
+.encart.red .encart-label{color:var(--red)}
+.encart p{font-size:.98rem;margin-bottom:8px;line-height:1.7}
+.encart p:last-child{margin-bottom:0}
+.table-wrap{overflow-x:auto;margin:20px 0}
+table{width:100%;border-collapse:collapse;font-size:.95rem;background:var(--bg-white);border-radius:10px;overflow:hidden;box-shadow:var(--shadow)}
+thead{background:var(--text);color:#fff}
+th{padding:12px 16px;text-align:left;font-weight:600;font-size:.85rem;letter-spacing:.5px}
+td{padding:11px 16px;border-bottom:1px solid var(--border)}
+tr:last-child td{border-bottom:none}
+tbody tr:hover{background:var(--bg-warm)}
+td code{font-family:'DM Sans',sans-serif;font-weight:600;color:var(--accent);background:var(--accent-bg);padding:2px 7px;border-radius:4px;font-size:.9rem}
+.ex{background:var(--bg-white);border-left:3px solid var(--border);padding:14px 20px;margin:14px 0;border-radius:0 8px 8px 0;font-size:.97rem}
+.ex .en{font-weight:600;color:var(--text)}
+.ex .fr{color:var(--text-muted);font-style:italic;margin-left:4px}
+.ex.correct{border-left-color:var(--green);background:var(--green-bg)}
+.ex.wrong{border-left-color:var(--red);background:var(--red-bg)}
+.quiz-block{background:var(--bg-white);border:1px solid var(--border);border-radius:10px;padding:26px;margin:28px 0;box-shadow:var(--shadow)}
+.quiz-label{font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;display:block}
+.quiz-question{font-family:'Source Serif 4',serif;font-size:1.05rem;font-weight:600;margin-bottom:16px;line-height:1.5}
+.quiz-options{display:flex;flex-direction:column;gap:8px;margin-bottom:10px}
+.quiz-option{display:block;width:100%;text-align:left;padding:12px 18px;font-family:'DM Sans',sans-serif;font-size:.95rem;color:var(--text);background:var(--bg);border:1.5px solid var(--border);border-radius:8px;cursor:pointer;transition:all .2s;line-height:1.5}
+.quiz-option:hover:not(:disabled){border-color:var(--accent-light);background:var(--accent-bg)}
+.quiz-option.ok{border-color:var(--green);background:var(--green-bg);color:var(--green);font-weight:600;cursor:default}
+.quiz-option.ko{border-color:var(--red);background:var(--red-bg);color:var(--red);cursor:default;text-decoration:line-through}
+.quiz-option.show-ok{border-color:var(--green);background:var(--green-bg);color:var(--green);font-weight:600;cursor:default}
+.quiz-option:disabled{cursor:default}
+.quiz-fb{font-size:.92rem;padding:14px 18px;border-radius:8px;display:none;line-height:1.65;margin-top:8px}
+.quiz-fb.show{display:block}
+.quiz-fb.correct{background:var(--green-bg);color:var(--green)}
+.quiz-fb.wrong{background:var(--red-bg);color:var(--red)}
+.reveal-block{margin:20px 0}
+.reveal-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:600;color:var(--accent);background:var(--accent-bg);border:1.5px solid rgba(196,86,10,.2);border-radius:8px;cursor:pointer;transition:all .2s}
+.reveal-btn:hover{background:rgba(196,86,10,.12)}
+.reveal-btn .arrow{transition:transform .3s;font-size:.75rem}
+.reveal-btn.open .arrow{transform:rotate(90deg)}
+.reveal-content{max-height:0;overflow:hidden;transition:max-height .5s ease,padding .3s;padding:0 18px;background:var(--bg-white);border-radius:0 0 10px 10px}
+.reveal-content.open{max-height:2000px;padding:18px;border:1px solid var(--border);border-top:none;margin-top:-4px}
+.reveal-content p{font-size:.95rem;color:var(--text-light);margin-bottom:8px;line-height:1.7}
+.sep{height:1px;background:var(--border);margin:50px 0}
+.score-bar{position:sticky;top:0;z-index:100;background:rgba(250,248,245,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:10px 24px;display:flex;justify-content:space-between;align-items:center;font-size:.85rem}
+.score-bar .left{font-weight:600;color:var(--text)}
+.score-bar .right{color:var(--accent);font-weight:700}
+.formula{background:var(--blue-bg);border:1px solid rgba(26,95,138,.15);border-radius:10px;padding:18px 24px;margin:18px 0;text-align:center;font-family:'Source Serif 4',serif;font-size:1.15rem;font-weight:600;color:var(--blue);letter-spacing:.3px}
+.nav-bottom{display:flex;justify-content:space-between;align-items:center;padding:30px 0;margin-top:40px;border-top:1px solid var(--border)}
+.nav-btn{padding:12px 28px;font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:700;border-radius:8px;text-decoration:none;cursor:pointer;transition:all .2s;border:none}
+.nav-btn.prev{color:var(--text-light);background:var(--bg-warm);border:1px solid var(--border)}
+.nav-btn.prev:hover{background:var(--border)}
+.nav-btn.next{color:#fff;background:var(--accent)}
+.nav-btn.next:hover{background:#a84808;transform:translateY(-1px);box-shadow:0 4px 12px rgba(196,86,10,.25)}
+footer{text-align:center;padding:20px 0 50px;font-size:.8rem;color:var(--text-muted)}
+footer strong{color:var(--accent);font-weight:700}
+@media(max-width:600px){header{padding:40px 0 30px}.page{padding:0 16px}table{font-size:.85rem}th,td{padding:9px 12px}}
+</style>
+</head>
+<body>
+
+<div class="score-bar">
+  <span class="left">Chapitre 3 &mdash; Le pluriel</span>
+  <span class="right" id="scoreDisplay">0 / 10 bonnes r&eacute;ponses</span>
+</div>
+
+<div class="page">
+
+<header>
+  <span class="tag">Chapitre 3</span>
+  <h1>Le pluriel en anglais.</h1>
+  <p class="subtitle">
+    Ajouter un -s ne suffit pas toujours. Ce chapitre couvre toutes les r&egrave;gles,
+    les exceptions, et les pi&egrave;ges que les examinateurs utilisent pour te faire perdre des points.
+  </p>
+</header>
+
+<!-- ============================================================ -->
+<!-- SECTION 1 : LE PLURIEL REGULIER -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Le pluriel r&eacute;gulier : ajouter -s.</h2>
+  <p>
+    Dans la plupart des cas, former le pluriel en anglais est simple : on ajoute un <strong>-s</strong> &agrave; la fin du nom singulier. C'est la r&egrave;gle de base.
+  </p>
+
+  <div class="ex"><span class="en">book &rarr; book<strong>s</strong></span> <span class="fr">| dog &rarr; dog<strong>s</strong> | river &rarr; river<strong>s</strong> | hat &rarr; hat<strong>s</strong> | cup &rarr; cup<strong>s</strong></span></div>
+
+  <p>Jusque-l&agrave;, rien de compliqu&eacute;. Mais le diable est dans les d&eacute;tails. Il y a cinq cas particuliers &agrave; conna&icirc;tre, et ce sont eux qui tombent au concours.</p>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 2 : LES TERMINAISONS EN -ES -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Les noms en -s, -sh, -ch, -x, -z, -o : ajouter -es.</h2>
+  <p>
+    Quand un nom se termine par un son sifflant ou par la lettre -o, on ne peut pas juste coller un -s. Il faut ajouter <strong>-es</strong> pour que le mot reste pronon&ccedil;able.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Terminaison</th><th>Singulier</th><th>Pluriel</th></tr></thead>
+      <tbody>
+        <tr><td>-s</td><td>bus</td><td><code>buses</code></td></tr>
+        <tr><td>-sh</td><td>church</td><td><code>churches</code></td></tr>
+        <tr><td>-ch</td><td>watch</td><td><code>watches</code></td></tr>
+        <tr><td>-x</td><td>box</td><td><code>boxes</code></td></tr>
+        <tr><td>-z</td><td>quiz</td><td><code>quizzes</code></td></tr>
+        <tr><td>-o</td><td>potato, hero, echo</td><td><code>potatoes</code>, <code>heroes</code>, <code>echoes</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="encart accent">
+    <span class="encart-label">Pi&egrave;ge : les mots en -o qui prennent juste un -s</span>
+    <p>Certains mots en -o ne prennent <strong>pas</strong> -es mais un simple -s. Ce sont g&eacute;n&eacute;ralement des mots d'origine &eacute;trang&egrave;re ou des abr&eacute;viations : <strong>photo, piano, auto, pro, tattoo, solo, kangaroo, kilo, memo, studio, video, zoo</strong>.</p>
+    <p>La r&egrave;gle pratique : si le mot "sonne" comme un mot import&eacute; ou abr&eacute;g&eacute;, c'est probablement un simple -s.</p>
+  </div>
+
+  <!-- QUIZ 1 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">Quel est le pluriel de "tomato" ?</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) tomatos</button>
+      <button class="quiz-option" onclick="check(this,true)">b) tomatoes</button>
+      <button class="quiz-option" onclick="check(this,false)">c) tomatoes</button>
+      <button class="quiz-option" onclick="check(this,false)">d) tomato's</button>
+    </div>
+    <div class="quiz-fb correct">Exact. "Tomato" fait partie des mots en -o qui prennent <strong>-es</strong> au pluriel, comme potato, hero, echo. Attention &agrave; l'orthographe : tomato<strong>es</strong> (pas "tomatoe<del>s</del>").</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>b) tomatoes</strong>. "Tomato" prend -es au pluriel. Attention : l'apostrophe (tomato's) marque le possessif, jamais le pluriel en anglais.</div>
+  </div>
+
+  <!-- QUIZ 2 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">Quel est le pluriel de "photo" ?</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,true)">a) photos</button>
+      <button class="quiz-option" onclick="check(this,false)">b) photoes</button>
+      <button class="quiz-option" onclick="check(this,false)">c) photois</button>
+      <button class="quiz-option" onclick="check(this,false)">d) photo's</button>
+    </div>
+    <div class="quiz-fb correct">Bravo. "Photo" est une abr&eacute;viation (de photograph). Les abr&eacute;viations et mots d'origine &eacute;trang&egrave;re en -o prennent un simple <strong>-s</strong> : photos, pianos, videos, zoos.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>a) photos</strong>. "Photo" est une abr&eacute;viation &rarr; simple -s au pluriel. C'est l'exception &agrave; la r&egrave;gle des mots en -o. M&ecirc;me chose pour piano, video, zoo.</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 3 : LES NOMS EN -Y -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Les noms en -y : -ies ou -ys ?</h2>
+  <p>
+    Tout d&eacute;pend de la lettre <strong>avant</strong> le -y. C'est une r&egrave;gle simple mais redoutablement efficace pour gagner des points.
+  </p>
+
+  <div class="encart blue">
+    <span class="encart-label">La r&egrave;gle</span>
+    <p><strong>Consonne + y</strong> &rarr; on remplace le -y par <strong>-ies</strong>.</p>
+    <p><strong>Voyelle + y</strong> &rarr; on ajoute simplement <strong>-s</strong>.</p>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Consonne + y &rarr; -ies</th><th>Voyelle + y &rarr; -s</th></tr></thead>
+      <tbody>
+        <tr><td>baby &rarr; <code>babies</code></td><td>boy &rarr; <code>boys</code></td></tr>
+        <tr><td>party &rarr; <code>parties</code></td><td>toy &rarr; <code>toys</code></td></tr>
+        <tr><td>city &rarr; <code>cities</code></td><td>key &rarr; <code>keys</code></td></tr>
+        <tr><td>lady &rarr; <code>ladies</code></td><td>day &rarr; <code>days</code></td></tr>
+        <tr><td>fly &rarr; <code>flies</code></td><td>donkey &rarr; <code>donkeys</code></td></tr>
+        <tr><td>cherry &rarr; <code>cherries</code></td><td>tray &rarr; <code>trays</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="encart green">
+    <span class="encart-label">Astuce m&eacute;moire</span>
+    <p>Regarde juste la lettre <strong>juste avant le -y</strong>. Si c'est a, e, i, o, u (une voyelle) &rarr; tu ajoutes -s. Si c'est n'importe quelle autre lettre &rarr; tu changes -y en -ies.</p>
+  </div>
+
+  <!-- QUIZ 3 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">Quel est le pluriel de "country" ?</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) countrys</button>
+      <button class="quiz-option" onclick="check(this,true)">b) countries</button>
+      <button class="quiz-option" onclick="check(this,false)">c) countris</button>
+      <button class="quiz-option" onclick="check(this,false)">d) country's</button>
+    </div>
+    <div class="quiz-fb correct">Exact. La lettre avant le -y est "r" (une consonne). Donc on remplace -y par <strong>-ies</strong> &rarr; countries.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>b) countries</strong>. Countr<strong>y</strong> : la lettre avant le -y est "r" (consonne) &rarr; on remplace -y par -ies. Si c'&eacute;tait une voyelle (comme dans "donkey"), on ajouterait juste un -s.</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 4 : LES NOMS EN -F / -FE -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Les noms en -f ou -fe : transformer en -ves.</h2>
+  <p>
+    Pour la plupart des noms qui se terminent par -f ou -fe, on remplace cette terminaison par <strong>-ves</strong> au pluriel. C'est un pi&egrave;ge classique parce que le changement est radical.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Singulier</th><th>Pluriel</th></tr></thead>
+      <tbody>
+        <tr><td>wife (femme/&eacute;pouse)</td><td><code>wives</code></td></tr>
+        <tr><td>knife (couteau)</td><td><code>knives</code></td></tr>
+        <tr><td>leaf (feuille)</td><td><code>leaves</code></td></tr>
+        <tr><td>thief (voleur)</td><td><code>thieves</code></td></tr>
+        <tr><td>loaf (miche)</td><td><code>loaves</code></td></tr>
+        <tr><td>shelf (&eacute;tag&egrave;re)</td><td><code>shelves</code></td></tr>
+        <tr><td>half (moiti&eacute;)</td><td><code>halves</code></td></tr>
+        <tr><td>wolf (loup)</td><td><code>wolves</code></td></tr>
+        <tr><td>life (vie)</td><td><code>lives</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="encart accent">
+    <span class="encart-label">Attention aux exceptions</span>
+    <p>Certains mots en -f prennent simplement un <strong>-s</strong> classique : <strong>belief</strong> (beliefs), <strong>chief</strong> (chiefs), <strong>cliff</strong> (cliffs), <strong>proof</strong> (proofs), <strong>roof</strong> (roofs), <strong>safe</strong> (safes).</p>
+  </div>
+
+  <!-- QUIZ 4 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">Quel est le pluriel de "knife" ?</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) knifes</button>
+      <button class="quiz-option" onclick="check(this,true)">b) knives</button>
+      <button class="quiz-option" onclick="check(this,false)">c) knifs</button>
+      <button class="quiz-option" onclick="check(this,false)">d) knife's</button>
+    </div>
+    <div class="quiz-fb correct">Exact. Knife se termine par -fe &rarr; on remplace par <strong>-ves</strong> &rarr; knives. M&ecirc;me logique que wife &rarr; wives, life &rarr; lives.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>b) knives</strong>. Les noms en -fe deviennent -ves au pluriel : knife &rarr; knives, wife &rarr; wives, life &rarr; lives. "Knifes" n'est pas correct.</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 5 : LES PLURIELS IRREGULIERS -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Les pluriels irr&eacute;guliers : &agrave; conna&icirc;tre par coeur.</h2>
+  <p>
+    Certains noms changent compl&egrave;tement de forme au pluriel. Pas de r&egrave;gle, pas de logique : il faut les m&eacute;moriser. La bonne nouvelle, c'est qu'ils ne sont pas tr&egrave;s nombreux.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Singulier</th><th>Pluriel</th><th>Traduction</th></tr></thead>
+      <tbody>
+        <tr><td>man</td><td><code>men</code></td><td>homme &rarr; hommes</td></tr>
+        <tr><td>woman</td><td><code>women</code></td><td>femme &rarr; femmes</td></tr>
+        <tr><td>child</td><td><code>children</code></td><td>enfant &rarr; enfants</td></tr>
+        <tr><td>person</td><td><code>people</code></td><td>personne &rarr; personnes</td></tr>
+        <tr><td>foot</td><td><code>feet</code></td><td>pied &rarr; pieds</td></tr>
+        <tr><td>tooth</td><td><code>teeth</code></td><td>dent &rarr; dents</td></tr>
+        <tr><td>mouse</td><td><code>mice</code></td><td>souris &rarr; souris</td></tr>
+        <tr><td>goose</td><td><code>geese</code></td><td>oie &rarr; oies</td></tr>
+        <tr><td>ox</td><td><code>oxen</code></td><td>boeuf &rarr; boeufs</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- QUIZ 5 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">"There were many _____ playing in the park."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) childs</button>
+      <button class="quiz-option" onclick="check(this,true)">b) children</button>
+      <button class="quiz-option" onclick="check(this,false)">c) childrens</button>
+      <button class="quiz-option" onclick="check(this,false)">d) child</button>
+    </div>
+    <div class="quiz-fb correct">Exact. Le pluriel irr&eacute;gulier de "child" est <strong>children</strong>. Pas de -s &agrave; la fin ("childrens" n'existe pas), et "childs" est incorrect.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>b) children</strong>. "Child" est irr&eacute;gulier : child &rarr; children. Attention &agrave; ne pas ajouter un -s apr&egrave;s "children" &mdash; c'est d&eacute;j&agrave; un pluriel.</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 6 : LES NOMS INVARIABLES -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Les noms invariables : m&ecirc;me forme au singulier et au pluriel.</h2>
+  <p>
+    Certains noms ne changent <strong>jamais</strong> de forme, qu'on parle d'un ou de mille. C'est un pi&egrave;ge d'autant plus vicieux que le candidat francophone a le r&eacute;flexe d'ajouter un -s.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Cat&eacute;gorie</th><th>Exemples (singulier = pluriel)</th></tr></thead>
+      <tbody>
+        <tr><td>Animaux</td><td><code>sheep</code>, <code>deer</code>, <code>fish</code>, <code>salmon</code>, <code>species</code></td></tr>
+        <tr><td>Ind&eacute;nombrables</td><td><code>information</code>, <code>furniture</code>, <code>luggage</code>, <code>hair</code>, <code>advice</code></td></tr>
+        <tr><td>Transport</td><td><code>aircraft</code>, <code>series</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="encart red">
+    <span class="encart-label">Erreurs fatales &agrave; &eacute;viter absolument</span>
+    <p>On ne dit <strong>jamais</strong> <del>informations</del>, <del>furnitures</del>, <del>luggages</del>, <del>advices</del> ou <del>sheeps</del>.</p>
+    <p>En anglais, ces mots sont ind&eacute;nombrables. Si tu veux en compter, il faut utiliser une expression : <em>a <strong>piece of</strong> information</em>, <em>a <strong>piece of</strong> furniture</em>, <em>a <strong>piece of</strong> luggage</em>.</p>
+  </div>
+
+  <div class="ex"><span class="en correct">I need some <strong>information</strong>.</span> <span class="fr">(J'ai besoin d'informations.)</span></div>
+  <div class="ex wrong"><span class="en"><del>I need some informations.</del></span></div>
+
+  <!-- QUIZ 6 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">Quelle phrase est correcte ?</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) I bought two furnitures for my apartment.</button>
+      <button class="quiz-option" onclick="check(this,false)">b) She gave me many advices.</button>
+      <button class="quiz-option" onclick="check(this,true)">c) There are three sheep in the field.</button>
+      <button class="quiz-option" onclick="check(this,false)">d) He lost his luggages at the airport.</button>
+    </div>
+    <div class="quiz-fb correct">Bravo. "Sheep" est invariable &mdash; m&ecirc;me forme au singulier et au pluriel. Les trois autres phrases contiennent des erreurs : furniture, advice et luggage sont ind&eacute;nombrables et ne prennent <strong>jamais</strong> de -s.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>c)</strong>. "Sheep" est invariable (un sheep, trois sheep). Les mots "furniture", "advice" et "luggage" sont ind&eacute;nombrables en anglais : ils ne prennent jamais de -s, m&ecirc;me si en fran&ccedil;ais on dit "des meubles", "des conseils", "des bagages".</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 7 : PLURIELS D'ORIGINE GRECQUE/LATINE -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Les pluriels d'origine grecque ou latine.</h2>
+  <p>
+    Certains mots anglais emprunt&eacute;s au grec ou au latin conservent leur pluriel d'origine. On les retrouve surtout dans le vocabulaire scientifique et administratif &mdash; donc dans les textes de l'ENA.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Singulier</th><th>Pluriel</th><th>Traduction</th></tr></thead>
+      <tbody>
+        <tr><td>basis</td><td><code>bases</code></td><td>base &rarr; bases</td></tr>
+        <tr><td>crisis</td><td><code>crises</code></td><td>crise &rarr; crises</td></tr>
+        <tr><td>analysis</td><td><code>analyses</code></td><td>analyse &rarr; analyses</td></tr>
+        <tr><td>hypothesis</td><td><code>hypotheses</code></td><td>hypoth&egrave;se &rarr; hypoth&egrave;ses</td></tr>
+        <tr><td>thesis</td><td><code>theses</code></td><td>th&egrave;se &rarr; th&egrave;ses</td></tr>
+        <tr><td>diagnosis</td><td><code>diagnoses</code></td><td>diagnostic &rarr; diagnostics</td></tr>
+        <tr><td>phenomenon</td><td><code>phenomena</code></td><td>ph&eacute;nom&egrave;ne &rarr; ph&eacute;nom&egrave;nes</td></tr>
+        <tr><td>referendum</td><td><code>referenda</code></td><td>r&eacute;f&eacute;rendum &rarr; r&eacute;f&eacute;rendums</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="encart green">
+    <span class="encart-label">Astuce pour les rep&eacute;rer</span>
+    <p>Les mots en <strong>-is</strong> deviennent <strong>-es</strong> au pluriel (crisis &rarr; crises, basis &rarr; bases).</p>
+    <p>Les mots en <strong>-on</strong> ou <strong>-um</strong> deviennent souvent <strong>-a</strong> (phenomenon &rarr; phenomena).</p>
+  </div>
+
+  <!-- QUIZ 7 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">Quel est le pluriel de "crisis" ?</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) crisises</button>
+      <button class="quiz-option" onclick="check(this,false)">b) crisis</button>
+      <button class="quiz-option" onclick="check(this,true)">c) crises</button>
+      <button class="quiz-option" onclick="check(this,false)">d) crisies</button>
+    </div>
+    <div class="quiz-fb correct">Exact. Les mots en -is d'origine grecque deviennent -es au pluriel : crisis &rarr; <strong>crises</strong>, analysis &rarr; analyses, hypothesis &rarr; hypotheses.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>c) crises</strong>. Le -is final devient -es. C'est un pluriel d'origine grecque. M&ecirc;me transformation pour basis &rarr; bases, thesis &rarr; theses.</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 8 : LES NOMBRES ET LES OBJETS COMPOSES -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Deux cas sp&eacute;ciaux : les nombres et les objets compos&eacute;s.</h2>
+
+  <h3>Les mesures et nombres restent au singulier apr&egrave;s un chiffre.</h3>
+  <p>
+    Quand un nombre pr&eacute;c&egrave;de un mot de mesure, celui-ci reste au <strong>singulier</strong>. Mais utilis&eacute; seul, il prend un pluriel normal.
+  </p>
+
+  <div class="ex"><span class="en">I need <strong>two hundred</strong> copies.</span> <span class="fr">(Singulier apr&egrave;s un nombre pr&eacute;cis.)</span></div>
+  <div class="ex"><span class="en"><strong>Hundreds</strong> of people came.</span> <span class="fr">(Pluriel quand utilis&eacute; seul avec "of".)</span></div>
+
+  <p class="light">M&ecirc;me logique pour thousand, million, foot, pound, stone.</p>
+
+  <h3>Les objets compos&eacute;s de deux parties sont toujours au pluriel.</h3>
+  <p>
+    Certains objets form&eacute;s de deux parties identiques n'existent qu'au pluriel. On les pr&eacute;c&egrave;de souvent de <strong>a pair of</strong>.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Anglais</th><th>Fran&ccedil;ais</th></tr></thead>
+      <tbody>
+        <tr><td><code>trousers</code></td><td>un pantalon</td></tr>
+        <tr><td><code>scissors</code></td><td>des ciseaux</td></tr>
+        <tr><td><code>glasses</code></td><td>des lunettes</td></tr>
+        <tr><td><code>tweezers</code></td><td>une pince &agrave; &eacute;piler</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ex"><span class="en">I need <strong>a pair of scissors</strong>.</span> <span class="fr">(J'ai besoin d'une paire de ciseaux.)</span></div>
+  <div class="ex"><span class="en">These <strong>trousers are</strong> too tight.</span> <span class="fr">(Ce pantalon est trop serr&eacute;. &mdash; Verbe au pluriel en anglais.)</span></div>
+
+  <div class="encart accent">
+    <span class="encart-label">Pi&egrave;ge fr&eacute;quent</span>
+    <p>En fran&ccedil;ais, "un pantalon" est singulier. En anglais, "trousers" est <strong>toujours pluriel</strong> et s'accorde avec un verbe au pluriel : <em>These trousers <strong>are</strong> new.</em> (et non <del>This trouser is new</del>.)</p>
+  </div>
+
+  <!-- QUIZ 8 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">"Five _____ people attended the ceremony."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,true)">a) hundred</button>
+      <button class="quiz-option" onclick="check(this,false)">b) hundreds</button>
+      <button class="quiz-option" onclick="check(this,false)">c) hundredth</button>
+      <button class="quiz-option" onclick="check(this,false)">d) hundreds of</button>
+    </div>
+    <div class="quiz-fb correct">Exact. Apr&egrave;s un nombre pr&eacute;cis (five, ten, three...), les mots de mesure restent au <strong>singulier</strong> : five hundred, two thousand, six million. On dit "hundreds of" seulement quand le nombre est vague.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>a) hundred</strong>. Apr&egrave;s un chiffre pr&eacute;cis, hundred/thousand/million restent au singulier. "Five hundred" (pas "five hundreds"). On utilise "hundreds of" uniquement quand le nombre est ind&eacute;fini.</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 9 : NOMS EN -S QUI SONT SINGULIERS -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Les noms en -s qui sont en r&eacute;alit&eacute; singuliers.</h2>
+  <p>
+    Dernier pi&egrave;ge : certains noms se terminent par -s mais sont trait&eacute;s comme des <strong>singuliers</strong>. Ils prennent un verbe au singulier. Ce sont principalement des noms de maladies, de jeux et de mati&egrave;res.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Cat&eacute;gorie</th><th>Exemples (singulier malgr&eacute; le -s)</th></tr></thead>
+      <tbody>
+        <tr><td>Maladies</td><td><code>measles</code> (rougeole), <code>mumps</code> (oreillons)</td></tr>
+        <tr><td>Jeux</td><td><code>billiards</code>, <code>darts</code>, <code>dominoes</code></td></tr>
+        <tr><td>Mati&egrave;res scolaires</td><td><code>physics</code>, <code>mathematics</code>, <code>linguistics</code>, <code>economics</code></td></tr>
+        <tr><td>Informations</td><td><code>news</code> (les nouvelles)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ex"><span class="en correct">Mathematics <strong>is</strong> my favourite subject.</span></div>
+  <div class="ex wrong"><span class="en"><del>Mathematics are my favourite subject.</del></span></div>
+
+  <div class="ex"><span class="en correct">The news <strong>is</strong> very worrying.</span></div>
+  <div class="ex wrong"><span class="en"><del>The news are very worrying.</del></span></div>
+
+  <!-- QUIZ 9 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">"Physics _____ a very difficult subject."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,true)">a) is</button>
+      <button class="quiz-option" onclick="check(this,false)">b) are</button>
+      <button class="quiz-option" onclick="check(this,false)">c) were</button>
+      <button class="quiz-option" onclick="check(this,false)">d) have been</button>
+    </div>
+    <div class="quiz-fb correct">Exact. "Physics" d&eacute;signe une mati&egrave;re scolaire &mdash; c'est un nom singulier malgr&eacute; le -s. Donc on utilise <strong>is</strong>. M&ecirc;me chose pour mathematics, economics, news.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>a) is</strong>. Les noms de mati&egrave;res en -s (physics, mathematics, economics) et le mot "news" sont des singuliers en anglais. Ils s'accordent avec un verbe au singulier.</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- QUIZ FINAL -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Quiz de fin de chapitre.</h2>
+  <p class="light">Une derni&egrave;re question pour boucler ce chapitre.</p>
+
+  <!-- QUIZ 10 -->
+  <div class="quiz-block">
+    <span class="quiz-label">Question 10 sur 10</span>
+    <p class="quiz-question">Combien de phrases sont correctes ?<br>
+    1. "The sheeps are in the field."<br>
+    2. "I bought two pieces of furniture."<br>
+    3. "The children are playing outside."<br>
+    4. "She lost her luggages."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) Une seule.</button>
+      <button class="quiz-option" onclick="check(this,true)">b) Deux (la 2 et la 3).</button>
+      <button class="quiz-option" onclick="check(this,false)">c) Trois (la 1, la 2, la 3).</button>
+      <button class="quiz-option" onclick="check(this,false)">d) Les quatre sont correctes.</button>
+    </div>
+    <div class="quiz-fb correct">Parfait. La phrase 1 est fausse ("sheep" est invariable, jamais "sheeps"). La phrase 4 est fausse ("luggage" est ind&eacute;nombrable, jamais "luggages"). Les phrases <strong>2</strong> ("pieces of furniture" est la bonne fa&ccedil;on de compter) et <strong>3</strong> ("children" est le pluriel correct de "child") sont correctes.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>b)</strong>. Seules les phrases 2 et 3 sont correctes. Phrase 1 : "sheep" est invariable (pas "sheeps"). Phrase 4 : "luggage" est ind&eacute;nombrable (pas "luggages"). Phrase 2 : "pieces of furniture" est la bonne mani&egrave;re de compter des meubles. Phrase 3 : "children" est le pluriel irr&eacute;gulier correct de "child".</div>
+  </div>
+</section>
+
+<!-- BILAN -->
+<section class="section" id="bilan" style="display:none;">
+  <div class="encart green">
+    <span class="encart-label">Ton bilan du chapitre 3</span>
+    <p id="bilan-text"></p>
+  </div>
+</section>
+
+<!-- RESUME -->
+<section class="section">
+  <h2>R&eacute;sum&eacute; du chapitre.</h2>
+  <div class="reveal-block">
+    <button class="reveal-btn" onclick="toggleReveal(this)">
+      <span class="arrow">&#9654;</span> Afficher le r&eacute;sum&eacute; complet
+    </button>
+    <div class="reveal-content">
+      <p><strong>R&egrave;gle g&eacute;n&eacute;rale :</strong> pluriel = singulier + s.</p>
+      <p><strong>Noms en -s, -sh, -ch, -x, -z, -o :</strong> ajouter -es (boxes, churches, potatoes). Exception : les abr&eacute;viations et emprunts en -o prennent un simple -s (photos, pianos, videos).</p>
+      <p><strong>Noms en -y :</strong> consonne + y &rarr; -ies (city &rarr; cities). Voyelle + y &rarr; -s (boy &rarr; boys).</p>
+      <p><strong>Noms en -f/-fe :</strong> deviennent -ves (knife &rarr; knives, wife &rarr; wives). Exceptions : belief, chief, roof, proof &rarr; -s.</p>
+      <p><strong>Irr&eacute;guliers :</strong> man &rarr; men, woman &rarr; women, child &rarr; children, person &rarr; people, foot &rarr; feet, tooth &rarr; teeth, mouse &rarr; mice.</p>
+      <p><strong>Invariables :</strong> sheep, deer, fish, aircraft, series. Et les ind&eacute;nombrables : information, furniture, luggage, advice, hair (jamais de -s).</p>
+      <p><strong>Pluriels grecs/latins :</strong> -is &rarr; -es (crisis &rarr; crises). -on/-um &rarr; -a (phenomenon &rarr; phenomena).</p>
+      <p><strong>Nombres :</strong> apr&egrave;s un chiffre pr&eacute;cis, hundred/thousand/million restent au singulier.</p>
+      <p><strong>Objets compos&eacute;s :</strong> trousers, scissors, glasses &rarr; toujours pluriel + verbe pluriel.</p>
+      <p><strong>Faux pluriels :</strong> physics, mathematics, news &rarr; singulier malgr&eacute; le -s.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Navigation -->
+<div class="nav-bottom">
+  <button class="nav-btn prev" onclick="window.location.href='./manuel_interactif_anglais_chapitre2_comparatifs_superlatifs.html';">&larr; Chapitre 2 : comparatifs</button>
+  <button class="nav-btn next" onclick="window.location.href='./manuel_interactif_anglais_chapitre4_conjugaison.html';">Chapitre 4 : la conjugaison &rarr;</button>
+</div>
+
+<footer>
+  <p><strong>Passeport Concours</strong> &mdash; Anglais ENA 2026 &mdash; Chapitre 3.</p>
+</footer>
+
+</div>
+
+<script>
+let score=0,total=10,answered=0;
+function check(btn,isCorrect){
+  const block=btn.closest('.quiz-block');
+  if(block.dataset.done)return;
+  block.dataset.done='1';
+  const opts=block.querySelectorAll('.quiz-option');
+  const fbs=block.querySelectorAll('.quiz-fb');
+  opts.forEach(o=>o.disabled=true);
+  if(isCorrect){btn.classList.add('ok');fbs[0].classList.add('show');score++}
+  else{btn.classList.add('ko');fbs[1].classList.add('show');opts.forEach(o=>{const h=o.getAttribute('onclick');if(h&&h.includes('true'))o.classList.add('show-ok')})}
+  answered++;
+  document.getElementById('scoreDisplay').textContent=score+' / '+total+' bonnes réponses';
+  if(answered===total)setTimeout(showBilan,500);
+}
+function showBilan(){
+  const b=document.getElementById('bilan'),t=document.getElementById('bilan-text');
+  const pct=Math.round(score/total*100);
+  let msg='';
+  if(pct>=80)msg='<strong>'+score+'/'+total+' ('+pct+'%) — Excellent.</strong> Tu maîtrises les pluriels en anglais. Les pièges classiques ne te feront plus perdre de points. Direction le chapitre 4 sur la conjugaison.';
+  else if(pct>=50)msg='<strong>'+score+'/'+total+' ('+pct+'%) — Correct, mais il reste des zones grises.</strong> Relis attentivement les sections sur les indénombrables (information, furniture, luggage) et les irréguliers. Ce sont les pièges les plus fréquents au concours.';
+  else msg='<strong>'+score+'/'+total+' ('+pct+'%) — Ce chapitre nécessite une deuxième lecture.</strong> Les pluriels semblent simples mais regorgent d\'exceptions. Reprends le résumé, refais les quiz demain, et concentre-toi sur les catégories où tu as fait des erreurs.';
+  t.innerHTML=msg;b.style.display='block';b.scrollIntoView({behavior:'smooth',block:'center'});
+}
+function toggleReveal(btn){btn.classList.toggle('open');btn.nextElementSibling.classList.toggle('open')}
+</script>
+
+</body>
+</html>

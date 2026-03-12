@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapitre 2 - Les comparatifs et les superlatifs.</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf8f5;--bg-white:#fff;--bg-warm:#f5f0ea;--text:#2c2420;--text-light:#6b5e54;--text-muted:#9a8d82;--accent:#c4560a;--accent-light:#e8874a;--accent-bg:#fef3ea;--green:#2a7d4f;--green-bg:#edf7f0;--blue:#1a5f8a;--blue-bg:#eaf3fa;--red:#b83232;--red-bg:#fdeaea;--border:#e8e0d8;--shadow:0 1px 3px rgba(44,36,32,.06)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.8;-webkit-font-smoothing:antialiased}
+.page{max-width:720px;margin:0 auto;padding:0 24px}
+header{padding:60px 0 40px;border-bottom:1px solid var(--border);margin-bottom:50px}
+header .tag{display:inline-block;font-size:.7rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);background:var(--accent-bg);padding:5px 14px;border-radius:4px;margin-bottom:20px}
+header h1{font-family:'Source Serif 4',serif;font-size:clamp(1.8rem,5vw,2.6rem);font-weight:700;color:var(--text);line-height:1.25;margin-bottom:14px}
+header .subtitle{font-size:1.05rem;color:var(--text-light);max-width:580px;line-height:1.7}
+.section{margin-bottom:50px}
+.section h2{font-family:'Source Serif 4',serif;font-size:1.45rem;font-weight:700;color:var(--text);margin-bottom:14px;line-height:1.3}
+.section h3{font-family:'Source Serif 4',serif;font-size:1.15rem;font-weight:600;color:var(--text);margin:22px 0 10px}
+.section p{font-size:1.02rem;color:var(--text);margin-bottom:14px}
+.section p.light{color:var(--text-light)}
+strong{font-weight:600}
+em{font-style:italic;color:var(--text-light)}
+
+.encart{background:var(--bg-white);border:1px solid var(--border);border-radius:10px;padding:22px 26px;margin:22px 0;box-shadow:var(--shadow)}
+.encart.accent{background:var(--accent-bg);border-color:rgba(196,86,10,.15)}
+.encart.green{background:var(--green-bg);border-color:rgba(42,125,79,.15)}
+.encart.blue{background:var(--blue-bg);border-color:rgba(26,95,138,.15)}
+.encart.red{background:var(--red-bg);border-color:rgba(184,50,50,.15)}
+.encart-label{font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;display:block}
+.encart.accent .encart-label{color:var(--accent)}
+.encart.green .encart-label{color:var(--green)}
+.encart.blue .encart-label{color:var(--blue)}
+.encart.red .encart-label{color:var(--red)}
+.encart p{font-size:.98rem;margin-bottom:8px;line-height:1.7}
+.encart p:last-child{margin-bottom:0}
+
+.table-wrap{overflow-x:auto;margin:20px 0}
+table{width:100%;border-collapse:collapse;font-size:.95rem;background:var(--bg-white);border-radius:10px;overflow:hidden;box-shadow:var(--shadow)}
+thead{background:var(--text);color:#fff}
+th{padding:12px 16px;text-align:left;font-weight:600;font-size:.85rem;letter-spacing:.5px}
+td{padding:11px 16px;border-bottom:1px solid var(--border)}
+tr:last-child td{border-bottom:none}
+tbody tr:hover{background:var(--bg-warm)}
+td code{font-family:'DM Sans',sans-serif;font-weight:600;color:var(--accent);background:var(--accent-bg);padding:2px 7px;border-radius:4px;font-size:.9rem}
+
+.ex{background:var(--bg-white);border-left:3px solid var(--border);padding:14px 20px;margin:14px 0;border-radius:0 8px 8px 0;font-size:.97rem}
+.ex .en{font-weight:600;color:var(--text)}
+.ex .fr{color:var(--text-muted);font-style:italic;margin-left:4px}
+.ex.correct{border-left-color:var(--green);background:var(--green-bg)}
+.ex.wrong{border-left-color:var(--red);background:var(--red-bg);text-decoration:line-through;color:var(--text-muted)}
+
+.quiz-block{background:var(--bg-white);border:1px solid var(--border);border-radius:10px;padding:26px;margin:28px 0;box-shadow:var(--shadow)}
+.quiz-label{font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;display:block}
+.quiz-question{font-family:'Source Serif 4',serif;font-size:1.05rem;font-weight:600;margin-bottom:16px;line-height:1.5}
+.quiz-options{display:flex;flex-direction:column;gap:8px;margin-bottom:10px}
+.quiz-option{display:block;width:100%;text-align:left;padding:12px 18px;font-family:'DM Sans',sans-serif;font-size:.95rem;color:var(--text);background:var(--bg);border:1.5px solid var(--border);border-radius:8px;cursor:pointer;transition:all .2s;line-height:1.5}
+.quiz-option:hover:not(:disabled){border-color:var(--accent-light);background:var(--accent-bg)}
+.quiz-option.ok{border-color:var(--green);background:var(--green-bg);color:var(--green);font-weight:600;cursor:default}
+.quiz-option.ko{border-color:var(--red);background:var(--red-bg);color:var(--red);cursor:default;text-decoration:line-through}
+.quiz-option.show-ok{border-color:var(--green);background:var(--green-bg);color:var(--green);font-weight:600;cursor:default}
+.quiz-option:disabled{cursor:default}
+.quiz-fb{font-size:.92rem;padding:14px 18px;border-radius:8px;display:none;line-height:1.65;margin-top:8px}
+.quiz-fb.show{display:block}
+.quiz-fb.correct{background:var(--green-bg);color:var(--green)}
+.quiz-fb.wrong{background:var(--red-bg);color:var(--red)}
+
+.reveal-block{margin:20px 0}
+.reveal-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:600;color:var(--accent);background:var(--accent-bg);border:1.5px solid rgba(196,86,10,.2);border-radius:8px;cursor:pointer;transition:all .2s}
+.reveal-btn:hover{background:rgba(196,86,10,.12)}
+.reveal-btn .arrow{transition:transform .3s;font-size:.75rem}
+.reveal-btn.open .arrow{transform:rotate(90deg)}
+.reveal-content{max-height:0;overflow:hidden;transition:max-height .5s ease,padding .3s;padding:0 18px;background:var(--bg-white);border-radius:0 0 10px 10px}
+.reveal-content.open{max-height:2000px;padding:18px;border:1px solid var(--border);border-top:none;margin-top:-4px}
+.reveal-content p{font-size:.95rem;color:var(--text-light);margin-bottom:8px;line-height:1.7}
+
+.sep{height:1px;background:var(--border);margin:50px 0}
+
+.score-bar{position:sticky;top:0;z-index:100;background:rgba(250,248,245,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:10px 24px;display:flex;justify-content:space-between;align-items:center;font-size:.85rem}
+.score-bar .left{font-weight:600;color:var(--text)}
+.score-bar .right{color:var(--accent);font-weight:700}
+
+.formula{background:var(--blue-bg);border:1px solid rgba(26,95,138,.15);border-radius:10px;padding:18px 24px;margin:18px 0;text-align:center;font-family:'Source Serif 4',serif;font-size:1.15rem;font-weight:600;color:var(--blue);letter-spacing:.3px}
+
+.nav-bottom{display:flex;justify-content:space-between;align-items:center;padding:30px 0;margin-top:40px;border-top:1px solid var(--border)}
+.nav-btn{padding:12px 28px;font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:700;border-radius:8px;text-decoration:none;cursor:pointer;transition:all .2s;border:none}
+.nav-btn.prev{color:var(--text-light);background:var(--bg-warm);border:1px solid var(--border)}
+.nav-btn.prev:hover{background:var(--border)}
+.nav-btn.next{color:#fff;background:var(--accent)}
+.nav-btn.next:hover{background:#a84808;transform:translateY(-1px);box-shadow:0 4px 12px rgba(196,86,10,.25)}
+
+footer{text-align:center;padding:20px 0 50px;font-size:.8rem;color:var(--text-muted)}
+footer strong{color:var(--accent);font-weight:700}
+
+@media(max-width:600px){header{padding:40px 0 30px}.page{padding:0 16px}table{font-size:.85rem}th,td{padding:9px 12px}}
+</style>
+</head>
+<body>
+
+<div class="score-bar">
+  <span class="left">Chapitre 2 &mdash; Comparatifs et superlatifs</span>
+  <span class="right" id="scoreDisplay">0 / 10 bonnes r&eacute;ponses</span>
+</div>
+
+<div class="page">
+
+<header>
+  <span class="tag">Chapitre 2</span>
+  <h1>Les comparatifs et les superlatifs.</h1>
+  <p class="subtitle">
+    Comment dire "plus grand", "le meilleur", "aussi rapide que" en anglais &mdash;
+    et surtout, comment &eacute;viter les pi&egrave;ges que les examinateurs adorent tendre.
+  </p>
+</header>
+
+<!-- ============================================================ -->
+<!-- SECTION 1 : LE COMPARATIF - PRINCIPE -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Le comparatif : comparer deux choses entre elles.</h2>
+  <p>
+    On utilise le comparatif quand on veut dire qu'une chose est <strong>plus</strong> (ou <strong>moins</strong>) que l'autre.
+    En fran&ccedil;ais, on dit "plus grand que", "moins cher que". En anglais, la formation d&eacute;pend de la <strong>longueur de l'adjectif</strong>.
+  </p>
+
+  <div class="encart blue">
+    <span class="encart-label">La r&egrave;gle cl&eacute;</span>
+    <p><strong>Adjectif court</strong> (1 syllabe, ou 2 syllabes en -y) &rarr; on ajoute <strong>-er</strong>.</p>
+    <p><strong>Adjectif long</strong> (2 syllabes ou plus) &rarr; on met <strong>more</strong> devant.</p>
+    <p>Dans les deux cas, on utilise <strong>than</strong> pour introduire la comparaison.</p>
+  </div>
+
+  <h3>Les adjectifs courts : ajouter -er.</h3>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>R&egrave;gle</th><th>Adjectif</th><th>Comparatif</th><th>Traduction</th></tr></thead>
+      <tbody>
+        <tr><td>Cas g&eacute;n&eacute;ral : + er</td><td>fast, great, short, tall</td><td><code>faster</code>, <code>taller</code></td><td>plus rapide, plus grand</td></tr>
+        <tr><td>Finit par -e : + r</td><td>nice, close, large, wise</td><td><code>nicer</code>, <code>wiser</code></td><td>plus gentil, plus sage</td></tr>
+        <tr><td>Finit par consonne-voyelle-consonne : doubler la consonne + er</td><td>big, hot, fat, sad, thin</td><td><code>bigger</code>, <code>hotter</code></td><td>plus gros, plus chaud</td></tr>
+        <tr><td>Finit par -y : remplacer par -ier</td><td>happy, crazy, easy, pretty</td><td><code>happier</code>, <code>easier</code></td><td>plus heureux, plus facile</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ex"><span class="en">He is three years <strong>older than</strong> me.</span> <span class="fr">(Il a trois ans de plus que moi.)</span></div>
+  <div class="ex"><span class="en">New York is much <strong>bigger than</strong> Chicago.</span> <span class="fr">(New York est bien plus grand que Chicago.)</span></div>
+
+  <h3>Les adjectifs longs : more + adjectif.</h3>
+  <p class="light">Pour les adjectifs de deux syllabes ou plus (sauf ceux en -y), on place <strong>more</strong> devant l'adjectif.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Adjectif</th><th>Comparatif</th><th>Traduction</th></tr></thead>
+      <tbody>
+        <tr><td>beautiful</td><td><code>more beautiful</code></td><td>plus beau</td></tr>
+        <tr><td>expensive</td><td><code>more expensive</code></td><td>plus cher</td></tr>
+        <tr><td>important</td><td><code>more important</code></td><td>plus important</td></tr>
+        <tr><td>delicious</td><td><code>more delicious</code></td><td>plus d&eacute;licieux</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ex"><span class="en">This restaurant is <strong>more expensive than</strong> the other one.</span></div>
+
+  <div class="encart red">
+    <span class="encart-label">Erreur fatale</span>
+    <p>On ne dit jamais <del>more bigger</del>, <del>more faster</del> ou <del>more easy</del>. C'est soit -er, soit more, <strong>jamais les deux</strong>.</p>
+  </div>
+
+  <!-- QUIZ 1 -->
+  <div class="quiz-block" data-q="q1">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">Quelle est la forme comparative correcte de "interesting" ?</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) interestinger</button>
+      <button class="quiz-option" onclick="check(this,true)">b) more interesting</button>
+      <button class="quiz-option" onclick="check(this,false)">c) most interesting</button>
+      <button class="quiz-option" onclick="check(this,false)">d) more interestinger</button>
+    </div>
+    <div class="quiz-fb correct">Exact. "Interesting" a 4 syllabes &rarr; c'est un adjectif long &rarr; on utilise <strong>more</strong>. "Most interesting" serait le superlatif, pas le comparatif.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>b) more interesting</strong>. "Interesting" est un adjectif long (4 syllabes). On ne peut pas ajouter -er. On utilise <strong>more</strong> devant.</div>
+  </div>
+
+  <!-- QUIZ 2 -->
+  <div class="quiz-block" data-q="q2">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">"Australia is a _____ country than Portugal."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,true)">a) bigger</button>
+      <button class="quiz-option" onclick="check(this,false)">b) more big</button>
+      <button class="quiz-option" onclick="check(this,false)">c) biggest</button>
+      <button class="quiz-option" onclick="check(this,false)">d) biger</button>
+    </div>
+    <div class="quiz-fb correct">Bravo. "Big" est court (1 syllabe) et se termine par consonne-voyelle-consonne &rarr; on double le g et on ajoute -er &rarr; <strong>bigger</strong>. Attention &agrave; l'orthographe : deux "g".</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>a) bigger</strong>. "Big" a une syllabe &rarr; on ajoute -er. Mais comme il finit par consonne (b) + voyelle (i) + consonne (g), on <strong>double la consonne finale</strong> avant d'ajouter -er. "More big" est incorrect et "biger" est mal orthographi&eacute;.</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 2 : LES IRREGULIERS -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Les comparatifs irr&eacute;guliers : les conna&icirc;tre par coeur.</h2>
+  <p>
+    Certains adjectifs tr&egrave;s courants ne suivent aucune des r&egrave;gles pr&eacute;c&eacute;dentes. Ils changent compl&egrave;tement de forme au comparatif et au superlatif. Ils tombent <strong>syst&eacute;matiquement</strong> au concours.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Adjectif</th><th>Comparatif</th><th>Superlatif</th></tr></thead>
+      <tbody>
+        <tr><td><strong>good</strong> (bon)</td><td><code>better</code></td><td><code>the best</code></td></tr>
+        <tr><td><strong>bad</strong> (mauvais)</td><td><code>worse</code></td><td><code>the worst</code></td></tr>
+        <tr><td><strong>far</strong> (loin)</td><td><code>further / farther</code></td><td><code>the furthest</code></td></tr>
+        <tr><td><strong>little</strong> (petit/peu)</td><td><code>less</code></td><td><code>the least</code></td></tr>
+        <tr><td><strong>much / many</strong> (beaucoup)</td><td><code>more</code></td><td><code>the most</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="encart accent">
+    <span class="encart-label">Le pi&egrave;ge pr&eacute;f&eacute;r&eacute; des examinateurs</span>
+    <p>On ne dit jamais <del>gooder</del>, <del>badder</del> ou <del>more good</del>. Ces formes n'existent pas. Il faut conna&icirc;tre <strong>better, worse, further</strong> par coeur, il n'y a pas de raccourci.</p>
+  </div>
+
+  <div class="ex"><span class="en">Zidane is a <strong>better</strong> football player <strong>than</strong> Ronaldo.</span></div>
+  <div class="ex"><span class="en">The situation is getting <strong>worse</strong>.</span> <span class="fr">(La situation empire.)</span></div>
+
+  <!-- QUIZ 3 -->
+  <div class="quiz-block" data-q="q3">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">"This year's results are _____ than last year's."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) more bad</button>
+      <button class="quiz-option" onclick="check(this,false)">b) badder</button>
+      <button class="quiz-option" onclick="check(this,true)">c) worse</button>
+      <button class="quiz-option" onclick="check(this,false)">d) worst</button>
+    </div>
+    <div class="quiz-fb correct">Exact. "Bad" &rarr; <strong>worse</strong> (comparatif irr&eacute;gulier). "Worst" est le superlatif, et les formes "more bad" et "badder" n'existent pas.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>c) worse</strong>. "Bad" est irr&eacute;gulier : bad &rarr; worse (comparatif) &rarr; the worst (superlatif). Ni "badder" ni "more bad" ne sont acceptables en anglais.</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 3 : LE SUPERLATIF -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Le superlatif : dire que quelque chose est "le plus" ou "le moins".</h2>
+  <p>
+    Le superlatif sert &agrave; d&eacute;signer l'&eacute;l&eacute;ment qui a le <strong>plus haut degr&eacute;</strong> (ou le plus bas) d'une qualit&eacute; dans un groupe. En fran&ccedil;ais : "le plus grand", "la meilleure", "le moins cher". La logique est la m&ecirc;me que pour le comparatif, mais en version "maximum".
+  </p>
+
+  <div class="encart blue">
+    <span class="encart-label">La r&egrave;gle cl&eacute;</span>
+    <p><strong>Adjectif court</strong> &rarr; <strong>the + adjectif + -est</strong>.</p>
+    <p><strong>Adjectif long</strong> &rarr; <strong>the most + adjectif</strong>.</p>
+    <p>Le superlatif est <strong>toujours pr&eacute;c&eacute;d&eacute; de "the"</strong>.</p>
+  </div>
+
+  <h3>Les adjectifs courts : the + adjectif + -est.</h3>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>R&egrave;gle</th><th>Adjectif</th><th>Superlatif</th></tr></thead>
+      <tbody>
+        <tr><td>Cas g&eacute;n&eacute;ral : + est</td><td>fast, cheap, high</td><td><code>the fastest</code>, <code>the cheapest</code></td></tr>
+        <tr><td>Finit par -e : + st</td><td>nice, close, wise</td><td><code>the nicest</code>, <code>the wisest</code></td></tr>
+        <tr><td>Consonne-voyelle-consonne : doubler + est</td><td>big, hot, fat</td><td><code>the biggest</code>, <code>the hottest</code></td></tr>
+        <tr><td>Finit par -y : remplacer par -iest</td><td>happy, crazy, easy, pretty</td><td><code>the happiest</code>, <code>the easiest</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Les adjectifs longs : the most + adjectif.</h3>
+
+  <div class="ex"><span class="en">She is <strong>the most beautiful</strong> woman in the room.</span></div>
+  <div class="ex"><span class="en">It was <strong>the most expensive</strong> restaurant in town.</span></div>
+
+  <div class="ex"><span class="en">The Everest is <strong>the highest</strong> mountain in the world.</span> <span class="fr">(L'Everest est la plus haute montagne du monde.)</span></div>
+  <div class="ex"><span class="en">Nathan is <strong>the best</strong> football player in the team.</span> <span class="fr">(Nathan est le meilleur joueur de l'&eacute;quipe.)</span></div>
+
+  <div class="encart accent">
+    <span class="encart-label">Exception : pas de "the" avec un possessif</span>
+    <p>Quand il y a un possessif (my, your, his, her...) devant le superlatif, on ne met <strong>pas "the"</strong>.</p>
+    <p><em>Her <strong>strongest</strong> point is her ambition.</em> (et non <del>her the strongest</del>.)</p>
+  </div>
+
+  <!-- QUIZ 4 -->
+  <div class="quiz-block" data-q="q4">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">"He was _____ most expensive player ever."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,true)">a) the</button>
+      <button class="quiz-option" onclick="check(this,false)">b) a</button>
+      <button class="quiz-option" onclick="check(this,false)">c) rien (pas d'article)</button>
+      <button class="quiz-option" onclick="check(this,false)">d) an</button>
+    </div>
+    <div class="quiz-fb correct">Exact. Le superlatif est toujours pr&eacute;c&eacute;d&eacute; de <strong>the</strong>. C'est automatique : the most, the biggest, the best... La seule exception est quand un possessif est d&eacute;j&agrave; pr&eacute;sent (my best friend).</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>a) the</strong>. Le superlatif exige toujours l'article <strong>the</strong> devant lui. "The most expensive", "the biggest", "the best". C'est une r&egrave;gle sans exception (sauf avec un possessif).</div>
+  </div>
+
+  <!-- QUIZ 5 -->
+  <div class="quiz-block" data-q="q5">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">Quel est le superlatif de "pretty" ?</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) the most pretty</button>
+      <button class="quiz-option" onclick="check(this,false)">b) the prettyest</button>
+      <button class="quiz-option" onclick="check(this,true)">c) the prettiest</button>
+      <button class="quiz-option" onclick="check(this,false)">d) the prettyer</button>
+    </div>
+    <div class="quiz-fb correct">Bravo. "Pretty" se termine par -y &rarr; on remplace le -y par <strong>-iest</strong> &rarr; the prettiest. "Prettyer" est le comparatif (et mal form&eacute; en plus : ce serait "prettier").</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>c) the prettiest</strong>. Les adjectifs en -y suivent la r&egrave;gle : on remplace le -y par <strong>-iest</strong> au superlatif (et -ier au comparatif). Donc : pretty &rarr; prettier &rarr; the prettiest.</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 4 : COMPARER AVEC THAN -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Comparer avec "than" et la structure "as...as".</h2>
+
+  <h3>Comparer avec than.</h3>
+  <p>Pour comparer deux &eacute;l&eacute;ments, on utilise le comparatif suivi de <strong>than</strong> (= que).</p>
+
+  <div class="ex"><span class="en">He is three years <strong>older than</strong> me.</span> <span class="fr">(Il a trois ans de plus que moi.)</span></div>
+  <div class="ex"><span class="en">This book is <strong>more interesting than</strong> the other one.</span></div>
+
+  <h3>Dire que deux choses sont &eacute;gales : as + adjectif + as.</h3>
+  <p>Pour dire que deux choses sont similaires ou &eacute;gales, on utilise la structure <strong>as + adjectif + as</strong>.</p>
+
+  <div class="formula">as + adjectif + as = aussi ... que</div>
+
+  <div class="ex"><span class="en">He's <strong>as tall as</strong> me.</span> <span class="fr">(Il est aussi grand que moi.)</span></div>
+  <div class="ex"><span class="en">Tom's bike is <strong>as fast as</strong> mine.</span> <span class="fr">(La moto de Tom est aussi rapide que la mienne.)</span></div>
+
+  <h3>Dire que deux choses ne sont pas &eacute;gales : not as + adjectif + as.</h3>
+  <p>Pour exprimer l'in&eacute;galit&eacute;, on ajoute simplement <strong>not</strong>.</p>
+
+  <div class="formula">not as + adjectif + as = pas aussi ... que</div>
+
+  <div class="ex"><span class="en">Danny's car is <strong>not as fast as</strong> mine.</span> <span class="fr">(La voiture de Danny n'est pas aussi rapide que la mienne.)</span></div>
+
+  <div class="encart green">
+    <span class="encart-label">Astuce concours</span>
+    <p>Quand tu vois "as...as" dans un QCM, l'adjectif au milieu reste <strong>toujours &agrave; sa forme de base</strong>, sans -er ni more. On ne dit jamais <del>as bigger as</del> ou <del>as more expensive as</del>.</p>
+  </div>
+
+  <!-- QUIZ 6 -->
+  <div class="quiz-block" data-q="q6">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">"My apartment is not _____ your house."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) as big than</button>
+      <button class="quiz-option" onclick="check(this,true)">b) as big as</button>
+      <button class="quiz-option" onclick="check(this,false)">c) as bigger as</button>
+      <button class="quiz-option" onclick="check(this,false)">d) so big than</button>
+    </div>
+    <div class="quiz-fb correct">Exact. La structure est <strong>not as + adjectif (forme de base) + as</strong>. L'adjectif ne change pas (pas de -er), et la pr&eacute;position est "as" (pas "than").</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>b) as big as</strong>. La structure "as...as" utilise toujours l'adjectif &agrave; sa forme de base et se termine par "as" (pas "than"). "Than" s'utilise uniquement avec le comparatif (-er / more).</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 5 : STRUCTURES AVANCEES -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Les structures avanc&eacute;es : ce qui fait la diff&eacute;rence au concours.</h2>
+
+  <h3>Le double comparatif : "de plus en plus".</h3>
+  <p>Pour exprimer une &eacute;volution progressive, on r&eacute;p&egrave;te le comparatif reli&eacute; par <strong>and</strong>.</p>
+
+  <div class="formula">comparatif + and + comparatif</div>
+
+  <div class="ex"><span class="en">The lake got <strong>bigger and bigger</strong>.</span> <span class="fr">(Le lac est devenu de plus en plus grand.)</span></div>
+  <div class="ex"><span class="en">Everything is getting <strong>more and more expensive</strong>.</span> <span class="fr">(Tout devient de plus en plus cher.)</span></div>
+  <div class="ex"><span class="en">My house is looking <strong>older and older</strong>.</span> <span class="fr">(Ma maison semble de plus en plus vieille.)</span></div>
+
+  <h3>The + comparatif, the + comparatif : "plus..., plus...".</h3>
+  <p>Pour exprimer une relation de cause &agrave; effet entre deux &eacute;volutions, on utilise <strong>the</strong> devant chaque comparatif.</p>
+
+  <div class="formula">the + comparatif ..., the + comparatif ...</div>
+
+  <div class="ex"><span class="en"><strong>The faster</strong> you drive, <strong>the more dangerous</strong> it is.</span> <span class="fr">(Plus tu conduis vite, plus c'est dangereux.)</span></div>
+  <div class="ex"><span class="en"><strong>The longer</strong> you wait, <strong>the harder</strong> it gets.</span> <span class="fr">(Plus tu attends, plus &ccedil;a devient difficile.)</span></div>
+  <div class="ex"><span class="en"><strong>The higher</strong> he climbed, <strong>the colder</strong> it got.</span> <span class="fr">(Plus il montait haut, plus il faisait froid.)</span></div>
+
+  <h3>Modifier l'intensit&eacute; : by far, much, nearly.</h3>
+  <p>On peut renforcer ou att&eacute;nuer un comparatif ou un superlatif avec des modificateurs.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Modificateur</th><th>Sens</th><th>Exemple</th></tr></thead>
+      <tbody>
+        <tr><td><code>much / far / a lot</code></td><td>Renforce le comparatif</td><td><em>He is <strong>much</strong> taller than me.</em></td></tr>
+        <tr><td><code>by far</code></td><td>Renforce le superlatif</td><td><em>It's <strong>by far</strong> the best restaurant in town.</em></td></tr>
+        <tr><td><code>nearly / almost</code></td><td>Att&eacute;nue le superlatif</td><td><em>She's <strong>nearly</strong> the oldest in the class.</em></td></tr>
+        <tr><td><code>easily</code></td><td>Renforce le superlatif</td><td><em>He's <strong>easily</strong> the best student.</em></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- QUIZ 7 -->
+  <div class="quiz-block" data-q="q7">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">Comment dit-on "de plus en plus difficile" en anglais ?</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) the more difficult and more difficult</button>
+      <button class="quiz-option" onclick="check(this,false)">b) more difficult more difficult</button>
+      <button class="quiz-option" onclick="check(this,true)">c) more and more difficult</button>
+      <button class="quiz-option" onclick="check(this,false)">d) the most difficult</button>
+    </div>
+    <div class="quiz-fb correct">Exact. La structure "de plus en plus" se traduit par <strong>comparatif + and + comparatif</strong>. Comme "difficult" est long &rarr; more and more difficult.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>c) more and more difficult</strong>. Pour dire "de plus en plus + adjectif", on utilise la structure : comparatif + <strong>and</strong> + comparatif. Avec un adjectif long : more and more + adjectif. Avec un adjectif court : bigger and bigger, faster and faster.</div>
+  </div>
+
+  <!-- QUIZ 8 -->
+  <div class="quiz-block" data-q="q8">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">"_____ you study, _____ your results will be."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) More ... more good</button>
+      <button class="quiz-option" onclick="check(this,true)">b) The more ... the better</button>
+      <button class="quiz-option" onclick="check(this,false)">c) Most ... best</button>
+      <button class="quiz-option" onclick="check(this,false)">d) The most ... the best</button>
+    </div>
+    <div class="quiz-fb correct">Parfait. La structure "plus..., plus..." se traduit par <strong>the + comparatif, the + comparatif</strong>. Et "good" au comparatif donne <strong>better</strong> (irr&eacute;gulier). Donc : the more you study, the better your results will be.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>b) the more ... the better</strong>. La structure "plus..., plus..." utilise <strong>the + comparatif</strong> deux fois. "Good" &rarr; better (irr&eacute;gulier, jamais "more good"). "Most/best" sont des superlatifs, pas des comparatifs.</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 6 : RECAP COMPARATIF vs SUPERLATIF -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Ne plus confondre comparatif et superlatif.</h2>
+  <p>
+    C'est l'erreur la plus courante. Voici le moyen infaillible de ne plus se tromper :
+  </p>
+
+  <div class="encart blue">
+    <span class="encart-label">La distinction fondamentale</span>
+    <p><strong>Comparatif</strong> = on compare <strong>deux</strong> &eacute;l&eacute;ments. Utilise -er / more + than.</p>
+    <p><strong>Superlatif</strong> = on d&eacute;signe <strong>le n&deg;1</strong> d'un groupe (3 &eacute;l&eacute;ments ou plus). Utilise the + -est / the most.</p>
+  </div>
+
+  <div class="ex"><span class="en"><strong>Comparatif :</strong> Paris is <strong>bigger than</strong> Lyon.</span> <span class="fr">(2 villes compar&eacute;es.)</span></div>
+  <div class="ex"><span class="en"><strong>Superlatif :</strong> Paris is <strong>the biggest</strong> city in France.</span> <span class="fr">(La n&deg;1 parmi toutes les villes.)</span></div>
+
+  <div class="reveal-block">
+    <button class="reveal-btn" onclick="toggleReveal(this)">
+      <span class="arrow">&#9654;</span> Voir le tableau r&eacute;capitulatif complet
+    </button>
+    <div class="reveal-content">
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Type d'adjectif</th><th>Comparatif (-er / more)</th><th>Superlatif (-est / most)</th></tr></thead>
+          <tbody>
+            <tr><td>Court (1 syll.)</td><td>tall &rarr; tall<strong>er</strong></td><td>tall &rarr; the tall<strong>est</strong></td></tr>
+            <tr><td>Court en -e</td><td>nice &rarr; nic<strong>er</strong></td><td>nice &rarr; the nic<strong>est</strong></td></tr>
+            <tr><td>Court CVC</td><td>big &rarr; bi<strong>gger</strong></td><td>big &rarr; the bi<strong>ggest</strong></td></tr>
+            <tr><td>En -y</td><td>happy &rarr; happ<strong>ier</strong></td><td>happy &rarr; the happ<strong>iest</strong></td></tr>
+            <tr><td>Long (2+ syll.)</td><td><strong>more</strong> beautiful</td><td><strong>the most</strong> beautiful</td></tr>
+            <tr><td>good</td><td><strong>better</strong></td><td><strong>the best</strong></td></tr>
+            <tr><td>bad</td><td><strong>worse</strong></td><td><strong>the worst</strong></td></tr>
+            <tr><td>far</td><td><strong>further</strong></td><td><strong>the furthest</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- QUIZ FINAL -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Quiz de fin de chapitre.</h2>
+  <p class="light">Deux derni&egrave;res questions pour consolider le tout.</p>
+
+  <!-- QUIZ 9 -->
+  <div class="quiz-block" data-q="q9">
+    <span class="quiz-label">Question 9 sur 10</span>
+    <p class="quiz-question">"Burger King is _____ better than McDonald's." (de loin)</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,true)">a) by far</button>
+      <button class="quiz-option" onclick="check(this,false)">b) the most</button>
+      <button class="quiz-option" onclick="check(this,false)">c) more</button>
+      <button class="quiz-option" onclick="check(this,false)">d) as</button>
+    </div>
+    <div class="quiz-fb correct">Exact. "By far" est un modificateur qui renforce un comparatif ou un superlatif. Ici, il signifie "de loin" : <em>Burger King is <strong>by far</strong> better than McDonald's.</em></div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>a) by far</strong>. Pour dire "de loin meilleur", on utilise <strong>by far</strong> devant le comparatif. "The most" et "more" cr&eacute;eraient un double comparatif incorrect avec "better".</div>
+  </div>
+
+  <!-- QUIZ 10 -->
+  <div class="quiz-block" data-q="q10">
+    <span class="quiz-label">Question 10 sur 10</span>
+    <p class="quiz-question">"She's _____ the oldest in the class." (presque)</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) by far</button>
+      <button class="quiz-option" onclick="check(this,false)">b) easily</button>
+      <button class="quiz-option" onclick="check(this,true)">c) nearly</button>
+      <button class="quiz-option" onclick="check(this,false)">d) much</button>
+    </div>
+    <div class="quiz-fb correct">Bravo. "Nearly" signifie "presque" et att&eacute;nue le superlatif : <em>She's <strong>nearly</strong> the oldest.</em> "By far" et "easily" renforceraient le superlatif, ce qui est le sens oppos&eacute;.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>c) nearly</strong>. "Nearly" = presque. Il att&eacute;nue le superlatif. &Agrave; l'inverse, "by far" et "easily" signifient "de loin" et renforceraient l'id&eacute;e, ce qui ne correspond pas &agrave; "presque".</div>
+  </div>
+</section>
+
+<!-- BILAN -->
+<section class="section" id="bilan" style="display:none;">
+  <div class="encart green">
+    <span class="encart-label">Ton bilan du chapitre 2</span>
+    <p id="bilan-text"></p>
+  </div>
+</section>
+
+<!-- RESUME -->
+<section class="section">
+  <h2>R&eacute;sum&eacute; du chapitre.</h2>
+  <div class="reveal-block">
+    <button class="reveal-btn" onclick="toggleReveal(this)">
+      <span class="arrow">&#9654;</span> Afficher le r&eacute;sum&eacute; complet
+    </button>
+    <div class="reveal-content">
+      <p><strong>Comparatif (2 &eacute;l&eacute;ments) :</strong> adjectif court + -er + than. Adjectif long : more + adjectif + than. Jamais les deux &agrave; la fois.</p>
+      <p><strong>Superlatif (le n&deg;1 du groupe) :</strong> the + adjectif court + -est. Adjectif long : the most + adjectif. Toujours pr&eacute;c&eacute;d&eacute; de "the" (sauf avec un possessif).</p>
+      <p><strong>R&egrave;gles orthographiques :</strong> -e &rarr; ajouter -r/-st. Consonne-voyelle-consonne &rarr; doubler la consonne. -y &rarr; remplacer par -ier/-iest.</p>
+      <p><strong>Irr&eacute;guliers :</strong> good &rarr; better &rarr; the best. Bad &rarr; worse &rarr; the worst. Far &rarr; further &rarr; the furthest.</p>
+      <p><strong>As...as :</strong> &eacute;galit&eacute; (as tall as). In&eacute;galit&eacute; (not as tall as). L'adjectif reste &agrave; la forme de base.</p>
+      <p><strong>Double comparatif :</strong> bigger and bigger, more and more expensive = de plus en plus.</p>
+      <p><strong>The + comparatif, the + comparatif :</strong> the faster you drive, the more dangerous it is = plus..., plus...</p>
+      <p><strong>Modificateurs :</strong> much/far/a lot (renforcent le comparatif). By far/easily (renforcent le superlatif). Nearly/almost (att&eacute;nuent).</p>
+    </div>
+  </div>
+</section>
+
+<!-- Navigation -->
+<div class="nav-bottom">
+  <button class="nav-btn prev" onclick="window.location.href='./manuel_interactif_anglais_chapitre1_bases_grammaire.html';">&larr; Chapitre 1 : les bases</button>
+  <button class="nav-btn next" onclick="window.location.href='./manuel_interactif_anglais_chapitre3_pluriel.html';">Chapitre 3 : le pluriel &rarr;</button>
+</div>
+
+<footer>
+  <p><strong>Passeport Concours</strong> &mdash; Anglais ENA 2026 &mdash; Chapitre 2.</p>
+</footer>
+
+</div>
+
+<script>
+let score=0,total=10,answered=0;
+function check(btn,isCorrect){
+  const block=btn.closest('.quiz-block');
+  if(block.dataset.done)return;
+  block.dataset.done='1';
+  const opts=block.querySelectorAll('.quiz-option');
+  const fbs=block.querySelectorAll('.quiz-fb');
+  opts.forEach(o=>o.disabled=true);
+  if(isCorrect){btn.classList.add('ok');fbs[0].classList.add('show');score++}
+  else{btn.classList.add('ko');fbs[1].classList.add('show');opts.forEach(o=>{const h=o.getAttribute('onclick');if(h&&h.includes('true'))o.classList.add('show-ok')})}
+  answered++;
+  document.getElementById('scoreDisplay').textContent=score+' / '+total+' bonnes réponses';
+  if(answered===total)setTimeout(showBilan,500);
+}
+function showBilan(){
+  const b=document.getElementById('bilan'),t=document.getElementById('bilan-text');
+  const pct=Math.round(score/total*100);
+  let msg='';
+  if(pct>=80)msg='<strong>'+score+'/'+total+' ('+pct+'%) — Excellent.</strong> Tu maîtrises les comparatifs et superlatifs. Tu peux foncer sur le chapitre 3. Les pluriels en anglais n\'auront aucun secret pour toi.';
+  else if(pct>=50)msg='<strong>'+score+'/'+total+' ('+pct+'%) — Correct, mais attention aux pièges.</strong> Relis surtout les sections sur les irréguliers et la structure "as...as" avant de continuer. Ce sont les points les plus testés au concours.';
+  else msg='<strong>'+score+'/'+total+' ('+pct+'%) — Ce chapitre mérite une deuxième lecture.</strong> Les comparatifs et superlatifs reviennent dans presque chaque épreuve. Reprends le tableau récapitulatif et refais les quiz demain. La répétition est la clé.';
+  t.innerHTML=msg;b.style.display='block';b.scrollIntoView({behavior:'smooth',block:'center'});
+}
+function toggleReveal(btn){btn.classList.toggle('open');btn.nextElementSibling.classList.toggle('open')}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mission anglais ENA 2026 - Introduction.</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf8f5;
+    --bg-white: #ffffff;
+    --bg-warm: #f5f0ea;
+    --bg-accent: #fff8ed;
+    --text: #2c2420;
+    --text-light: #6b5e54;
+    --text-muted: #9a8d82;
+    --accent: #c4560a;
+    --accent-light: #e8874a;
+    --accent-bg: #fef3ea;
+    --green: #2a7d4f;
+    --green-bg: #edf7f0;
+    --blue: #1a5f8a;
+    --blue-bg: #eaf3fa;
+    --red: #b83232;
+    --red-bg: #fdeaea;
+    --border: #e8e0d8;
+    --shadow: 0 1px 3px rgba(44,36,32,0.06);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ===== HEADER ===== */
+  header {
+    padding: 60px 0 40px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 50px;
+  }
+
+  header .tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-bg);
+    padding: 5px 14px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+
+  header h1 {
+    font-family: 'Source Serif 4', serif;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+
+  header .subtitle {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 560px;
+    line-height: 1.7;
+  }
+
+  /* ===== SECTIONS ===== */
+  .section {
+    margin-bottom: 55px;
+  }
+
+  .section h2 {
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.55rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 16px;
+    line-height: 1.3;
+  }
+
+  .section p {
+    font-size: 1.02rem;
+    color: var(--text);
+    margin-bottom: 14px;
+  }
+
+  .section p.light {
+    color: var(--text-light);
+  }
+
+  strong { font-weight: 600; }
+  em { font-style: italic; color: var(--text-light); }
+
+  /* ===== ENCARTS ===== */
+  .encart {
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px 26px;
+    margin: 22px 0;
+    box-shadow: var(--shadow);
+  }
+
+  .encart.accent {
+    background: var(--accent-bg);
+    border-color: rgba(196,86,10,0.15);
+  }
+
+  .encart.green {
+    background: var(--green-bg);
+    border-color: rgba(42,125,79,0.15);
+  }
+
+  .encart.blue {
+    background: var(--blue-bg);
+    border-color: rgba(26,95,138,0.15);
+  }
+
+  .encart-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .encart.accent .encart-label { color: var(--accent); }
+  .encart.green .encart-label { color: var(--green); }
+  .encart.blue .encart-label { color: var(--blue); }
+
+  .encart p {
+    font-size: 0.98rem;
+    margin-bottom: 8px;
+    line-height: 1.7;
+  }
+
+  .encart p:last-child { margin-bottom: 0; }
+
+  /* ===== REGLES NUMEROTÉES ===== */
+  .regle {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    margin-bottom: 22px;
+    padding: 18px 22px;
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+  }
+
+  .regle-num {
+    flex-shrink: 0;
+    width: 36px; height: 36px;
+    background: var(--accent);
+    color: #fff;
+    font-family: 'Source Serif 4', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%;
+  }
+
+  .regle-content h3 {
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--text);
+  }
+
+  .regle-content p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-bottom: 0;
+    line-height: 1.65;
+  }
+
+  /* ===== QUIZ INTERACTIF ===== */
+  .quiz-block {
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 26px;
+    margin: 28px 0;
+    box-shadow: var(--shadow);
+  }
+
+  .quiz-block .quiz-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .quiz-block .quiz-question {
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.08rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+
+  .quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .quiz-option {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 12px 18px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text);
+    background: var(--bg);
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    line-height: 1.5;
+  }
+
+  .quiz-option:hover {
+    border-color: var(--accent-light);
+    background: var(--accent-bg);
+  }
+
+  .quiz-option.selected-correct {
+    border-color: var(--green);
+    background: var(--green-bg);
+    color: var(--green);
+    font-weight: 600;
+    cursor: default;
+  }
+
+  .quiz-option.selected-wrong {
+    border-color: var(--red);
+    background: var(--red-bg);
+    color: var(--red);
+    cursor: default;
+    text-decoration: line-through;
+  }
+
+  .quiz-option.reveal-correct {
+    border-color: var(--green);
+    background: var(--green-bg);
+    color: var(--green);
+    font-weight: 600;
+    cursor: default;
+  }
+
+  .quiz-option:disabled {
+    cursor: default;
+  }
+
+  .quiz-feedback {
+    font-size: 0.92rem;
+    padding: 14px 18px;
+    border-radius: 8px;
+    display: none;
+    line-height: 1.65;
+    margin-top: 4px;
+  }
+
+  .quiz-feedback.show { display: block; }
+  .quiz-feedback.correct { background: var(--green-bg); color: var(--green); }
+  .quiz-feedback.wrong { background: var(--red-bg); color: var(--red); }
+
+  /* ===== TOGGLE / REVELER ===== */
+  .reveal-block {
+    margin: 22px 0;
+  }
+
+  .reveal-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-bg);
+    border: 1.5px solid rgba(196,86,10,0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .reveal-btn:hover {
+    background: rgba(196,86,10,0.12);
+  }
+
+  .reveal-btn .arrow {
+    transition: transform 0.3s ease;
+    font-size: 0.75rem;
+  }
+
+  .reveal-btn.open .arrow {
+    transform: rotate(90deg);
+  }
+
+  .reveal-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 18px;
+    background: var(--bg-white);
+    border-radius: 0 0 10px 10px;
+  }
+
+  .reveal-content.open {
+    max-height: 600px;
+    padding: 18px;
+    border: 1px solid var(--border);
+    border-top: none;
+    margin-top: -4px;
+  }
+
+  .reveal-content p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-bottom: 8px;
+    line-height: 1.7;
+  }
+
+  /* ===== PLAN DU LIVRE ===== */
+  .plan-item {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    padding: 18px 14px;
+    border-bottom: 1px solid var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.18s ease, border-color 0.18s ease;
+    margin: 0 -14px;
+    text-decoration: none;
+  }
+
+  .plan-item:last-child { border-bottom: 1px solid var(--border); }
+
+  .plan-item:hover {
+    background: var(--accent-bg);
+    border-color: rgba(196,86,10,0.18);
+  }
+
+  .plan-item:hover .plan-info h3 {
+    color: var(--accent);
+  }
+
+  .plan-item:hover .plan-arrow {
+    transform: translateX(4px);
+    color: var(--accent);
+  }
+
+  .plan-chapter {
+    flex-shrink: 0;
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding-top: 2px;
+    min-width: 60px;
+  }
+
+  .plan-info {
+    flex: 1;
+  }
+
+  .plan-info h3 {
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 3px;
+    transition: color 0.18s ease;
+  }
+
+  .plan-info p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
+  }
+
+  .plan-arrow {
+    flex-shrink: 0;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    transition: transform 0.18s ease, color 0.18s ease;
+  }
+
+  /* ===== SEPARATEUR ===== */
+  .sep {
+    height: 1px;
+    background: var(--border);
+    margin: 50px 0;
+  }
+
+  /* ===== CHIFFRES ===== */
+  .chiffres {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 24px 0;
+  }
+
+  .chiffre-box {
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 16px;
+    text-align: center;
+    box-shadow: var(--shadow);
+  }
+
+  .chiffre-val {
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .chiffre-desc {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* ===== CTA ===== */
+  .cta {
+    text-align: center;
+    padding: 40px 0 20px;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    padding: 14px 36px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    background: var(--accent);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+  }
+
+  .cta-btn:hover {
+    background: #a84808;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(196,86,10,0.25);
+  }
+
+  .cta-note {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 12px;
+    font-style: italic;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    text-align: center;
+    padding: 30px 0 50px;
+    border-top: 1px solid var(--border);
+    margin-top: 50px;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  footer strong { color: var(--accent); font-weight: 700; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 600px) {
+    .chiffres { grid-template-columns: 1fr; }
+    header { padding: 40px 0 30px; }
+    .regle { flex-direction: column; gap: 10px; }
+    .plan-item { flex-direction: column; gap: 6px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ===== EN-TÊTE ===== -->
+  <header>
+    <span class="tag">Passeport concours &mdash; &eacute;dition 2026</span>
+    <h1>Anglais ENA : le manuel<br>qui va droit au but.</h1>
+    <p class="subtitle">
+      Un guide con&ccedil;u pour les candidats press&eacute;s, les allergiques &agrave; la grammaire,
+      et tous ceux qui veulent maximiser leur score sans perdre de temps.
+    </p>
+  </header>
+
+  <!-- ===== POURQUOI CE MANUEL ===== -->
+  <section class="section">
+    <h2>Pourquoi ce manuel est diff&eacute;rent.</h2>
+    <p>
+      La plupart des cours d'anglais sont &eacute;crits pour des &eacute;tudiants qui ont d&eacute;j&agrave; un bon niveau.
+      Ils empilent les r&egrave;gles, alignent les exceptions, et te laissent seul face &agrave; un mur de texte.
+      R&eacute;sultat : tu refermes le livre au bout de dix pages.
+    </p>
+    <p>
+      Ici, on part d'un principe simple : <strong>tu n'as pas besoin de parler anglais couramment pour r&eacute;ussir le QCM</strong>.
+      Tu as besoin de comprendre la logique de la langue, de conna&icirc;tre les pi&egrave;ges classiques,
+      et de ma&icirc;triser le vocabulaire qui revient chaque ann&eacute;e au concours.
+    </p>
+
+    <div class="encart accent">
+      <span class="encart-label">Le principe fondamental</span>
+      <p>
+        L'&eacute;preuve d'anglais de l'ENA est un QCM. Ce n'est ni une r&eacute;daction, ni un oral.
+        C'est un exercice de <strong>strat&eacute;gie et de m&eacute;thode</strong> avant d'&ecirc;tre un exercice de langue.
+        Bonne nouvelle : la strat&eacute;gie, &ccedil;a s'apprend.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== QUIZ D'AUTO-EVALUATION ===== -->
+  <section class="section">
+    <h2>O&ugrave; en es-tu ? Fais le test.</h2>
+    <p class="light">
+      Avant de commencer, v&eacute;rifie ton niveau avec ces trois questions rapides.
+      Pas de pi&egrave;ge : c'est juste pour savoir par o&ugrave; commencer.
+    </p>
+
+    <!-- Question 1 -->
+    <div class="quiz-block" id="q1">
+      <span class="quiz-label">Question 1 sur 3</span>
+      <p class="quiz-question">Compl&egrave;te la phrase : "She _____ to the office every day."</p>
+      <div class="quiz-options">
+        <button class="quiz-option" onclick="checkAnswer(this, 'q1', false)">a) go</button>
+        <button class="quiz-option" onclick="checkAnswer(this, 'q1', true)">b) goes</button>
+        <button class="quiz-option" onclick="checkAnswer(this, 'q1', false)">c) going</button>
+        <button class="quiz-option" onclick="checkAnswer(this, 'q1', false)">d) gone</button>
+      </div>
+      <div class="quiz-feedback correct" id="q1-ok">
+        Exact. Au pr&eacute;sent simple, on ajoute un <strong>-s</strong> &agrave; la troisi&egrave;me personne du singulier (he, she, it). C'est la r&egrave;gle la plus test&eacute;e au concours.
+      </div>
+      <div class="quiz-feedback wrong" id="q1-ko">
+        La bonne r&eacute;ponse est <strong>b) goes</strong>. Au pr&eacute;sent simple, le verbe prend un <strong>-s</strong> avec he, she, it. C'est l'erreur n&deg;1 des candidats francophones &mdash; ce manuel y revient en d&eacute;tail.
+      </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="quiz-block" id="q2">
+      <span class="quiz-label">Question 2 sur 3</span>
+      <p class="quiz-question">Que signifie "civil servant" ?</p>
+      <div class="quiz-options">
+        <button class="quiz-option" onclick="checkAnswer(this, 'q2', false)">a) Serviteur civil</button>
+        <button class="quiz-option" onclick="checkAnswer(this, 'q2', false)">b) Employ&eacute; de maison</button>
+        <button class="quiz-option" onclick="checkAnswer(this, 'q2', true)">c) Fonctionnaire</button>
+        <button class="quiz-option" onclick="checkAnswer(this, 'q2', false)">d) B&eacute;n&eacute;vole</button>
+      </div>
+      <div class="quiz-feedback correct" id="q2-ok">
+        Bien jou&eacute;. "Civil servant" = fonctionnaire. C'est du vocabulaire typique de l'&eacute;preuve ENA. La section vocabulaire de ce manuel couvre tout le champ lexical de l'administration publique.
+      </div>
+      <div class="quiz-feedback wrong" id="q2-ko">
+        La bonne r&eacute;ponse est <strong>c) fonctionnaire</strong>. "Civil servant" est un faux ami partiel &mdash; "servant" ne veut pas dire "serviteur" dans ce contexte. Ce type de vocabulaire administratif est au coeur de l'&eacute;preuve.
+      </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="quiz-block" id="q3">
+      <span class="quiz-label">Question 3 sur 3</span>
+      <p class="quiz-question">Choisis la forme correcte : "They _____ the report yesterday."</p>
+      <div class="quiz-options">
+        <button class="quiz-option" onclick="checkAnswer(this, 'q3', false)">a) have finished</button>
+        <button class="quiz-option" onclick="checkAnswer(this, 'q3', true)">b) finished</button>
+        <button class="quiz-option" onclick="checkAnswer(this, 'q3', false)">c) finishing</button>
+        <button class="quiz-option" onclick="checkAnswer(this, 'q3', false)">d) finishes</button>
+      </div>
+      <div class="quiz-feedback correct" id="q3-ok">
+        Correct. "Yesterday" indique le pass&eacute;. Avec un marqueur de temps pr&eacute;cis dans le pass&eacute;, on utilise le <strong>past simple</strong> (finished), jamais le present perfect. C'est un pi&egrave;ge r&eacute;current.
+      </div>
+      <div class="quiz-feedback wrong" id="q3-ko">
+        La bonne r&eacute;ponse est <strong>b) finished</strong>. Le mot "yesterday" impose le past simple. Le present perfect ("have finished") ne s'utilise jamais avec un moment pr&eacute;cis dans le pass&eacute;. Ce point est d&eacute;taill&eacute; dans le chapitre sur la conjugaison.
+      </div>
+    </div>
+
+    <!-- Résultat -->
+    <div id="quiz-result" style="display:none;">
+      <div class="encart green">
+        <span class="encart-label">Ton r&eacute;sultat</span>
+        <p id="result-text"></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="sep"></div>
+
+  <!-- ===== LES 5 REGLES D'OR ===== -->
+  <section class="section">
+    <h2>Cinq r&egrave;gles d'or pour le jour du concours.</h2>
+    <p class="light">
+      Avant de toucher &agrave; la grammaire, imprime ces r&egrave;gles dans ta m&eacute;moire.
+      Elles peuvent te faire gagner plusieurs points sans conna&icirc;tre une seule r&egrave;gle de grammaire suppl&eacute;mentaire.
+    </p>
+
+    <div class="regle">
+      <span class="regle-num">1</span>
+      <div class="regle-content">
+        <h3>Lis la consigne deux fois.</h3>
+        <p>La moiti&eacute; des erreurs viennent d'une mauvaise lecture. Attention aux n&eacute;gations cach&eacute;es : "choisissez la r&eacute;ponse qui ne correspond PAS".</p>
+      </div>
+    </div>
+
+    <div class="regle">
+      <span class="regle-num">2</span>
+      <div class="regle-content">
+        <h3>&Eacute;limine avant de choisir.</h3>
+        <p>Sur quatre propositions, tu peux presque toujours en &eacute;carter deux. Tu passes alors de 25% &agrave; 50% de chances de trouver la bonne r&eacute;ponse.</p>
+      </div>
+    </div>
+
+    <div class="regle">
+      <span class="regle-num">3</span>
+      <div class="regle-content">
+        <h3>R&eacute;ponds mentalement d'abord.</h3>
+        <p>Avant de regarder les choix propos&eacute;s, essaie de deviner la r&eacute;ponse. Si elle figure parmi les options, c'est un signal fort.</p>
+      </div>
+    </div>
+
+    <div class="regle">
+      <span class="regle-num">4</span>
+      <div class="regle-content">
+        <h3>Ne reste jamais bloqu&eacute;.</h3>
+        <p>Moins d'une minute par question en moyenne. Si tu h&eacute;sites, coche ton meilleur choix, marque la question, et avance. Tu reviendras &agrave; la fin.</p>
+      </div>
+    </div>
+
+    <div class="regle">
+      <span class="regle-num">5</span>
+      <div class="regle-content">
+        <h3>Un mot inconnu n'est pas un obstacle.</h3>
+        <p>Le contexte est ton alli&eacute;. Regarde les mots autour, la structure de la phrase. Le sens se d&eacute;duit souvent sans conna&icirc;tre chaque mot.</p>
+      </div>
+    </div>
+
+    <!-- Reveal : appliquer les règles -->
+    <div class="reveal-block">
+      <button class="reveal-btn" onclick="toggleReveal(this)">
+        <span class="arrow">&#9654;</span> Voir un exemple concret d'application
+      </button>
+      <div class="reveal-content">
+        <p><strong>Question type :</strong> "The government _____ new measures to reduce public debt last year."</p>
+        <p>a) has introduced &nbsp; b) introduce &nbsp; c) introduced &nbsp; d) introducing</p>
+        <p><strong>R&egrave;gle 3 :</strong> avant de lire les choix, tu penses "le gouvernement A INTRODUIT"... au pass&eacute;.</p>
+        <p><strong>R&egrave;gle 2 :</strong> "introduce" (pr&eacute;sent) et "introducing" (participe) sont &eacute;limin&eacute;s imm&eacute;diatement.</p>
+        <p><strong>R&egrave;gle 1 :</strong> "last year" = marqueur de pass&eacute; pr&eacute;cis. Donc past simple, pas present perfect.</p>
+        <p><strong>R&eacute;ponse : c) introduced.</strong> En moins de 30 secondes, sans stress.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="sep"></div>
+
+  <!-- ===== COMMENT S'ENTRAÎNER ===== -->
+  <section class="section">
+    <h2>Comment s'entra&icirc;ner au quotidien.</h2>
+    <p>
+      Les sp&eacute;cialistes des tests psychotechniques estiment que l'entra&icirc;nement r&eacute;gulier
+      peut am&eacute;liorer les r&eacute;sultats de <strong>quinze pour cent</strong>. Ce n'est pas n&eacute;gligeable.
+      Voici quatre habitudes simples &agrave; adopter d&egrave;s maintenant :
+    </p>
+
+    <div class="encart">
+      <p><strong>Regarde tes s&eacute;ries en version originale sous-titr&eacute;e anglais.</strong>
+      Netflix, YouTube, tout fonctionne. Ton cerveau absorbe la grammaire et le vocabulaire
+      sans effort conscient.</p>
+    </div>
+
+    <div class="encart">
+      <p><strong>&Eacute;coute 10 minutes de podcast en anglais par jour.</strong>
+      BBC Learning English ou VOA Learning English sont parfaits pour commencer.
+      Dans les transports, c'est du temps gagn&eacute;.</p>
+    </div>
+
+    <div class="encart">
+      <p><strong>Mets ton t&eacute;l&eacute;phone en anglais.</strong>
+      Tu lis de l'anglais toute la journ&eacute;e sans t'en rendre compte :
+      "settings", "notifications", "reply"... Le vocabulaire rentre tout seul.</p>
+    </div>
+
+    <div class="encart">
+      <p><strong>Travaille ce manuel par petites sessions de 15 minutes.</strong>
+      Chaque section est con&ccedil;ue pour tenir dans une pause. Quinze minutes par jour
+      valent bien mieux que trois heures un dimanche.</p>
+    </div>
+
+    <div class="encart green">
+      <span class="encart-label">Astuce</span>
+      <p>Cr&eacute;e un petit groupe WhatsApp avec deux ou trois amis candidats.
+      Envoyez-vous une question par jour. La r&eacute;gularit&eacute; et le petit esprit de comp&eacute;tition
+      font des miracles.</p>
+    </div>
+  </section>
+
+  <div class="sep"></div>
+
+  <!-- ===== L'EPREUVE EN CHIFFRES ===== -->
+  <section class="section">
+    <h2>L'&eacute;preuve d'anglais en bref.</h2>
+    <p class="light">
+      Conna&icirc;tre le format de l'&eacute;preuve, c'est d&eacute;j&agrave; se donner un avantage.
+    </p>
+
+    <div class="chiffres">
+      <div class="chiffre-box">
+        <span class="chiffre-val">QCM</span>
+        <span class="chiffre-desc">Format</span>
+      </div>
+      <div class="chiffre-box">
+        <span class="chiffre-val">&lt; 1 min</span>
+        <span class="chiffre-desc">Par question</span>
+      </div>
+      <div class="chiffre-box">
+        <span class="chiffre-val">4 choix</span>
+        <span class="chiffre-desc">Par question</span>
+      </div>
+    </div>
+
+    <div class="encart blue">
+      <span class="encart-label">Ce que l'&eacute;preuve teste</span>
+      <p>
+        Trois comp&eacute;tences pr&eacute;cises : ta ma&icirc;trise de la <strong>grammaire</strong>,
+        ta connaissance du <strong>vocabulaire</strong> (notamment administratif),
+        et ta capacit&eacute; &agrave; <strong>comprendre la logique d'une phrase</strong>.
+        Ce manuel entra&icirc;ne ces trois comp&eacute;tences, dans cet ordre.
+      </p>
+    </div>
+  </section>
+
+  <div class="sep"></div>
+
+  <!-- ===== PLAN DU MANUEL ===== -->
+  <section class="section">
+    <h2>Ce qui t'attend dans ce manuel.</h2>
+    <p class="light">
+      Le manuel est organis&eacute; par difficult&eacute; croissante. Si tu d&eacute;butes, suis l'ordre.
+      Si tu te d&eacute;brouilles, saute directement aux chapitres qui te posent probl&egrave;me.
+    </p>
+
+    <div class="plan-item" onclick="window.location.href='./manuel_interactif_anglais_chapitre1_bases_grammaire.html';">
+      <span class="plan-chapter">Chap. 1</span>
+      <div class="plan-info">
+        <h3>Les bases de la grammaire anglaise.</h3>
+        <p>Verbes, adverbes, pr&eacute;positions, pronoms, g&eacute;rondif... les termes essentiels expliqu&eacute;s simplement.</p>
+      </div>
+      <span class="plan-arrow">&#9654;</span>
+    </div>
+
+    <div class="plan-item" onclick="window.location.href='./manuel_interactif_anglais_chapitre2_comparatifs_superlatifs.html';">
+      <span class="plan-chapter">Chap. 2</span>
+      <div class="plan-info">
+        <h3>Les comparatifs et les superlatifs.</h3>
+        <p>Comment comparer en anglais sans se tromper, y compris les formes irr&eacute;guli&egrave;res.</p>
+      </div>
+      <span class="plan-arrow">&#9654;</span>
+    </div>
+
+    <div class="plan-item" onclick="window.location.href='./manuel_interactif_anglais_chapitre3_pluriel.html';">
+      <span class="plan-chapter">Chap. 3</span>
+      <div class="plan-info">
+        <h3>Le pluriel en anglais.</h3>
+        <p>R&egrave;gles r&eacute;guli&egrave;res, exceptions, et cas particuliers qui reviennent souvent aux concours.</p>
+      </div>
+      <span class="plan-arrow">&#9654;</span>
+    </div>
+
+    <div class="plan-item" onclick="window.location.href='./manuel_interactif_anglais_chapitre4_conjugaison.html';">
+      <span class="plan-chapter">Chap. 4</span>
+      <div class="plan-info">
+        <h3>La conjugaison compl&egrave;te.</h3>
+        <p>Tous les temps anglais : pr&eacute;sent, pass&eacute;, futur, perfect, continuous... avec la m&eacute;thode "quand utiliser quoi".</p>
+      </div>
+      <span class="plan-arrow">&#9654;</span>
+    </div>
+
+    <div class="plan-item" onclick="window.location.href='./manuel_interactif_anglais_chapitre5_prepositions.html';">
+      <span class="plan-chapter">Chap. 5</span>
+      <div class="plan-info">
+        <h3>Les pr&eacute;positions : on, at, in.</h3>
+        <p>Le cauchemar des francophones, d&eacute;mystifi&eacute; une fois pour toutes.</p>
+      </div>
+      <span class="plan-arrow">&#9654;</span>
+    </div>
+
+    <div class="plan-item" onclick="window.location.href='./manuel_interactif_anglais_chapitre6_traduction.html';">
+      <span class="plan-chapter">Chap. 6</span>
+      <div class="plan-info">
+        <h3>Le vocabulaire du secteur public.</h3>
+        <p>Les mots de l'administration, de la politique, et du service public en anglais. C'est le vocabulaire qui tombe &agrave; l'ENA.</p>
+      </div>
+      <span class="plan-arrow">&#9654;</span>
+    </div>
+
+    <div class="plan-item" onclick="window.location.href='./chapitre7_anciens_sujets_ENA.html';">
+      <span class="plan-chapter">Chap. 7</span>
+      <div class="plan-info">
+        <h3>Entra&icirc;nement : QCM type concours.</h3>
+        <p>Des s&eacute;ries compl&egrave;tes de questions dans les conditions r&eacute;elles, avec corrections d&eacute;taill&eacute;es.</p>
+      </div>
+      <span class="plan-arrow">&#9654;</span>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <div class="cta">
+    <button class="cta-btn" onclick="window.location.href='./manuel_interactif_anglais_chapitre1_bases_grammaire.html';">
+      Commencer le chapitre 1 &rarr;
+    </button>
+    <p class="cta-note">Quinze minutes par jour suffisent. Commence aujourd'hui.</p>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p><strong>Passeport Concours</strong> &mdash; Anglais ENA 2026.</p>
+  </footer>
+
+</div>
+
+<script>
+  let score = 0;
+  let answered = 0;
+
+  function checkAnswer(btn, qId, isCorrect) {
+    const block = document.getElementById(qId);
+    const options = block.querySelectorAll('.quiz-option');
+    const okFeedback = document.getElementById(qId + '-ok');
+    const koFeedback = document.getElementById(qId + '-ko');
+
+    // Désactiver tous les boutons
+    options.forEach(o => o.disabled = true);
+
+    if (isCorrect) {
+      btn.classList.add('selected-correct');
+      okFeedback.classList.add('show');
+      score++;
+    } else {
+      btn.classList.add('selected-wrong');
+      koFeedback.classList.add('show');
+      // Montrer la bonne réponse
+      options.forEach(o => {
+        if (o.onclick && o.onclick.toString().includes('true')) {
+          o.classList.add('reveal-correct');
+        }
+      });
+    }
+
+    answered++;
+
+    if (answered === 3) {
+      setTimeout(showResult, 600);
+    }
+  }
+
+  function showResult() {
+    const resultDiv = document.getElementById('quiz-result');
+    const resultText = document.getElementById('result-text');
+
+    let msg = '';
+    if (score === 3) {
+      msg = '<strong>3/3 — Excellent.</strong> Tu as de bonnes bases. Ce manuel va te permettre de consolider tes acquis et de viser un score &eacute;lev&eacute;. Tu peux commencer directement par les chapitres qui te semblent les plus utiles.';
+    } else if (score === 2) {
+      msg = '<strong>2/3 — Pas mal.</strong> Les fondamentaux sont l&agrave;, mais il y a des zones de fragilit&eacute;. Suis le manuel dans l\'ordre pour combler les lacunes sans en cr&eacute;er de nouvelles.';
+    } else if (score === 1) {
+      msg = '<strong>1/3 — C\'est un d&eacute;but.</strong> Ne t\'inqui&egrave;te pas, ce manuel a &eacute;t&eacute; &eacute;crit exactement pour toi. Commence par le chapitre 1 et avance &agrave; ton rythme. Chaque page te rapproche du concours.';
+    } else {
+      msg = '<strong>0/3 — Z&eacute;ro stress.</strong> Tout le monde part de quelque part. Ce manuel reprend chaque notion depuis le d&eacute;but, en fran&ccedil;ais simple, avec des exemples concrets. Dans quelques semaines, tu r&eacute;pondras &agrave; ces m&ecirc;mes questions les yeux ferm&eacute;s.';
+    }
+
+    resultText.innerHTML = msg;
+    resultDiv.style.display = 'block';
+    resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  function toggleReveal(btn) {
+    const content = btn.nextElementSibling;
+    btn.classList.toggle('open');
+    content.classList.toggle('open');
+  }
+</script>
+
+</body>
+</html>

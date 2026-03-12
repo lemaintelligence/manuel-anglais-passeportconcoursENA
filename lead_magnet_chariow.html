@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>10 ans de sujets r&eacute;els ENA — Entra&icirc;ne-toi pour r&eacute;ussir.</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ============================================================ */
+/* DESIGN SYSTEM — identique à tous les chapitres              */
+/* ============================================================ */
+:root {
+  --bg: #faf8f5;
+  --bg-white: #fff;
+  --bg-warm: #f5f0ea;
+  --text: #2c2420;
+  --text-light: #6b5e54;
+  --text-muted: #9a8d82;
+  --accent: #c4560a;
+  --accent-light: #e8874a;
+  --accent-bg: #fef3ea;
+  --green: #2a7d4f;
+  --green-bg: #edf7f0;
+  --blue: #1a5f8a;
+  --blue-bg: #eaf3fa;
+  --red: #b83232;
+  --red-bg: #fdeaea;
+  --border: #e8e0d8;
+  --shadow: 0 1px 3px rgba(44,36,32,.06);
+
+  /* Couleurs marque Passeport Concours */
+  --brand-navy: #1d3a6e;
+  --brand-navy-dark: #152d55;
+  --brand-navy-light: #2a4e8f;
+  --brand-gold: #c9a227;
+  --brand-gold-light: #e0b93a;
+  --brand-gold-bg: #fdf8ec;
+  --brand-gold-border: rgba(201,162,39,.25);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; -webkit-font-smoothing: antialiased; }
+.page { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+header { padding: 60px 0 40px; border-bottom: 1px solid var(--border); margin-bottom: 50px; }
+header .tag { display: inline-block; font-size: .7rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); background: var(--accent-bg); padding: 5px 14px; border-radius: 4px; margin-bottom: 20px; }
+header h1 { font-family: 'Source Serif 4', serif; font-size: clamp(1.8rem,5vw,2.6rem); font-weight: 700; color: var(--text); line-height: 1.25; margin-bottom: 14px; }
+header .subtitle { font-size: 1.05rem; color: var(--text-light); max-width: 580px; line-height: 1.7; }
+
+.section { margin-bottom: 50px; }
+.section h2 { font-family: 'Source Serif 4', serif; font-size: 1.45rem; font-weight: 700; color: var(--text); margin-bottom: 14px; line-height: 1.3; }
+.section h3 { font-family: 'Source Serif 4', serif; font-size: 1.15rem; font-weight: 600; color: var(--text); margin: 22px 0 10px; }
+.section p { font-size: 1.02rem; color: var(--text); margin-bottom: 14px; }
+.section p.light { color: var(--text-light); }
+strong { font-weight: 600; }
+
+/* Encarts */
+.encart { background: var(--bg-white); border: 1px solid var(--border); border-radius: 10px; padding: 22px 26px; margin: 22px 0; box-shadow: var(--shadow); }
+.encart.accent { background: var(--accent-bg); border-color: rgba(196,86,10,.15); }
+.encart.green { background: var(--green-bg); border-color: rgba(42,125,79,.15); }
+.encart.blue { background: var(--blue-bg); border-color: rgba(26,95,138,.15); }
+.encart-label { font-size: .72rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; display: block; }
+.encart.accent .encart-label { color: var(--accent); }
+.encart.green .encart-label { color: var(--green); }
+.encart.blue .encart-label { color: var(--blue); }
+.encart p { font-size: .98rem; margin-bottom: 8px; line-height: 1.7; }
+.encart p:last-child { margin-bottom: 0; }
+
+/* Tableau méthode */
+.steps-grid { display: flex; flex-direction: column; gap: 14px; margin: 24px 0; }
+.step-row { display: flex; gap: 16px; align-items: flex-start; background: var(--bg-white); border: 1px solid var(--border); border-radius: 10px; padding: 18px 20px; box-shadow: var(--shadow); }
+.step-num { flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; background: var(--brand-navy); color: #fff; font-family: 'Source Serif 4', serif; font-weight: 700; font-size: 1rem; display: flex; align-items: center; justify-content: center; }
+.step-content strong { display: block; font-size: .97rem; color: var(--text); margin-bottom: 4px; }
+.step-content span { font-size: .9rem; color: var(--text-light); line-height: 1.6; }
+
+/* Tableau années */
+.table-wrap { overflow-x: auto; margin: 20px 0; }
+table { width: 100%; border-collapse: collapse; font-size: .95rem; background: var(--bg-white); border-radius: 10px; overflow: hidden; box-shadow: var(--shadow); }
+thead { background: var(--brand-navy); color: #fff; }
+th { padding: 12px 16px; text-align: left; font-weight: 600; font-size: .85rem; letter-spacing: .5px; }
+td { padding: 11px 16px; border-bottom: 1px solid var(--border); }
+tr:last-child td { border-bottom: none; }
+tbody tr:hover { background: var(--bg-warm); }
+.badge-cycle { display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .5px; padding: 3px 10px; border-radius: 20px; }
+.badge-cm { background: #edf7f0; color: #2a7d4f; }
+.badge-cms { background: #eaf3fa; color: #1a5f8a; }
+.badge-cs { background: var(--brand-gold-bg); color: var(--brand-navy); }
+
+/* Séparateur */
+.sep { height: 1px; background: var(--border); margin: 50px 0; }
+
+/* ============================================================ */
+/* BLOC OFFRE PASSEPORT CONCOURS — couleurs marque             */
+/* ============================================================ */
+.offre-section {
+  background: var(--brand-navy);
+  border-radius: 16px;
+  padding: 40px 36px;
+  margin: 40px 0;
+  position: relative;
+  overflow: hidden;
+}
+.offre-section::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 220px; height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,162,39,.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+.offre-eyebrow {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--brand-gold);
+  margin-bottom: 12px;
+  display: block;
+}
+.offre-section h2 {
+  font-family: 'Source Serif 4', serif;
+  font-size: clamp(1.4rem, 4vw, 1.9rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+  margin-bottom: 14px;
+}
+.offre-section .offre-intro {
+  font-size: .98rem;
+  color: rgba(255,255,255,.75);
+  max-width: 560px;
+  line-height: 1.75;
+  margin-bottom: 32px;
+}
+
+/* Cartes kits */
+.kits-grid { display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px; }
+.kit-card {
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(201,162,39,.25);
+  border-radius: 12px;
+  padding: 20px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  transition: background .2s, border-color .2s;
+  text-decoration: none;
+}
+.kit-card:hover {
+  background: rgba(255,255,255,.12);
+  border-color: var(--brand-gold);
+}
+.kit-card-left {}
+.kit-card-label {
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--brand-gold);
+  margin-bottom: 5px;
+  display: block;
+}
+.kit-card-name {
+  font-family: 'Source Serif 4', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
+  line-height: 1.35;
+}
+.kit-card-detail {
+  font-size: .82rem;
+  color: rgba(255,255,255,.55);
+}
+.kit-card-right { flex-shrink: 0; text-align: right; }
+.kit-price-old {
+  font-size: .75rem;
+  color: rgba(255,255,255,.4);
+  text-decoration: line-through;
+  display: block;
+  margin-bottom: 2px;
+}
+.kit-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--brand-gold);
+  display: block;
+  margin-bottom: 6px;
+}
+.kit-btn {
+  display: inline-block;
+  padding: 7px 16px;
+  background: var(--brand-gold);
+  color: var(--brand-navy);
+  font-family: 'DM Sans', sans-serif;
+  font-size: .8rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background .2s, transform .15s;
+  white-space: nowrap;
+}
+.kit-btn:hover { background: var(--brand-gold-light); transform: translateY(-1px); }
+
+/* Carte best-seller — mise en avant */
+.kit-card-bestseller {
+  border-color: var(--brand-gold);
+  border-width: 2px;
+  background: rgba(201,162,39,.10);
+  margin-top: 6px;
+}
+.kit-card-bestseller .kit-card-label {
+  font-size: .78rem;
+  text-transform: none;
+  letter-spacing: 0;
+  color: #fff;
+  font-weight: 600;
+}
+.kit-card-bestseller .kit-card-label u {
+  color: var(--brand-gold);
+  text-underline-offset: 3px;
+}
+
+/* Ligne séparatrice dans offre */
+.offre-sep { height: 1px; background: rgba(255,255,255,.1); margin: 28px 0; }
+
+/* Garanties */
+.garanties { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 28px; }
+.garantie-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: .83rem;
+  color: rgba(255,255,255,.7);
+}
+.garantie-item .dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--brand-gold);
+  flex-shrink: 0;
+}
+
+/* Bouton WhatsApp */
+.wa-line {
+  font-size: .85rem;
+  color: rgba(255,255,255,.55);
+  text-align: center;
+}
+.wa-line strong { color: rgba(255,255,255,.85); }
+
+/* Bloc stat */
+.stats-row { display: flex; gap: 12px; flex-wrap: wrap; margin: 24px 0; }
+.stat-box {
+  flex: 1 1 140px;
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 16px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+.stat-num {
+  font-family: 'Source Serif 4', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--brand-navy);
+  display: block;
+  line-height: 1.1;
+  margin-bottom: 5px;
+}
+.stat-label {
+  font-size: .78rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* Reveal */
+.reveal-block { margin: 20px 0; }
+.reveal-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; font-family: 'DM Sans', sans-serif; font-size: .9rem; font-weight: 600; color: var(--accent); background: var(--accent-bg); border: 1.5px solid rgba(196,86,10,.2); border-radius: 8px; cursor: pointer; transition: all .2s; }
+.reveal-btn:hover { background: rgba(196,86,10,.12); }
+.reveal-btn .arrow { transition: transform .3s; font-size: .75rem; }
+.reveal-btn.open .arrow { transform: rotate(90deg); }
+.reveal-content { max-height: 0; overflow: hidden; transition: max-height .5s ease, padding .3s; padding: 0 18px; background: var(--bg-white); border-radius: 0 0 10px 10px; }
+.reveal-content.open { max-height: 900px; padding: 18px; border: 1px solid var(--border); border-top: none; margin-top: -4px; }
+.reveal-content p { font-size: .95rem; color: var(--text-light); margin-bottom: 8px; line-height: 1.7; }
+
+/* Score bar */
+.score-bar { position: sticky; top: 0; z-index: 100; background: rgba(250,248,245,.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); padding: 10px 24px; display: flex; justify-content: space-between; align-items: center; font-size: .85rem; }
+.score-bar .left { font-weight: 600; color: var(--text); }
+.score-bar .right { color: var(--brand-navy); font-weight: 700; font-size: .8rem; }
+
+/* Nav */
+.nav-bottom { display: flex; justify-content: space-between; align-items: center; padding: 30px 0; margin-top: 40px; border-top: 1px solid var(--border); }
+.nav-btn { padding: 12px 28px; font-family: 'DM Sans', sans-serif; font-size: .95rem; font-weight: 700; border-radius: 8px; text-decoration: none; cursor: pointer; transition: all .2s; border: none; }
+.nav-btn.prev { color: var(--text-light); background: var(--bg-warm); border: 1px solid var(--border); }
+.nav-btn.prev:hover { background: var(--border); }
+.nav-btn.next { color: #fff; background: var(--accent); }
+.nav-btn.next:hover { background: #a84808; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(196,86,10,.25); }
+
+footer { text-align: center; padding: 20px 0 50px; font-size: .8rem; color: var(--text-muted); }
+footer strong { color: var(--accent); font-weight: 700; }
+
+@media(max-width:600px) {
+  header { padding: 40px 0 30px; }
+  .page { padding: 0 16px; }
+  .offre-section { padding: 28px 20px; }
+  .kit-card { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .kit-card-right { text-align: left; }
+  .stats-row { gap: 8px; }
+  .stat-box { flex: 1 1 120px; padding: 14px 12px; }
+  .stat-num { font-size: 1.5rem; }
+  .nav-btn { padding: 11px 18px; font-size: .88rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- Barre sticky -->
+<div class="score-bar">
+  <span class="left">Entra&icirc;nement &mdash; Les vrais sujets qui ont &eacute;limin&eacute; les autres</span>
+  <span class="right">Passeport Concours</span>
+</div>
+
+<div class="page">
+
+<!-- ============================================================ -->
+<!-- HEADER -->
+<!-- ============================================================ -->
+<header>
+  <span class="tag">Annales officielles &mdash; 10 sessions r&eacute;elles</span>
+  <h1>Entra&icirc;ne-toi sur les vrais sujets qui ont &eacute;limin&eacute; les autres.</h1>
+  <p class="subtitle">Les bases sont acquises. Il reste l&rsquo;&eacute;tape que la plupart des candidats sautent : s&rsquo;entra&icirc;ner sur les sujets r&eacute;els pos&eacute;s par l&rsquo;ENA. C&rsquo;est ce qui transforme un bon candidat en candidat re&ccedil;u.</p>
+</header>
+
+<!-- ============================================================ -->
+<!-- POURQUOI LES ANNALES -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Pourquoi les annales r&eacute;elles sont indispensables.</h2>
+
+  <p>Il y a une v&eacute;rit&eacute; que peu de pr&eacute;parateurs disent clairement : <strong>les concepteurs de l&rsquo;ENA recyclent les logiques, les th&egrave;mes et les formulations</strong>. Les sujets changent de surface d&rsquo;une ann&eacute;e &agrave; l&rsquo;autre, mais les pi&egrave;ges, les structures de questions et les attentes du jury restent stables sur dix ans.</p>
+
+  <p>Un candidat qui a travaill&eacute; 30 sujets r&eacute;els arrive en salle d&rsquo;examen avec un cerveau calibr&eacute;. Il reconna&icirc;t le type de question avant m&ecirc;me d&rsquo;avoir fini de la lire. Il ne panique pas. Il ex&eacute;cute.</p>
+
+  <div class="encart accent">
+    <span class="encart-label">Le principe des r&eacute;flexes</span>
+    <p>La connaissance th&eacute;orique t&rsquo;apprend &laquo; quoi r&eacute;pondre &raquo;. L&rsquo;entra&icirc;nement sur annales t&rsquo;apprend &laquo; comment r&eacute;pondre vite, sous pression, sans erreur &raquo;. Les deux sont n&eacute;cessaires. Le second est souvent n&eacute;glig&eacute;.</p>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-row">
+    <div class="stat-box">
+      <span class="stat-num">10</span>
+      <span class="stat-label">Sessions de concours de 2015 &agrave; 2025.</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-num">3</span>
+      <span class="stat-label">Cycles (Moyen, Moyen Sup&eacute;rieur, Sup&eacute;rieur).</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-num">400</span>
+      <span class="stat-label">Places disponibles pour plus de 17&nbsp;000 candidats.</span>
+    </div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- MÉTHODE DE TRAVAIL -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Comment travailler un sujet seul et en tirer le maximum.</h2>
+
+  <p>Lire un sujet et regarder la r&eacute;ponse imm&eacute;diatement n&rsquo;entra&icirc;ne rien. Ce qui cr&eacute;&eacute; les r&eacute;flexes, c&rsquo;est la <strong>difficult&eacute; g&eacute;r&eacute;e</strong> : se tromper, comprendre pourquoi, et retenter.</p>
+
+  <div class="steps-grid">
+    <div class="step-row">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <strong>Traite le sujet en conditions r&eacute;elles.</strong>
+        <span>Lance une minuterie. Pas de notes, pas d&rsquo;aide. Traite le sujet exactement comme si tu &eacute;tais en salle. La pression artificielle entra&icirc;ne la vraie.</span>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <strong>Corrige-toi avec le corrig&eacute; d&eacute;taill&eacute;.</strong>
+        <span>Ne te contente pas de voir si ta r&eacute;ponse est juste. Lis l&rsquo;explication compl&egrave;te pour comprendre le raisonnement exact attendu par le jury.</span>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <strong>Note chaque erreur dans un carnet de lacunes.</strong>
+        <span>Classe tes erreurs par cat&eacute;gorie. Tu verras vite tes points faibles r&eacute;currents. Ce carnet est ton plan de r&eacute;vision personnalis&eacute;.</span>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <strong>Refais le m&ecirc;me sujet 3 jours plus tard.</strong>
+        <span>Sans regarder tes notes. Si tu trouves encore, c&rsquo;est acquis. Si tu te trompes encore, c&rsquo;est une lacune profonde &agrave; travailler en priorit&eacute; absolue.</span>
+      </div>
+    </div>
+    <div class="step-row">
+      <div class="step-num">5</div>
+      <div class="step-content">
+        <strong>Passe au sujet suivant, par ann&eacute;e inverse.</strong>
+        <span>Commence par les sessions les plus r&eacute;centes (2024, 2023&hellip;) car elles refl&egrave;tent mieux les attentes actuelles du jury.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="encart green">
+    <span class="encart-label">R&egrave;gle d&rsquo;or</span>
+    <p>20 minutes d&rsquo;entra&icirc;nement quotidien sur annales valent mieux qu&rsquo;une s&eacute;ance de 4 heures une fois par semaine. La r&eacute;gularit&eacute; construit les r&eacute;flexes. L&rsquo;intensit&eacute; ponctuelle les &eacute;puise.</p>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- TABLEAU SESSIONS 2015-2025 -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Les sessions disponibles de 2015 &agrave; 2025.</h2>
+  <p class="light">Ce tableau te donne un aper&ccedil;u des sessions &agrave; couvrir. Coche mentalement chaque session trait&eacute;e pour suivre ta progression.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Session</th>
+          <th>Cycle moyen</th>
+          <th>Cycle moyen sup.</th>
+          <th>Cycle sup&eacute;rieur</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>2025</td><td><span class="badge-cycle badge-cm">Disponible</span></td><td><span class="badge-cycle badge-cms">Disponible</span></td><td><span class="badge-cycle badge-cs">Disponible</span></td></tr>
+        <tr><td>2024</td><td><span class="badge-cycle badge-cm">Disponible</span></td><td><span class="badge-cycle badge-cms">Disponible</span></td><td><span class="badge-cycle badge-cs">Disponible</span></td></tr>
+        <tr><td>2023</td><td><span class="badge-cycle badge-cm">Disponible</span></td><td><span class="badge-cycle badge-cms">Disponible</span></td><td><span class="badge-cycle badge-cs">Disponible</span></td></tr>
+        <tr><td>2022</td><td><span class="badge-cycle badge-cm">Disponible</span></td><td><span class="badge-cycle badge-cms">Disponible</span></td><td><span class="badge-cycle badge-cs">Disponible</span></td></tr>
+        <tr><td>2021</td><td><span class="badge-cycle badge-cm">Disponible</span></td><td><span class="badge-cycle badge-cms">Disponible</span></td><td><span class="badge-cycle badge-cs">Disponible</span></td></tr>
+        <tr><td>2020</td><td><span class="badge-cycle badge-cm">Disponible</span></td><td><span class="badge-cycle badge-cms">Disponible</span></td><td><span class="badge-cycle badge-cs">Disponible</span></td></tr>
+        <tr><td>2019</td><td><span class="badge-cycle badge-cm">Disponible</span></td><td><span class="badge-cycle badge-cms">Disponible</span></td><td><span class="badge-cycle badge-cs">Disponible</span></td></tr>
+        <tr><td>2018</td><td><span class="badge-cycle badge-cm">Disponible</span></td><td><span class="badge-cycle badge-cms">Disponible</span></td><td><span class="badge-cycle badge-cs">Disponible</span></td></tr>
+        <tr><td>2017</td><td><span class="badge-cycle badge-cm">Disponible</span></td><td><span class="badge-cycle badge-cms">Disponible</span></td><td><span class="badge-cycle badge-cs">Disponible</span></td></tr>
+        <tr><td>2015</td><td><span class="badge-cycle badge-cm">Disponible</span></td><td><span class="badge-cycle badge-cms">Disponible</span></td><td><span class="badge-cycle badge-cs">Disponible</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="reveal-block">
+    <button class="reveal-btn" onclick="toggleReveal(this)">
+      <span class="arrow">&#9654;</span> Conseils de priorisation par cycle
+    </button>
+    <div class="reveal-content">
+      <p><strong>Cycle Moyen :</strong> travaille en priorit&eacute; la logique (aptitudes num&eacute;riques) et la culture g&eacute;n&eacute;rale (aptitudes verbales). Ce sont les deux QCM qui d&eacute;terminent ton passage &agrave; l&rsquo;&eacute;tape suivante. Sans pr&eacute;s&eacute;lection valid&eacute;e, le reste ne sert &agrave; rien.</p>
+      <p><strong>Cycle Moyen Sup&eacute;rieur :</strong> les QCM de pr&eacute;s&eacute;lection couvrent les aptitudes verbales, les aptitudes num&eacute;riques et l&rsquo;anglais. Travaille-les dans cet ordre : les aptitudes verbales sont les plus discriminantes, l&rsquo;anglais est souvent n&eacute;glig&eacute; par les candidats &mdash; c&rsquo;est une opportunit&eacute; &agrave; saisir.</p>
+      <p><strong>Cycle Sup&eacute;rieur :</strong> la pr&eacute;s&eacute;lection porte sur la culture g&eacute;n&eacute;rale (aptitudes verbales), la logique (aptitudes num&eacute;riques) et l&rsquo;anglais. L&rsquo;anglais est la mati&egrave;re o&ugrave; tu peux prendre le plus d&rsquo;avance sur les autres candidats avec une pr&eacute;paration cibl&eacute;e.</p>
+    </div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ */
+/* BLOC OFFRE PRINCIPAL                                         */
+/* ============================================================ -->
+<div class="offre-section">
+  <span class="offre-eyebrow">Passeport Concours &mdash; Kits officiels</span>
+  <h2>Obtiens les sujets corrig&eacute;s pour ton cycle.</h2>
+  <p class="offre-intro">Chaque kit contient les sujets r&eacute;els des sessions pass&eacute;es, avec des corrections d&eacute;taill&eacute;es qui expliquent le raisonnement complet &mdash; pas juste la bonne r&eacute;ponse. Format optimis&eacute; pour lire sur t&eacute;l&eacute;phone, t&eacute;l&eacute;chargement imm&eacute;diat apr&egrave;s paiement.</p>
+
+  <div class="kits-grid">
+
+    <!-- Kit Cycle Moyen -->
+    <a class="kit-card" href="https://tzlbvqtl.mychariow.shop/products/ena-cycle-moyen-2026" target="_blank" rel="noopener">
+      <div class="kit-card-left">
+        <span class="kit-card-label">Cycle Moyen</span>
+        <div class="kit-card-detail">Sessions 2015 &agrave; 2025 &middot; T&eacute;l&eacute;chargement imm&eacute;diat</div>
+      </div>
+      <div class="kit-card-right">
+        <span class="kit-price-old">5&thinsp;000 F CFA</span>
+        <span class="kit-price">2&thinsp;950 F CFA</span>
+        <span class="kit-btn">Obtenir ce kit</span>
+      </div>
+    </a>
+
+    <!-- Kit Cycle Moyen Supérieur -->
+    <a class="kit-card" href="https://tzlbvqtl.mychariow.shop/products/ena-cycle-moyen-superieur-2026" target="_blank" rel="noopener">
+      <div class="kit-card-left">
+        <span class="kit-card-label">Cycle Moyen Sup&eacute;rieur</span>
+        <div class="kit-card-detail">Sessions 2015 &agrave; 2025 &middot; T&eacute;l&eacute;chargement imm&eacute;diat</div>
+      </div>
+      <div class="kit-card-right">
+        <span class="kit-price-old">5&thinsp;000 F CFA</span>
+        <span class="kit-price">2&thinsp;950 F CFA</span>
+        <span class="kit-btn">Obtenir ce kit</span>
+      </div>
+    </a>
+
+    <!-- Kit Cycle Supérieur -->
+    <a class="kit-card" href="https://tzlbvqtl.mychariow.shop/products/ena-cycle-superieur-2026" target="_blank" rel="noopener">
+      <div class="kit-card-left">
+        <span class="kit-card-label">Cycle Sup&eacute;rieur</span>
+        <div class="kit-card-detail">Sessions 2015 &agrave; 2025 &middot; T&eacute;l&eacute;chargement imm&eacute;diat</div>
+      </div>
+      <div class="kit-card-right">
+        <span class="kit-price-old">5&thinsp;000 F CFA</span>
+        <span class="kit-price">2&thinsp;950 F CFA</span>
+        <span class="kit-btn">Obtenir ce kit</span>
+      </div>
+    </a>
+
+    <!-- 40 erreurs — best-seller -->
+    <a class="kit-card kit-card-bestseller" href="https://tzlbvqtl.mychariow.shop/products/40-erreurs-qui-ont-fait-echouer-plein-de-candidats" target="_blank" rel="noopener">
+      <div class="kit-card-left">
+        <span class="kit-card-label"><u>Best-seller</u> &mdash; 40 erreurs qui font &eacute;chouer au concours de l&rsquo;ENA.</span>
+        <div class="kit-card-detail">Guide PDF + checklist &middot; T&eacute;l&eacute;chargement imm&eacute;diat</div>
+      </div>
+      <div class="kit-card-right">
+        <span class="kit-price-old">3&thinsp;000 F CFA</span>
+        <span class="kit-price">1&thinsp;800 F CFA</span>
+        <span class="kit-btn">Obtenir ce guide</span>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="offre-sep"></div>
+
+  <div class="garanties">
+    <div class="garantie-item"><span class="dot"></span> Paiement Wave, Orange Money, MTN, Moov, Visa.</div>
+    <div class="garantie-item"><span class="dot"></span> Re&ccedil;u par e-mail en moins de 2 minutes.</div>
+    <div class="garantie-item"><span class="dot"></span> Format PDF optimis&eacute; pour mobile.</div>
+    <div class="garantie-item"><span class="dot"></span> Support WhatsApp si probl&egrave;me.</div>
+  </div>
+
+  <p class="wa-line">Un probl&egrave;me apr&egrave;s l&rsquo;achat ? <strong>WhatsApp : +225 05 02 62 92 17</strong></p>
+</div>
+
+<!-- ============================================================ -->
+<!-- ENCART RAPPEL -->
+<!-- ============================================================ -->
+<section class="section">
+  <div class="encart blue">
+    <span class="encart-label">Rappel important</span>
+    <p>Cette section est un espace de <strong>mise en pratique</strong>, pas de cours. Toute la th&eacute;orie n&eacute;cessaire se trouve dans les chapitres pr&eacute;c&eacute;dents de ce manuel. L&rsquo;entra&icirc;nement sur annales sans les bases solides ne suffit pas. Les deux ensemble sont imbattables.</p>
+  </div>
+</section>
+
+<!-- Navigation -->
+<div class="nav-bottom">
+  <button class="nav-btn prev" onclick="window.location.href='./manuel_interactif_anglais_chapitre6_traduction.html';">&larr; Chapitre 6</button>
+  <button class="nav-btn next" onclick="window.location.href='./passeport_concours_ENA_anglais.html';">Retour &agrave; l&rsquo;accueil &rarr;</button>
+</div>
+
+<footer>
+  <p><strong>Passeport Concours</strong> &mdash; 10 ans de sujets r&eacute;els ENA.</p>
+</footer>
+
+</div><!-- fin .page -->
+
+<script>
+function toggleReveal(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+</script>
+
+</body>
+</html>

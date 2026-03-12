@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapitre 6 - Traduire sans pi&egrave;ge.</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf8f5;--bg-white:#fff;--bg-warm:#f5f0ea;--text:#2c2420;--text-light:#6b5e54;--text-muted:#9a8d82;--accent:#c4560a;--accent-light:#e8874a;--accent-bg:#fef3ea;--green:#2a7d4f;--green-bg:#edf7f0;--blue:#1a5f8a;--blue-bg:#eaf3fa;--red:#b83232;--red-bg:#fdeaea;--border:#e8e0d8;--shadow:0 1px 3px rgba(44,36,32,.06)}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.8;-webkit-font-smoothing:antialiased}.page{max-width:720px;margin:0 auto;padding:0 24px}
+header{padding:60px 0 40px;border-bottom:1px solid var(--border);margin-bottom:50px}header .tag{display:inline-block;font-size:.7rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);background:var(--accent-bg);padding:5px 14px;border-radius:4px;margin-bottom:20px}header h1{font-family:'Source Serif 4',serif;font-size:clamp(1.8rem,5vw,2.6rem);font-weight:700;color:var(--text);line-height:1.25;margin-bottom:14px}header .subtitle{font-size:1.05rem;color:var(--text-light);max-width:580px;line-height:1.7}
+.section{margin-bottom:50px}.section h2{font-family:'Source Serif 4',serif;font-size:1.45rem;font-weight:700;color:var(--text);margin-bottom:14px;line-height:1.3}.section h3{font-family:'Source Serif 4',serif;font-size:1.15rem;font-weight:600;color:var(--text);margin:22px 0 10px}.section p{font-size:1.02rem;color:var(--text);margin-bottom:14px}.section p.light{color:var(--text-light)}strong{font-weight:600}em{font-style:italic;color:var(--text-light)}
+.encart{background:var(--bg-white);border:1px solid var(--border);border-radius:10px;padding:22px 26px;margin:22px 0;box-shadow:var(--shadow)}.encart.accent{background:var(--accent-bg);border-color:rgba(196,86,10,.15)}.encart.green{background:var(--green-bg);border-color:rgba(42,125,79,.15)}.encart.blue{background:var(--blue-bg);border-color:rgba(26,95,138,.15)}.encart.red{background:var(--red-bg);border-color:rgba(184,50,50,.15)}.encart-label{font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;display:block}.encart.accent .encart-label{color:var(--accent)}.encart.green .encart-label{color:var(--green)}.encart.blue .encart-label{color:var(--blue)}.encart.red .encart-label{color:var(--red)}.encart p{font-size:.98rem;margin-bottom:8px;line-height:1.7}.encart p:last-child{margin-bottom:0}
+.table-wrap{overflow-x:auto;margin:20px 0}table{width:100%;border-collapse:collapse;font-size:.95rem;background:var(--bg-white);border-radius:10px;overflow:hidden;box-shadow:var(--shadow)}thead{background:var(--text);color:#fff}th{padding:12px 16px;text-align:left;font-weight:600;font-size:.85rem;letter-spacing:.5px}td{padding:11px 16px;border-bottom:1px solid var(--border)}tr:last-child td{border-bottom:none}tbody tr:hover{background:var(--bg-warm)}td code{font-family:'DM Sans',sans-serif;font-weight:600;color:var(--accent);background:var(--accent-bg);padding:2px 7px;border-radius:4px;font-size:.9rem}
+.ex{background:var(--bg-white);border-left:3px solid var(--border);padding:14px 20px;margin:14px 0;border-radius:0 8px 8px 0;font-size:.97rem}.ex .en{font-weight:600;color:var(--text)}.ex .fr{color:var(--text-muted);font-style:italic;margin-left:4px}.ex.correct{border-left-color:var(--green);background:var(--green-bg)}.ex.wrong{border-left-color:var(--red);background:var(--red-bg)}
+.quiz-block{background:var(--bg-white);border:1px solid var(--border);border-radius:10px;padding:26px;margin:28px 0;box-shadow:var(--shadow)}.quiz-label{font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;display:block}.quiz-question{font-family:'Source Serif 4',serif;font-size:1.05rem;font-weight:600;margin-bottom:16px;line-height:1.5}.quiz-options{display:flex;flex-direction:column;gap:8px;margin-bottom:10px}.quiz-option{display:block;width:100%;text-align:left;padding:12px 18px;font-family:'DM Sans',sans-serif;font-size:.95rem;color:var(--text);background:var(--bg);border:1.5px solid var(--border);border-radius:8px;cursor:pointer;transition:all .2s;line-height:1.5}.quiz-option:hover:not(:disabled){border-color:var(--accent-light);background:var(--accent-bg)}.quiz-option.ok{border-color:var(--green);background:var(--green-bg);color:var(--green);font-weight:600;cursor:default}.quiz-option.ko{border-color:var(--red);background:var(--red-bg);color:var(--red);cursor:default;text-decoration:line-through}.quiz-option.show-ok{border-color:var(--green);background:var(--green-bg);color:var(--green);font-weight:600;cursor:default}.quiz-option:disabled{cursor:default}.quiz-fb{font-size:.92rem;padding:14px 18px;border-radius:8px;display:none;line-height:1.65;margin-top:8px}.quiz-fb.show{display:block}.quiz-fb.correct{background:var(--green-bg);color:var(--green)}.quiz-fb.wrong{background:var(--red-bg);color:var(--red)}
+.reveal-block{margin:20px 0}.reveal-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:600;color:var(--accent);background:var(--accent-bg);border:1.5px solid rgba(196,86,10,.2);border-radius:8px;cursor:pointer;transition:all .2s}.reveal-btn:hover{background:rgba(196,86,10,.12)}.reveal-btn .arrow{transition:transform .3s;font-size:.75rem}.reveal-btn.open .arrow{transform:rotate(90deg)}.reveal-content{max-height:0;overflow:hidden;transition:max-height .5s ease,padding .3s;padding:0 18px;background:var(--bg-white);border-radius:0 0 10px 10px}.reveal-content.open{max-height:3000px;padding:18px;border:1px solid var(--border);border-top:none;margin-top:-4px}.reveal-content p{font-size:.95rem;color:var(--text-light);margin-bottom:8px;line-height:1.7}
+.sep{height:1px;background:var(--border);margin:50px 0}
+.score-bar{position:sticky;top:0;z-index:100;background:rgba(250,248,245,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:10px 24px;display:flex;justify-content:space-between;align-items:center;font-size:.85rem}.score-bar .left{font-weight:600;color:var(--text)}.score-bar .right{color:var(--accent);font-weight:700}
+.trad-pair{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:14px 0;border-radius:10px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow)}.trad-fr,.trad-en{padding:14px 20px;font-size:.97rem}.trad-fr{background:var(--bg-warm);color:var(--text);border-right:1px solid var(--border)}.trad-en{background:var(--bg-white);font-weight:600;color:var(--text)}.trad-label{font-size:.65rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);display:block;margin-bottom:4px}
+.trad-pair.danger .trad-fr{background:var(--red-bg)}.trad-pair.danger .trad-en{background:var(--red-bg);color:var(--red);text-decoration:line-through}.trad-pair.good .trad-en{color:var(--green)}
+.nav-bottom{display:flex;justify-content:space-between;align-items:center;padding:30px 0;margin-top:40px;border-top:1px solid var(--border)}.nav-btn{padding:12px 28px;font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:700;border-radius:8px;text-decoration:none;cursor:pointer;transition:all .2s;border:none}.nav-btn.prev{color:var(--text-light);background:var(--bg-warm);border:1px solid var(--border)}.nav-btn.prev:hover{background:var(--border)}.nav-btn.next{color:#fff;background:var(--accent)}.nav-btn.next:hover{background:#a84808;transform:translateY(-1px);box-shadow:0 4px 12px rgba(196,86,10,.25)}
+footer{text-align:center;padding:20px 0 50px;font-size:.8rem;color:var(--text-muted)}footer strong{color:var(--accent);font-weight:700}
+@media(max-width:600px){header{padding:40px 0 30px}.page{padding:0 16px}table{font-size:.85rem}th,td{padding:9px 12px}.trad-pair{grid-template-columns:1fr}.trad-fr{border-right:none;border-bottom:1px solid var(--border)}}
+</style>
+</head>
+<body>
+
+<div class="score-bar">
+  <span class="left">Chapitre 6 &mdash; Traduire sans pi&egrave;ge</span>
+  <span class="right" id="scoreDisplay">0 / 12 bonnes r&eacute;ponses</span>
+</div>
+
+<div class="page">
+
+<header>
+  <span class="tag">Chapitre 6</span>
+  <h1>Traduire sans pi&egrave;ge.</h1>
+  <p class="subtitle">
+    Le r&eacute;flexe du candidat francophone, c'est de traduire mot &agrave; mot depuis le fran&ccedil;ais.
+    C'est la source n&deg;1 d'erreurs au concours. Ce chapitre t'apprend &agrave; penser en anglais.
+  </p>
+</header>
+
+<!-- ============================================================ -->
+<!-- SECTION 1 : LES FAUX AMIS -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Les faux amis : quand le mot anglais ne veut pas dire ce que tu crois.</h2>
+  <p>
+    Un faux ami est un mot anglais qui <strong>ressemble</strong> &agrave; un mot fran&ccedil;ais mais qui a un <strong>sens compl&egrave;tement diff&eacute;rent</strong>. Les examinateurs les adorent parce qu'ils pi&egrave;gent automatiquement les candidats qui traduisent sans r&eacute;fl&eacute;chir.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Mot anglais</th><th>Ce qu'il veut dire VRAIMENT</th><th>Ce que tu crois qu'il veut dire</th></tr></thead>
+      <tbody>
+        <tr><td><code>actually</code></td><td>en fait, en r&eacute;alit&eacute;</td><td><del>actuellement</del> (= currently)</td></tr>
+        <tr><td><code>eventually</code></td><td>finalement, au bout du compte</td><td><del>&eacute;ventuellement</del> (= possibly)</td></tr>
+        <tr><td><code>library</code></td><td>biblioth&egrave;que</td><td><del>librairie</del> (= bookshop)</td></tr>
+        <tr><td><code>attend</code></td><td>assister &agrave;, &ecirc;tre pr&eacute;sent &agrave;</td><td><del>attendre</del> (= wait)</td></tr>
+        <tr><td><code>resume</code></td><td>reprendre, continuer</td><td><del>r&eacute;sum&eacute;</del> (= summary)</td></tr>
+        <tr><td><code>journey</code></td><td>voyage, trajet</td><td><del>journ&eacute;e</del> (= day)</td></tr>
+        <tr><td><code>sympathetic</code></td><td>compatissant, bienveillant</td><td><del>sympathique</del> (= nice, friendly)</td></tr>
+        <tr><td><code>sensible</code></td><td>raisonnable, sens&eacute;</td><td><del>sensible</del> (= sensitive)</td></tr>
+        <tr><td><code>demand</code></td><td>exiger</td><td><del>demander</del> (= ask)</td></tr>
+        <tr><td><code>comprehensive</code></td><td>complet, exhaustif</td><td><del>compr&eacute;hensif</del> (= understanding)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="encart accent">
+    <span class="encart-label">Les faux amis du secteur public (vocabulaire ENA)</span>
+    <p><strong>Policy</strong> = politique (au sens de strat&eacute;gie, plan d'action), pas "police" (= police).</p>
+    <p><strong>Office</strong> = bureau (lieu de travail), pas "office" au sens religieux.</p>
+    <p><strong>Minister</strong> = ministre, mais attention : "ministry" = minist&egrave;re.</p>
+    <p><strong>Civil servant</strong> = fonctionnaire, pas "serviteur civil".</p>
+    <p><strong>Public expenditure</strong> = d&eacute;penses publiques, pas "exp&eacute;rience publique".</p>
+  </div>
+
+  <!-- QUIZ 1 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">"The minister will eventually resign." Que signifie cette phrase ?</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) Le ministre va &eacute;ventuellement d&eacute;missionner.</button>
+      <button class="quiz-option" onclick="check(this,true)">b) Le ministre finira par d&eacute;missionner.</button>
+      <button class="quiz-option" onclick="check(this,false)">c) Le ministre ne d&eacute;missionnera pas.</button>
+      <button class="quiz-option" onclick="check(this,false)">d) Le ministre d&eacute;missionne actuellement.</button>
+    </div>
+    <div class="quiz-fb correct">Exact. "Eventually" ne veut pas dire "&eacute;ventuellement" mais <strong>finalement, au bout du compte</strong>. C'est l'un des faux amis les plus pi&eacute;geux. "&Eacute;ventuellement" se traduit par "possibly" ou "perhaps".</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>b)</strong>. "Eventually" = finalement. C'est un faux ami classique. Le ministre <strong>finira</strong> par d&eacute;missionner (c'est certain, mais &ccedil;a prendra du temps).</div>
+  </div>
+
+  <!-- QUIZ 2 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">Comment traduit-on "je suis actuellement en r&eacute;union" ?</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) I am actually in a meeting.</button>
+      <button class="quiz-option" onclick="check(this,true)">b) I am currently in a meeting.</button>
+      <button class="quiz-option" onclick="check(this,false)">c) I am eventually in a meeting.</button>
+      <button class="quiz-option" onclick="check(this,false)">d) I am recently in a meeting.</button>
+    </div>
+    <div class="quiz-fb correct">Exact. "Actuellement" = <strong>currently</strong> (ou "at the moment"). "Actually" signifie "en fait, en r&eacute;alit&eacute;", ce qui changerait compl&egrave;tement le sens de la phrase.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>b)</strong>. "Actuellement" se traduit par <strong>currently</strong>. "Actually" est un faux ami qui signifie "en fait".</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 2 : LES STRUCTURES QUI NE SE TRADUISENT PAS MOT A MOT -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Les structures qu'on ne peut pas traduire mot &agrave; mot.</h2>
+  <p>
+    Certaines tournures fran&ccedil;aises n'ont pas d'&eacute;quivalent direct en anglais. Si tu traduis mot &agrave; mot, tu obtiens une phrase incompr&eacute;hensible. Voici les plus courantes.
+  </p>
+
+  <h3>"Il y a" = there is / there are.</h3>
+  <div class="trad-pair">
+    <div class="trad-fr"><span class="trad-label">Fran&ccedil;ais</span>Il y a un probl&egrave;me.</div>
+    <div class="trad-en"><span class="trad-label">Anglais</span>There <strong>is</strong> a problem.</div>
+  </div>
+  <div class="trad-pair">
+    <div class="trad-fr"><span class="trad-label">Fran&ccedil;ais</span>Il y a beaucoup de gens.</div>
+    <div class="trad-en"><span class="trad-label">Anglais</span>There <strong>are</strong> many people.</div>
+  </div>
+
+  <div class="encart accent">
+    <span class="encart-label">Pi&egrave;ge concours</span>
+    <p>"There is" pour le singulier, "there are" pour le pluriel. Les candidats oublient souvent l'accord et mettent "there is" partout.</p>
+  </div>
+
+  <h3>"Il y a" (temps &eacute;coul&eacute;) = ago.</h3>
+  <div class="trad-pair">
+    <div class="trad-fr"><span class="trad-label">Fran&ccedil;ais</span>Je l'ai vu il y a trois jours.</div>
+    <div class="trad-en"><span class="trad-label">Anglais</span>I saw him three days <strong>ago</strong>.</div>
+  </div>
+
+  <p class="light">Attention : "ago" se place <strong>apr&egrave;s</strong> la dur&eacute;e, pas avant. Et il impose le past simple (jamais le present perfect).</p>
+
+  <h3>"Depuis" = since / for (present perfect).</h3>
+  <div class="trad-pair">
+    <div class="trad-fr"><span class="trad-label">Fran&ccedil;ais</span>J'habite ici depuis 2018.</div>
+    <div class="trad-en"><span class="trad-label">Anglais</span>I <strong>have lived</strong> here <strong>since</strong> 2018.</div>
+  </div>
+  <div class="trad-pair">
+    <div class="trad-fr"><span class="trad-label">Fran&ccedil;ais</span>J'habite ici depuis six ans.</div>
+    <div class="trad-en"><span class="trad-label">Anglais</span>I <strong>have lived</strong> here <strong>for</strong> six years.</div>
+  </div>
+
+  <div class="encart red">
+    <span class="encart-label">L'erreur fatale du francophone</span>
+    <p>En fran&ccedil;ais, on dit "j'habite ici depuis 2018" au <strong>pr&eacute;sent</strong>. En anglais, "depuis" impose le <strong>present perfect</strong> : "I <strong>have lived</strong> here since 2018" (et non <del>I live here since 2018</del>).</p>
+  </div>
+
+  <h3>"On" = we / they / people / you (passif).</h3>
+  <p>"On" n'existe pas en anglais. Selon le contexte, il se traduit diff&eacute;remment :</p>
+
+  <div class="trad-pair">
+    <div class="trad-fr"><span class="trad-label">Fran&ccedil;ais</span>On va au cin&eacute;ma ce soir.</div>
+    <div class="trad-en"><span class="trad-label">Anglais</span><strong>We</strong> are going to the cinema tonight.</div>
+  </div>
+  <div class="trad-pair">
+    <div class="trad-fr"><span class="trad-label">Fran&ccedil;ais</span>On dit que le pr&eacute;sident va d&eacute;missionner.</div>
+    <div class="trad-en"><span class="trad-label">Anglais</span>It <strong>is said</strong> that the president will resign. <em>(passif)</em></div>
+  </div>
+  <div class="trad-pair">
+    <div class="trad-fr"><span class="trad-label">Fran&ccedil;ais</span>On parle anglais ici.</div>
+    <div class="trad-en"><span class="trad-label">Anglais</span>English <strong>is spoken</strong> here. <em>(passif)</em></div>
+  </div>
+
+  <!-- QUIZ 3 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">Traduis : "Il y a beaucoup d'&eacute;tudiants dans cette universit&eacute;."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) It has many students in this university.</button>
+      <button class="quiz-option" onclick="check(this,true)">b) There are many students in this university.</button>
+      <button class="quiz-option" onclick="check(this,false)">c) There is many students in this university.</button>
+      <button class="quiz-option" onclick="check(this,false)">d) It is many students in this university.</button>
+    </div>
+    <div class="quiz-fb correct">Exact. "Il y a" + pluriel = <strong>there are</strong>. "Students" est pluriel, donc "are" (pas "is"). Et on ne traduit jamais "il y a" par "it has" ou "it is".</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>b)</strong>. "Il y a" = there is (singulier) / there are (pluriel). "Students" &eacute;tant pluriel, c'est <strong>there are</strong>. "There is many students" est une erreur d'accord.</div>
+  </div>
+
+  <!-- QUIZ 4 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">Traduis : "J'attends depuis deux heures."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) I wait since two hours.</button>
+      <button class="quiz-option" onclick="check(this,false)">b) I am waiting since two hours.</button>
+      <button class="quiz-option" onclick="check(this,true)">c) I have been waiting for two hours.</button>
+      <button class="quiz-option" onclick="check(this,false)">d) I waited for two hours.</button>
+    </div>
+    <div class="quiz-fb correct">Exact. "Depuis" + dur&eacute;e = <strong>for</strong> (pas "since"). Et l'action continue &rarr; present perfect continuous : <strong>have been waiting</strong>. "Since" serait pour un moment pr&eacute;cis ("since 3 o'clock").</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>c)</strong>. Deux pi&egrave;ges ici : "depuis" + dur&eacute;e = <strong>for</strong> (pas "since"). Et une action qui a commenc&eacute; dans le pass&eacute; et continue = present perfect (continuous) : <strong>have been waiting for</strong>.</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 3 : L'ORDRE DES MOTS -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>L'ordre des mots : ce qui change entre le fran&ccedil;ais et l'anglais.</h2>
+  <p>
+    En fran&ccedil;ais, l'adjectif se place souvent <strong>apr&egrave;s</strong> le nom. En anglais, c'est l'inverse : l'adjectif se place <strong>avant</strong> le nom. Cette diff&eacute;rence fait perdre des points &agrave; chaque concours.
+  </p>
+
+  <h3>L'adjectif avant le nom.</h3>
+
+  <div class="trad-pair good">
+    <div class="trad-fr"><span class="trad-label">Fran&ccedil;ais</span>Une d&eacute;cision <strong>importante</strong>.</div>
+    <div class="trad-en"><span class="trad-label">Anglais</span>An <strong>important</strong> decision.</div>
+  </div>
+  <div class="trad-pair good">
+    <div class="trad-fr"><span class="trad-label">Fran&ccedil;ais</span>Le secteur <strong>public</strong>.</div>
+    <div class="trad-en"><span class="trad-label">Anglais</span>The <strong>public</strong> sector.</div>
+  </div>
+  <div class="trad-pair good">
+    <div class="trad-fr"><span class="trad-label">Fran&ccedil;ais</span>La politique <strong>&eacute;trang&egrave;re</strong>.</div>
+    <div class="trad-en"><span class="trad-label">Anglais</span><strong>Foreign</strong> policy.</div>
+  </div>
+
+  <h3>La n&eacute;gation : ne...pas = do not / does not / did not.</h3>
+  <p>En fran&ccedil;ais, la n&eacute;gation entoure le verbe ("ne...pas"). En anglais, elle se place <strong>avant</strong> le verbe principal, via l'auxiliaire.</p>
+
+  <div class="trad-pair good">
+    <div class="trad-fr"><span class="trad-label">Fran&ccedil;ais</span>Je <strong>ne</strong> comprends <strong>pas</strong>.</div>
+    <div class="trad-en"><span class="trad-label">Anglais</span>I <strong>don't</strong> understand.</div>
+  </div>
+  <div class="trad-pair good">
+    <div class="trad-fr"><span class="trad-label">Fran&ccedil;ais</span>Il <strong>n'</strong>a <strong>pas</strong> fini.</div>
+    <div class="trad-en"><span class="trad-label">Anglais</span>He <strong>hasn't</strong> finished.</div>
+  </div>
+
+  <h3>La question : l'inversion sujet-auxiliaire.</h3>
+  <p>En fran&ccedil;ais, on peut former une question juste avec l'intonation ("Tu viens ?"). En anglais, il faut <strong>inverser l'auxiliaire et le sujet</strong>, ou ajouter "do/does/did".</p>
+
+  <div class="trad-pair good">
+    <div class="trad-fr"><span class="trad-label">Fran&ccedil;ais</span>Tu parles anglais ?</div>
+    <div class="trad-en"><span class="trad-label">Anglais</span><strong>Do</strong> you speak English?</div>
+  </div>
+  <div class="trad-pair good">
+    <div class="trad-fr"><span class="trad-label">Fran&ccedil;ais</span>O&ugrave; est-ce qu'il travaille ?</div>
+    <div class="trad-en"><span class="trad-label">Anglais</span>Where <strong>does</strong> he work?</div>
+  </div>
+
+  <div class="encart red">
+    <span class="encart-label">Erreur fatale</span>
+    <p>Ne jamais &eacute;crire <del>Where he works?</del> ou <del>You speak English?</del> dans un QCM. M&ecirc;me si c'est compr&eacute;hensible &agrave; l'oral, &agrave; l'&eacute;crit c'est grammaticalement faux.</p>
+  </div>
+
+  <!-- QUIZ 5 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">Traduis : "Le gouvernement a pris une d&eacute;cision difficile."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) The government has taken a decision difficult.</button>
+      <button class="quiz-option" onclick="check(this,true)">b) The government has taken a difficult decision.</button>
+      <button class="quiz-option" onclick="check(this,false)">c) The government has took a difficult decision.</button>
+      <button class="quiz-option" onclick="check(this,false)">d) The government took a decision difficult.</button>
+    </div>
+    <div class="quiz-fb correct">Exact. Deux r&egrave;gles appliqu&eacute;es : l'adjectif <strong>avant</strong> le nom ("difficult decision", pas "decision difficult") et le participe pass&eacute; correct de "take" &rarr; <strong>taken</strong> (pas "took" apr&egrave;s "has").</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>b)</strong>. En anglais, l'adjectif pr&eacute;c&egrave;de toujours le nom : "a <strong>difficult</strong> decision". Et apr&egrave;s "has", on utilise le participe pass&eacute; <strong>taken</strong> (pas "took", qui est le past simple).</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 4 : EXPRESSIONS IDIOMATIQUES -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Les expressions qui ne se traduisent pas litt&eacute;ralement.</h2>
+  <p>
+    Certaines expressions courantes en fran&ccedil;ais ont un &eacute;quivalent anglais qui n'a <strong>rien &agrave; voir mot &agrave; mot</strong>. Les conna&icirc;tre &eacute;vite de produire des traductions absurdes.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Fran&ccedil;ais</th><th>Anglais correct</th><th>Traduction litt&eacute;rale &agrave; &eacute;viter</th></tr></thead>
+      <tbody>
+        <tr><td>Avoir raison</td><td><code>to be right</code></td><td><del>to have reason</del></td></tr>
+        <tr><td>Avoir tort</td><td><code>to be wrong</code></td><td><del>to have wrong</del></td></tr>
+        <tr><td>Avoir faim</td><td><code>to be hungry</code></td><td><del>to have hunger</del></td></tr>
+        <tr><td>Avoir froid</td><td><code>to be cold</code></td><td><del>to have cold</del></td></tr>
+        <tr><td>Avoir peur</td><td><code>to be afraid / scared</code></td><td><del>to have fear</del></td></tr>
+        <tr><td>Avoir sommeil</td><td><code>to be sleepy / tired</code></td><td><del>to have sleep</del></td></tr>
+        <tr><td>Avoir ... ans</td><td><code>to be ... years old</code></td><td><del>to have ... years</del></td></tr>
+        <tr><td>Il fait chaud</td><td><code>it is hot</code></td><td><del>it makes hot</del></td></tr>
+        <tr><td>Il fait beau</td><td><code>the weather is nice</code></td><td><del>it makes beautiful</del></td></tr>
+        <tr><td>Faire attention</td><td><code>to be careful / to pay attention</code></td><td><del>to make attention</del></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="encart green">
+    <span class="encart-label">La r&egrave;gle &agrave; retenir</span>
+    <p>En fran&ccedil;ais, on utilise <strong>"avoir"</strong> pour beaucoup d'&eacute;tats (faim, froid, peur, raison...). En anglais, ces m&ecirc;mes &eacute;tats utilisent <strong>"to be"</strong> (be hungry, be cold, be afraid, be right...). C'est le pi&egrave;ge le plus fr&eacute;quent pour les francophones.</p>
+  </div>
+
+  <!-- QUIZ 6 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">Traduis : "Elle a 25 ans."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) She has 25 years.</button>
+      <button class="quiz-option" onclick="check(this,true)">b) She is 25 years old.</button>
+      <button class="quiz-option" onclick="check(this,false)">c) She have 25 years old.</button>
+      <button class="quiz-option" onclick="check(this,false)">d) She is 25 years.</button>
+    </div>
+    <div class="quiz-fb correct">Exact. L'&acirc;ge s'exprime avec <strong>to be</strong> en anglais : "She <strong>is</strong> 25 years old." On peut aussi dire simplement "She is 25." mais jamais "She has 25 years."</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>b)</strong>. En anglais, l'&acirc;ge s'exprime avec <strong>be</strong>, pas "have". La structure compl&egrave;te est : sujet + be + nombre + years old.</div>
+  </div>
+
+  <!-- QUIZ 7 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">Traduis : "Tu as raison, il fait froid dehors."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,true)">a) You are right, it is cold outside.</button>
+      <button class="quiz-option" onclick="check(this,false)">b) You have right, it makes cold outside.</button>
+      <button class="quiz-option" onclick="check(this,false)">c) You are right, it makes cold outside.</button>
+      <button class="quiz-option" onclick="check(this,false)">d) You have reason, it is cold outside.</button>
+    </div>
+    <div class="quiz-fb correct">Parfait. Deux pi&egrave;ges &eacute;vit&eacute;s : "avoir raison" = <strong>to be right</strong> (pas "have right") et "il fait froid" = <strong>it is cold</strong> (pas "it makes cold").</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>a)</strong>. "Avoir raison" = to <strong>be</strong> right. "Il fait froid" = it <strong>is</strong> cold. Les deux utilisent "be" en anglais l&agrave; o&ugrave; le fran&ccedil;ais utilise "avoir" et "faire".</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 5 : MAKE vs DO -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Make ou do ? Le pi&egrave;ge du verbe "faire".</h2>
+  <p>
+    En fran&ccedil;ais, "faire" est un seul verbe. En anglais, il se traduit par <strong>do</strong> ou <strong>make</strong> selon le contexte, et les candidats se trompent constamment.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>DO (activit&eacute;, t&acirc;che, travail)</th><th>MAKE (cr&eacute;er, produire, provoquer)</th></tr></thead>
+      <tbody>
+        <tr><td><code>do</code> homework (faire les devoirs)</td><td><code>make</code> a decision (prendre une d&eacute;cision)</td></tr>
+        <tr><td><code>do</code> the dishes (faire la vaisselle)</td><td><code>make</code> a mistake (faire une erreur)</td></tr>
+        <tr><td><code>do</code> business (faire des affaires)</td><td><code>make</code> money (gagner de l'argent)</td></tr>
+        <tr><td><code>do</code> exercise (faire de l'exercice)</td><td><code>make</code> progress (faire des progr&egrave;s)</td></tr>
+        <tr><td><code>do</code> your best (faire de son mieux)</td><td><code>make</code> an effort (faire un effort)</td></tr>
+        <tr><td><code>do</code> research (faire de la recherche)</td><td><code>make</code> a complaint (faire une r&eacute;clamation)</td></tr>
+        <tr><td><code>do</code> a favour (rendre un service)</td><td><code>make</code> a promise (faire une promesse)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="encart blue">
+    <span class="encart-label">L'astuce pour ne plus se tromper</span>
+    <p><strong>DO</strong> = tu fais une activit&eacute;, une t&acirc;che, un travail. L'accent est sur l'<strong>action</strong> elle-m&ecirc;me.</p>
+    <p><strong>MAKE</strong> = tu cr&eacute;es, tu produis, tu provoques quelque chose. L'accent est sur le <strong>r&eacute;sultat</strong>.</p>
+  </div>
+
+  <!-- QUIZ 8 -->
+  <div class="quiz-block">
+    <span class="quiz-label">V&eacute;rifie ta compr&eacute;hension</span>
+    <p class="quiz-question">"I'd like to _____ a complaint."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,true)">a) make</button>
+      <button class="quiz-option" onclick="check(this,false)">b) do</button>
+      <button class="quiz-option" onclick="check(this,false)">c) have</button>
+      <button class="quiz-option" onclick="check(this,false)">d) give</button>
+    </div>
+    <div class="quiz-fb correct">Exact. "Make a complaint" est une expression fig&eacute;e. On "produit" une r&eacute;clamation &rarr; <strong>make</strong>. De la m&ecirc;me fa&ccedil;on : make a decision, make a promise, make an effort.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>a) make</strong>. "Faire une r&eacute;clamation" = make a complaint. On utilise "make" quand on produit/cr&eacute;e quelque chose (une d&eacute;cision, une erreur, une promesse, une r&eacute;clamation).</div>
+  </div>
+</section>
+
+<div class="sep"></div>
+
+<!-- ============================================================ -->
+<!-- SECTION 6 : EXERCICES DE TRADUCTION -->
+<!-- ============================================================ -->
+<section class="section">
+  <h2>Exercices de traduction : du fran&ccedil;ais vers l'anglais.</h2>
+  <p class="light">Les quatre questions suivantes te mettent en situation r&eacute;elle de traduction. Chaque phrase contient au moins un pi&egrave;ge classique.</p>
+
+  <!-- QUIZ 9 -->
+  <div class="quiz-block">
+    <span class="quiz-label">Traduction 1</span>
+    <p class="quiz-question">Traduis : "Le premier ministre a annonc&eacute; de nouvelles mesures pour r&eacute;duire la dette publique."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) The prime minister has announced new measures for reduce the public debt.</button>
+      <button class="quiz-option" onclick="check(this,true)">b) The prime minister has announced new measures to reduce public debt.</button>
+      <button class="quiz-option" onclick="check(this,false)">c) The first minister announced new measures to reduce the public debt.</button>
+      <button class="quiz-option" onclick="check(this,false)">d) The prime minister announced news measures to reduce public debt.</button>
+    </div>
+    <div class="quiz-fb correct">Exact. Plusieurs pi&egrave;ges &eacute;vit&eacute;s : "premier ministre" = <strong>prime minister</strong> (pas "first minister"). "Pour + infinitif" = <strong>to + verbe</strong> (pas "for + verbe"). "Nouvelles" (adjectif) = <strong>new</strong> (pas "news", qui est un nom).</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>b)</strong>. "Premier ministre" = prime minister. "Pour r&eacute;duire" = to reduce (pas "for reduce"). "Nouvelles mesures" = new measures (pas "news", qui signifie "les informations"). "Public debt" ne prend pas forc&eacute;ment "the" en anglais quand on parle du concept g&eacute;n&eacute;ral.</div>
+  </div>
+
+  <!-- QUIZ 10 -->
+  <div class="quiz-block">
+    <span class="quiz-label">Traduction 2</span>
+    <p class="quiz-question">Traduis : "On m'a offert un poste au minist&egrave;re il y a deux semaines."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) They have offered me a position at the ministry two weeks ago.</button>
+      <button class="quiz-option" onclick="check(this,false)">b) I have been offered a position at the ministry since two weeks.</button>
+      <button class="quiz-option" onclick="check(this,true)">c) I was offered a position at the ministry two weeks ago.</button>
+      <button class="quiz-option" onclick="check(this,false)">d) On offered me a position at the ministry there is two weeks.</button>
+    </div>
+    <div class="quiz-fb correct">Parfait. Trois pi&egrave;ges d&eacute;jou&eacute;s : "on m'a offert" &rarr; voix passive <strong>I was offered</strong> (pas "on offered"). "Il y a deux semaines" &rarr; <strong>two weeks ago</strong> (pas "there is two weeks"). Et "ago" impose le <strong>past simple</strong> (was offered, pas "have been offered").</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>c)</strong>. "On m'a offert" se traduit en voix passive : <strong>I was offered</strong>. "Il y a" (dur&eacute;e pass&eacute;e) = <strong>ago</strong>. Et "ago" impose le past simple &mdash; jamais le present perfect.</div>
+  </div>
+
+  <!-- QUIZ 11 -->
+  <div class="quiz-block">
+    <span class="quiz-label">Traduction 3</span>
+    <p class="quiz-question">Traduis : "Les fonctionnaires doivent &ecirc;tre au service des citoyens."</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) The civil servants have to be at the service of the citizens.</button>
+      <button class="quiz-option" onclick="check(this,true)">b) Civil servants must serve the citizens.</button>
+      <button class="quiz-option" onclick="check(this,false)">c) The public servants must to serve the citizens.</button>
+      <button class="quiz-option" onclick="check(this,false)">d) Civil servants musted be at the service of citizens.</button>
+    </div>
+    <div class="quiz-fb correct">Exact. "Fonctionnaires" = <strong>civil servants</strong>. "Doivent" = <strong>must</strong> (obligation forte). Et "must" n'est jamais suivi de "to" (r&egrave;gle des modaux, chapitre 1). La phrase est directe et naturelle en anglais.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>b)</strong>. "Must" ne prend jamais "to" apr&egrave;s lui et ne se conjugue jamais ("musted" n'existe pas). La traduction la plus naturelle simplifie "&ecirc;tre au service de" en <strong>serve</strong>.</div>
+  </div>
+
+  <!-- QUIZ 12 -->
+  <div class="quiz-block">
+    <span class="quiz-label">Traduction 4</span>
+    <p class="quiz-question">Que signifie : "The government is currently facing a comprehensive review of its welfare policy." ?</p>
+    <div class="quiz-options">
+      <button class="quiz-option" onclick="check(this,false)">a) Le gouvernement fait actuellement face &agrave; une r&eacute;vision compr&eacute;hensive de sa politique de bien-&ecirc;tre.</button>
+      <button class="quiz-option" onclick="check(this,true)">b) Le gouvernement fait actuellement face &agrave; un examen complet de sa politique sociale.</button>
+      <button class="quiz-option" onclick="check(this,false)">c) Le gouvernement est en face d'une r&eacute;vision sympathique de sa politique de secours.</button>
+      <button class="quiz-option" onclick="check(this,false)">d) Le gouvernement a r&eacute;cemment subi un r&eacute;sum&eacute; de sa politique &eacute;trang&egrave;re.</button>
+    </div>
+    <div class="quiz-fb correct">Parfait. Tous les faux amis &eacute;vit&eacute;s : "comprehensive" = <strong>complet/exhaustif</strong> (pas "compr&eacute;hensif"). "Welfare policy" = <strong>politique sociale</strong> (pas "politique de bien-&ecirc;tre" au sens litt&eacute;ral). "Currently" = <strong>actuellement</strong>. "Facing" = <strong>faire face &agrave;</strong>.</div>
+    <div class="quiz-fb wrong">La r&eacute;ponse est <strong>b)</strong>. Faux amis : "comprehensive" = complet (pas compr&eacute;hensif). "Welfare policy" = politique sociale. "Currently" = actuellement. "Review" = examen/r&eacute;vision (pas r&eacute;sum&eacute;).</div>
+  </div>
+</section>
+
+<!-- BILAN -->
+<section class="section" id="bilan" style="display:none;">
+  <div class="encart green">
+    <span class="encart-label">Ton bilan du chapitre 6</span>
+    <p id="bilan-text"></p>
+  </div>
+</section>
+
+<!-- RESUME -->
+<section class="section">
+  <h2>R&eacute;sum&eacute; du chapitre.</h2>
+  <div class="reveal-block">
+    <button class="reveal-btn" onclick="toggleReveal(this)">
+      <span class="arrow">&#9654;</span> Afficher le r&eacute;sum&eacute; complet
+    </button>
+    <div class="reveal-content">
+      <p><strong>Faux amis :</strong> actually = en fait (pas "actuellement"). Eventually = finalement (pas "&eacute;ventuellement"). Library = biblioth&egrave;que (pas "librairie"). Sensible = raisonnable (pas "sensible"). Comprehensive = complet (pas "compr&eacute;hensif"). Demand = exiger (pas "demander"). Civil servant = fonctionnaire.</p>
+      <p><strong>Structures :</strong> "il y a" (existence) = there is/are. "Il y a" (temps) = ago (+ past simple). "Depuis" + moment = since + present perfect. "Depuis" + dur&eacute;e = for + present perfect. "On" = we, they, ou voix passive.</p>
+      <p><strong>Ordre des mots :</strong> l'adjectif se place avant le nom en anglais (an important decision, the public sector). La n&eacute;gation passe par l'auxiliaire (don't, doesn't, didn't, hasn't). La question inverse l'auxiliaire et le sujet.</p>
+      <p><strong>"Avoir" fran&ccedil;ais = "be" anglais :</strong> avoir faim = be hungry. Avoir froid = be cold. Avoir peur = be afraid. Avoir raison = be right. Avoir ... ans = be ... years old. Il fait chaud = it is hot.</p>
+      <p><strong>Do vs make :</strong> do = activit&eacute;, t&acirc;che (do homework, do business, do your best). Make = cr&eacute;er, produire (make a decision, make a mistake, make money, make a complaint).</p>
+      <p><strong>R&egrave;gle d'or :</strong> ne jamais traduire mot &agrave; mot depuis le fran&ccedil;ais. Penser en anglais d'abord, puis v&eacute;rifier que la structure est correcte.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Navigation -->
+<div class="nav-bottom">
+  <button class="nav-btn prev" onclick="window.location.href='./manuel_interactif_anglais_chapitre5_prepositions.html';">&larr; Chapitre 5 : prépositions</button>
+  <button class="nav-btn next" onclick="window.location.href='./passeport_concours_ENA_anglais.html';">Retour à l'accueil &rarr;</button>
+</div>
+
+<footer>
+  <p><strong>Passeport Concours</strong> &mdash; Anglais ENA 2026 &mdash; Chapitre 6.</p>
+</footer>
+
+</div>
+
+<script>
+let score=0,total=12,answered=0;
+function check(btn,isCorrect){
+  const block=btn.closest('.quiz-block');
+  if(block.dataset.done)return;
+  block.dataset.done='1';
+  const opts=block.querySelectorAll('.quiz-option');
+  const fbs=block.querySelectorAll('.quiz-fb');
+  opts.forEach(o=>o.disabled=true);
+  if(isCorrect){btn.classList.add('ok');fbs[0].classList.add('show');score++}
+  else{btn.classList.add('ko');fbs[1].classList.add('show');opts.forEach(o=>{const h=o.getAttribute('onclick');if(h&&h.includes('true'))o.classList.add('show-ok')})}
+  answered++;
+  document.getElementById('scoreDisplay').textContent=score+' / '+total+' bonnes réponses';
+  if(answered===total)setTimeout(showBilan,500);
+}
+function showBilan(){
+  const b=document.getElementById('bilan'),t=document.getElementById('bilan-text');
+  const pct=Math.round(score/total*100);
+  let msg='';
+  if(pct>=80)msg='<strong>'+score+'/'+total+' ('+pct+'%) — Excellent.</strong> Tu sais éviter les pièges de traduction. C\'est un avantage considérable au concours, car la majorité des candidats francophones tombent dans ces erreurs. Direction le chapitre 7 sur le vocabulaire du secteur public.';
+  else if(pct>=50)msg='<strong>'+score+'/'+total+' ('+pct+'%) — Correct, mais les réflexes francophones sont tenaces.</strong> Relis surtout le tableau des faux amis et la section "avoir = be". Ce sont les erreurs les plus fréquentes au concours. Fais-toi une fiche avec les 10 faux amis et relis-la chaque jour.';
+  else msg='<strong>'+score+'/'+total+' ('+pct+'%) — Ce chapitre révèle le piège principal des francophones.</strong> Tu traduis encore trop depuis le français. La clé : mémoriser les expressions anglaises comme des blocs (to be right, there are, two weeks ago) plutôt que de traduire mot à mot. Relis ce chapitre lentement, une section par jour.';
+  t.innerHTML=msg;b.style.display='block';b.scrollIntoView({behavior:'smooth',block:'center'});
+}
+function toggleReveal(btn){btn.classList.toggle('open');btn.nextElementSibling.classList.toggle('open')}
+</script>
+
+</body>
+</html>
